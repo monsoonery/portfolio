@@ -3,6 +3,7 @@
     "title": "#DECADE - A semi-competitive Splatoon team",
     "link": "https://webdesign.tutsplus.com/tutorials/how-to-build-a-javascript-countdown-timer--cms-93144",
     "image": "https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8",
+    "status": "completed",
     "categories": [
       "Branding"
     ],
@@ -16,6 +17,7 @@
     "title": "Glitch Techs: Tech Gauntlet model",
     "link": "https://webdesign.tutsplus.com/tutorials/how-to-create-a-sortable-html-table-with-javascript--cms-92993",
     "image": "https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8",
+    "status": "completed",
     "categories": [
       "Hand drawing",
       "Cosplay",
@@ -30,70 +32,76 @@
     ]
   },
   {
-    "title": "How to Implement a “Load More” Button With Vanilla JavaScript",
+    "title": "5thmonthocean - Mashup artist & DJ",
     "link": "https://webdesign.tutsplus.com/tutorials/how-to-implement-a-load-more-button-with-vanilla-javascript--cms-42080",
     "image": "https://cms-assets.tutsplus.com/cdn-cgi/image/width=300/uploads/users/30/posts/42080/preview_image/load_more.png",
+    "status": "completed",
     "categories": [
       "JavaScript",
       "UX"
     ],
     "level": [
-      "Intermediate"
+      "All"
     ]
   },
   {
-    "title": "How to Implement Infinite Scrolling With JavaScript",
+    "title": "Custom pins",
     "link": "https://webdesign.tutsplus.com/tutorials/how-to-implement-infinite-scrolling-with-javascript--cms-37055",
     "image": "https://cms-assets.tutsplus.com/cdn-cgi/image/width=300/uploads/users/30/posts/37055/preview_image/infinite_loading.jpg",
+    "status": "completed",
     "categories": [
       "JavaScript",
       "UX",
       "Scroll Events"
     ],
     "level": [
-      "Advanced"
+      "All"
     ]
   },
   {
     "title": "How to Implement Pagination with Vanilla JavaScript",
     "link": "https://webdesign.tutsplus.com/tutorials/pagination-with-vanilla-javascript--cms-41896",
     "image": "https://cms-assets.tutsplus.com/cdn-cgi/image/width=300/uploads/users/30/posts/41896/preview_image/pagination.jpg",
+    "status": "completed",
     "categories": [
       "JavaScript",
       "UX",
       "Navigation Design"
     ],
     "level": [
-      "Intermediate"
+      "All"
     ]
   },
   {
     "title": "How To Build a Simple Carousel With Vanilla JavaScript (14 Lines of Code!)",
     "link": "https://webdesign.tutsplus.com/tutorials/how-to-build-a-simple-carousel-with-vanilla-javascript--cms-41734",
     "image": "https://cms-assets.tutsplus.com/cdn-cgi/image/width=300/uploads/users/30/posts/41734/preview_image/slider.png",
+    "status": "completed",
     "categories": [
       "JavaScript",
       "Slider"
     ],
     "level": [
-      "Work"
+      "All"
     ]
   },
   {
     "title": "4 Quick Steps to Make a Website Responsive",
     "link": "https://webdesign.tutsplus.com/tutorials/quick-steps-to-make-a-website-responsive--cms-37330",
     "image": "https://cms-assets.tutsplus.com/cdn-cgi/image/width=300/uploads/users/30/posts/37330/preview_image/rwd.jpg",
+    "status": "completed",
     "categories": [
       "Responsive Web Design"
     ],
     "level": [
-      "Work"
+      "All"
     ]
   },
   {
     "title": "How to Recreate Material Design Floating Labels",
     "link": "https://webdesign.tutsplus.com/tutorials/recreate-material-design-floating-label--cms-37326",
     "image": "https://cms-assets.tutsplus.com/cdn-cgi/image/width=300/uploads/users/30/posts/37326/preview_image/floating-label.png",
+    "status": "completed",
     "categories": [
       "Material Design"
     ],
@@ -105,6 +113,7 @@
     "title": "How to Generate Random Background Colors With JavaScript",
     "link": "https://webdesign.tutsplus.com/tutorials/generate-random-background-colors-javascript--cms-37030",
     "image": "https://cms-assets.tutsplus.com/cdn-cgi/image/width=300/uploads/users/30/posts/37030/preview_image/pre.gif",
+    "status": "completed",
     "categories": [
       "JavaScript"
     ],
@@ -116,6 +125,7 @@
     "title": "Switch Between Color Schemes with CSS Variables and JavaScript",
     "link": "https://webdesign.tutsplus.com/tutorials/color-schemes-with-css-variables-and-javascript--cms-36989",
     "image": "https://cms-assets.tutsplus.com/cdn-cgi/image/width=300/uploads/users/30/posts/36989/preview_image/light-dark.jpg",
+    "status": "completed",
     "categories": [
       "CSS",
       "JavaScript"
@@ -128,6 +138,7 @@
     "title": "How to Implement Debounce and Throttle with JavaScript",
     "link": "https://webdesign.tutsplus.com/tutorials/javascript-debounce-and-throttle--cms-36783",
     "image": "https://cms-assets.tutsplus.com/cdn-cgi/image/width=300/uploads/users/30/posts/36783/preview_image/debounce_throttle.png",
+    "status": "completed",
     "categories": [
       "JavaScript",
       "Perfomance"
@@ -141,6 +152,7 @@
     "title": "How to Animate on Scroll With Vanilla JavaScript",
     "link": "https://webdesign.tutsplus.com/tutorials/animate-on-scroll-with-javascript--cms-36671",
     "image": "https://cms-assets.tutsplus.com/cdn-cgi/image/width=300/uploads/users/30/posts/36671/preview_image/animate-on-scroll.png",
+    "status": "completed",
     "categories": [
       "JavaScript",
       "Scroll Events",

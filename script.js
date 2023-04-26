@@ -75,9 +75,6 @@ const createPost = (postData) => {
         return '<span class="post-tag">' + category + "</span>";
     }).join("")}
         </div>
-        <div class="post-footer">
-          <span class="post-level">${level}</span>
-        </div>
       </div>
   `;
     postsContainer.append(post);
