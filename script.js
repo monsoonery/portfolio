@@ -29,7 +29,7 @@ console.log(levelsContainer);
 
 
 fetch(
-    "https://raw.githubusercontent.com/monsoonery/portfolio/178cb80facc6432987d54dc467984a9245896e50/data.json"
+    "https://raw.githubusercontent.com/monsoonery/portfolio/88fa7d5a46124a29b3a19e68176d00631cb27a9d/data.json"
 ).then(async (response) => {
     postsData = await response.json();
     console.log(postsData);
