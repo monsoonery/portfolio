@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Projects</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="script.js" defer></script>
+
+    <style>
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Raleway", sans-serif
+        }
+    </style>
+</head>
+
+<body class="w3-light-grey w3-content" style="max-width:1920px">
+
+    <!-- Sidebar/menu -->
+    <script src="nav.js"></script>
+
+    <!-- Main page content-->
+    <div class="w3-main" style="margin-left:300px">
+
+        <!-- Header -->
+        <header id="projects">
+            <a href="#"><img src="iconwatermark.png" style="width:65px;"
+                    class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
+            <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i
+                    class="fa fa-bars"></i></span>
+            <div class="w3-container">
+                <h1><b>Projects</b></h1>
+                <div class="filters main-filters w3-padding-16" id="mainFilters">
+                    <button class="filter-button filter-button-active" onclick="filterSelection('featured')"><i
+                            class="fa fa-star w3-margin-right"></i>Featured</button>
+                    <button class="filter-button" onclick="filterSelection('all')"><i
+                            class="fa fa-globe w3-margin-right"></i>All</button>
+                    <button class="filter-button" onclick="filterSelection('commission')"><i
+                            class="fa fa-file-invoice-dollar w3-margin-right"></i>Commission</button>
+                    <button class="filter-button" onclick="filterSelection('personal')"><i
+                            class="fa fa-user w3-margin-right"></i>Personal</button>
+                    <button class="filter-button" onclick="filterSelection('work')"><i
+                            class="fa fa-briefcase w3-margin-right"></i>Work</button>
+                </div>
+                <div class="w3-bottombar"></div>
+
+            </div>
+        </header>
+
+        <div class="row posts-container">
+            <!-- first entry-->
+            <div class="column personal">
+                <img src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8"
+                    alt="Engravity" style="width: 100%; height: 300px; object-fit: cover;" class="w3-hover-opacity">
+                <div class="content">
+                    <p><b>persona 1</b></p>
+                    <p>FDKJGHKJFDS FDKJGHFKSLDJGJHFDXKLJ text dfgkjfhgkjsdfhjgkf fdljghkfjdslghksdf fhdjgklshdfgjlkd
+                        nice project fghdjgkjdfsh.</p>
+                </div>
+            </div>
+            <!-- second entry-->
+            <div class="column commission featured 3dprint electronics">
+                <img src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8"
+                    alt="dingetje" style="width: 100%; height: 300px; object-fit: cover;" class="w3-hover-opacity">
+                <div class="content">
+                    <p><b>commission moment</b></p>
+                    <p>However, numerical methodsinvented by Newton, Euler and at a later stage by Gauss still play an
+                        important role even today..</p>
+                </div>
+            </div>
+            <!-- third entry-->
+            <div class="column work">
+                <img src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8"
+                    alt="kkkrab" style="width: 100%; height: 300px; object-fit: cover;" class="w3-hover-opacity">
+                <div class="content">
+                    <p><b>wollah gun geld</b></p>
+                    <p>shell is een prima bedrijf als ik de website mag geloven </p>
+                </div>
+            </div>
+            <!-- fourth entry-->
+            <div class="column personal">
+                <img src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8"
+                    alt="kkkrab" style="width: 100%; height: 300px; object-fit: cover;" class="w3-hover-opacity">
+                <div class="content">
+                    <p><b>splatoot</b></p>
+                    <p>laser go brrr</p>
+                </div>
+            </div>
+            <!-- fifth entry-->
+            <div class="column work">
+                <img src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8"
+                    alt="kkkrab" style="width: 100%; height: 300px; object-fit: cover;" class="w3-hover-opacity">
+                <div class="content">
+                    <p><b>lamp</b></p>
+                    <p>kan korter </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

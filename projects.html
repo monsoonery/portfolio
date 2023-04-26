@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Projects</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="script.js" defer></script>
+
+    <style>
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Raleway", sans-serif
+        }
+    </style>
+</head>
+
+<body class="w3-light-grey w3-content" style="max-width:1920px">
+
+    <!-- Sidebar/menu -->
+    <script src="nav.js"></script>
+
+    <!-- Main page content-->
+    <div class="w3-main" style="margin-left:300px">
+
+        <main class="container">
+            <div class="container__title">Level</div>
+            <div id="post-level" class="filter-container"></div>
+            <div class="container__title">Categories</div>
+            <div id="post-categories" class="filter-container"></div>
+            <div class="container__title">
+                Works (<span id="post-count"></span>)
+            </div>
+            <div id="posts-container"></div>
+            <p id="no-posts"></p>
+        </main>
+
+    </div>
+</body>
+
+</html>
