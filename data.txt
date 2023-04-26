@@ -6,7 +6,8 @@
     "categories": [
       "JavaScript",
       "Timer"
-    ]
+    ],
+    "level": "Advanced"
   },
   {
     "title": "How to Create a Sortable HTML Table with JavaScript",
@@ -16,7 +17,8 @@
       "JavaScript",
       "Sorting",
       "Data Structures"
-    ]
+    ],
+    "level": "Advanced"
   },
   {
     "title": "How to Implement a “Load More” Button With Vanilla JavaScript",
@@ -25,7 +27,8 @@
     "categories": [
       "JavaScript",
       "UX"
-    ]
+    ],
+    "level": "Intermediate"
   },
   {
     "title": "How to Implement Infinite Scrolling With JavaScript",
@@ -35,7 +38,8 @@
       "JavaScript",
       "UX",
       "Scroll Events"
-    ]
+    ],
+    "level": "Advanced"
   },
   {
     "title": "How to Implement Pagination with Vanilla JavaScript",
@@ -45,7 +49,8 @@
       "JavaScript",
       "UX",
       "Navigation Design"
-    ]
+    ],
+    "level": "Intermediate"
   },
   {
     "title": "How To Build a Simple Carousel With Vanilla JavaScript (14 Lines of Code!)",
@@ -54,7 +59,8 @@
     "categories": [
       "JavaScript",
       "Slider"
-    ]
+    ],
+    "level": ["Work"]
   },
   {
     "title": "4 Quick Steps to Make a Website Responsive",
@@ -62,7 +68,8 @@
     "image": "https://cms-assets.tutsplus.com/cdn-cgi/image/width=300/uploads/users/30/posts/37330/preview_image/rwd.jpg",
     "categories": [
       "Responsive Web Design"
-    ]
+    ],
+    "level":["Work"]
   },
   {
     "title": "How to Recreate Material Design Floating Labels",
@@ -70,7 +77,8 @@
     "image": "https://cms-assets.tutsplus.com/cdn-cgi/image/width=300/uploads/users/30/posts/37326/preview_image/floating-label.png",
     "categories": [
       "Material Design"
-    ]
+    ],
+    "level":["All"]
   },
   {
     "title": "How to Generate Random Background Colors With JavaScript",
@@ -78,7 +86,8 @@
     "image": "https://cms-assets.tutsplus.com/cdn-cgi/image/width=300/uploads/users/30/posts/37030/preview_image/pre.gif",
     "categories": [
       "JavaScript"
-    ]
+    ],
+    "level":["All"]
   },
   {
     "title": "Switch Between Color Schemes with CSS Variables and JavaScript",
@@ -87,7 +96,8 @@
     "categories": [
       "CSS",
       "JavaScript"
-    ]
+    ],
+    "level":["All"]
   },
   {
     "title": "How to Implement Debounce and Throttle with JavaScript",
@@ -96,7 +106,8 @@
     "categories": [
       "JavaScript",
       "Perfomance"
-    ]
+    ],
+    "level": ["All", "Commission"]
   },
   {
     "title": "How to Animate on Scroll With Vanilla JavaScript",
@@ -106,6 +117,7 @@
       "JavaScript",
       "Scroll Events",
       "Animation"
-    ]
+    ],
+    "level": ["All", "Featured", "Commission"]
   }
 ]
