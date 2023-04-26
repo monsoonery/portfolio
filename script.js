@@ -95,6 +95,11 @@ const createFilter = (key, param, container) => {
 const handleButtonClick = (e, key, param, container) => {
     const button = e.target;
     const buttonState = button.getAttribute("data-state");
+
+    if (key == "level") {
+        resetFilterButtons(button);
+    }
+
     if (buttonState == "inactive") {
         button.classList.add("is-active");
         button.setAttribute("data-state", "active");
@@ -105,8 +110,25 @@ const handleButtonClick = (e, key, param, container) => {
         button.setAttribute("data-state", "inactive");
         currentFilters[key] = currentFilters[key].filter((item) => item !== param);
         handleFilterPosts(currentFilters);
+        if (key == "level") {
+            resetPosts();
+        }
     }
 };
+
+const resetFilterButtons = (currentButton) => {
+    const filterButtons = document.querySelectorAll('.filter-button');
+    [...filterButtons].map(button => {
+        if (button != currentButton) {
+            button.classList.remove('is-active');
+            button.setAttribute('data-state', 'inactive')
+        }
+    })
+}
+const resetPosts = () => {
+    postsContainer.innerHTML = "";
+    postsData.map((post) => createPost(post));
+}
 
 const handleFilterPosts = (filters) => {
     let filteredPosts = [...postsData];
@@ -126,25 +148,25 @@ const handleFilterPosts = (filters) => {
         });
     });
 
-    //   if (filters.categories.length > 0) {
-    //     filteredPosts = filteredPosts.filter((post) =>
-    //       post.categories.some((category) => {
-    //         return filters.categories.includes(category);
-    //       })
-    //     );
+    if (filters.categories.length > 0) {
+        filteredPosts = filteredPosts.filter((post) =>
+            post.categories.some((category) => {
+                return filters.categories.includes(category);
+            })
+        );
 
-    //     // filteredPosts = filteredPosts.filter((post) =>
-    //     //   filters.categories.every((filter) => {
-    //     //     return post.categories.includes(filter);
-    //     //   })
-    //     // );
-    //   }
+        filteredPosts = filteredPosts.filter((post) =>
+            filters.categories.every((filter) => {
+                return post.categories.includes(filter);
+            })
+        );
+    }
 
-    //   if (filters.level.length > 0) {
-    //     filteredPosts = filteredPosts.filter((post) =>
-    //       filters.level.includes(post.level)
-    //     );
-    //   }
+    if (filters.level.length > 0) {
+        filteredPosts = filteredPosts.filter((post) =>
+            filters.level.includes(post.level)
+        );
+    }
 
     postCount.innerText = filteredPosts.length;
 

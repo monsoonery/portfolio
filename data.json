@@ -37,11 +37,12 @@
     "image": "https://cms-assets.tutsplus.com/cdn-cgi/image/width=300/uploads/users/30/posts/42080/preview_image/load_more.png",
     "status": "completed",
     "categories": [
-      "JavaScript",
-      "UX"
+      "Branding",
+      "Music"
     ],
     "level": [
       "All",
+      "Featured",
       "Personal"
     ]
   },
@@ -51,63 +52,79 @@
     "image": "https://cms-assets.tutsplus.com/cdn-cgi/image/width=300/uploads/users/30/posts/37055/preview_image/infinite_loading.jpg",
     "status": "completed",
     "categories": [
-      "JavaScript",
-      "UX",
-      "Scroll Events"
+      "3D print",
+      "Crafting",
     ],
     "level": [
-      "All"
+      "All",
+      "Featured",
+      "Personal"
     ]
   },
   {
-    "title": "How to Implement Pagination with Vanilla JavaScript",
+    "title": "Fuzzy pot - Simple planter",
     "link": "https://webdesign.tutsplus.com/tutorials/pagination-with-vanilla-javascript--cms-41896",
     "image": "https://cms-assets.tutsplus.com/cdn-cgi/image/width=300/uploads/users/30/posts/41896/preview_image/pagination.jpg",
     "status": "completed",
     "categories": [
-      "JavaScript",
-      "UX",
-      "Navigation Design"
+      "3D print",
+      "Functional model"
     ],
     "level": [
-      "All"
+      "All",
+      "Personal"
     ]
   },
   {
-    "title": "How To Build a Simple Carousel With Vanilla JavaScript (14 Lines of Code!)",
+    "title": "Hi-Fi RUSH: 808 (ball form) model",
     "link": "https://webdesign.tutsplus.com/tutorials/how-to-build-a-simple-carousel-with-vanilla-javascript--cms-41734",
     "image": "https://cms-assets.tutsplus.com/cdn-cgi/image/width=300/uploads/users/30/posts/41734/preview_image/slider.png",
     "status": "completed",
     "categories": [
-      "JavaScript",
-      "Slider"
+      "3D print",
+      "Electronics",
+      "CAD",
+      "Functional model"
     ],
     "level": [
-      "All"
+      "All",
+      "Personal"
     ]
   },
   {
-    "title": "4 Quick Steps to Make a Website Responsive",
+    "title": "Splatoon: Ink Tank prop with working light",
     "link": "https://webdesign.tutsplus.com/tutorials/quick-steps-to-make-a-website-responsive--cms-37330",
     "image": "https://cms-assets.tutsplus.com/cdn-cgi/image/width=300/uploads/users/30/posts/37330/preview_image/rwd.jpg",
     "status": "completed",
     "categories": [
-      "Responsive Web Design"
+      "3D print",
+      "Electronics",
+      "CAD",
+      "Cosplay",
+      "Functional model"
     ],
     "level": [
-      "All"
+      "All",
+      "Featured",
+      "Personal"
     ]
   },
   {
-    "title": "How to Recreate Material Design Floating Labels",
+    "title": "Splatoon: Splat Charger prop with working laser",
     "link": "https://webdesign.tutsplus.com/tutorials/recreate-material-design-floating-label--cms-37326",
     "image": "https://cms-assets.tutsplus.com/cdn-cgi/image/width=300/uploads/users/30/posts/37326/preview_image/floating-label.png",
     "status": "completed",
     "categories": [
-      "Material Design"
+      "3D print",
+      "Electronics",
+      "CAD",
+      "Cosplay",
+      "Functional model"
     ],
     "level": [
-      "All"
+      "All",
+      "Featured",
+      "Personal"
     ]
   },
   {
@@ -116,10 +133,15 @@
     "image": "https://cms-assets.tutsplus.com/cdn-cgi/image/width=300/uploads/users/30/posts/37030/preview_image/pre.gif",
     "status": "completed",
     "categories": [
-      "JavaScript"
+      "3D print",
+      "Electronics",
+      "CAD",
+      "Cosplay",
+      "Functional model"
     ],
     "level": [
-      "All"
+      "All",
+      "Work"
     ]
   },
   {
@@ -128,11 +150,15 @@
     "image": "https://cms-assets.tutsplus.com/cdn-cgi/image/width=300/uploads/users/30/posts/36989/preview_image/light-dark.jpg",
     "status": "completed",
     "categories": [
-      "CSS",
-      "JavaScript"
+      "3D print",
+      "Electronics",
+      "CAD",
+      "Cosplay",
+      "Functional model"
     ],
     "level": [
-      "All"
+      "All",
+      "Commission"
     ]
   },
   {
@@ -141,8 +167,11 @@
     "image": "https://cms-assets.tutsplus.com/cdn-cgi/image/width=300/uploads/users/30/posts/36783/preview_image/debounce_throttle.png",
     "status": "completed",
     "categories": [
-      "JavaScript",
-      "Perfomance"
+      "3D print",
+      "Electronics",
+      "CAD",
+      "Cosplay",
+      "Functional model"
     ],
     "level": [
       "All",
@@ -155,9 +184,11 @@
     "image": "https://cms-assets.tutsplus.com/cdn-cgi/image/width=300/uploads/users/30/posts/36671/preview_image/animate-on-scroll.png",
     "status": "completed",
     "categories": [
-      "JavaScript",
-      "Scroll Events",
-      "Animation"
+      "3D print",
+      "Electronics",
+      "CAD",
+      "Cosplay",
+      "Functional model"
     ],
     "level": [
       "All",
