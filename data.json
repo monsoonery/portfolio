@@ -1,24 +1,33 @@
 [
   {
-    "title": "How to Build A JavaScript Countdown Timer",
+    "title": "#DECADE - A semi-competitive Splatoon team",
     "link": "https://webdesign.tutsplus.com/tutorials/how-to-build-a-javascript-countdown-timer--cms-93144",
-    "image": "https://cms-assets.tutsplus.com/cdn-cgi/image/width=300/uploads/users/30/posts/93144/preview_image/timer.png",
+    "image": "https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8",
     "categories": [
-      "JavaScript",
-      "Timer"
+      "Branding"
     ],
-    "level": ["Advanced"]
+    "level": [
+      "All",
+      "Featured",
+      "Commission"
+    ]
   },
   {
-    "title": "How to Create a Sortable HTML Table with JavaScript",
+    "title": "Glitch Techs: Tech Gauntlet model",
     "link": "https://webdesign.tutsplus.com/tutorials/how-to-create-a-sortable-html-table-with-javascript--cms-92993",
-    "image": "https://cms-assets.tutsplus.com/cdn-cgi/image/width=300/uploads/users/30/posts/92993/preview_image/table.png",
+    "image": "https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8",
     "categories": [
-      "JavaScript",
-      "Sorting",
-      "Data Structures"
+      "Hand drawing",
+      "Cosplay",
+      "3D print",
+      "CAD",
+      "Electronics",
+      "Functional model"
     ],
-    "level": ["Advanced"]
+    "level": [
+      "All",
+      "Personal"
+    ]
   },
   {
     "title": "How to Implement a “Load More” Button With Vanilla JavaScript",
@@ -28,7 +37,9 @@
       "JavaScript",
       "UX"
     ],
-    "level": ["Intermediate"]
+    "level": [
+      "Intermediate"
+    ]
   },
   {
     "title": "How to Implement Infinite Scrolling With JavaScript",
@@ -39,7 +50,9 @@
       "UX",
       "Scroll Events"
     ],
-    "level": ["Advanced"]
+    "level": [
+      "Advanced"
+    ]
   },
   {
     "title": "How to Implement Pagination with Vanilla JavaScript",
@@ -50,7 +63,9 @@
       "UX",
       "Navigation Design"
     ],
-    "level": ["Intermediate"]
+    "level": [
+      "Intermediate"
+    ]
   },
   {
     "title": "How To Build a Simple Carousel With Vanilla JavaScript (14 Lines of Code!)",
@@ -60,7 +75,9 @@
       "JavaScript",
       "Slider"
     ],
-    "level": ["Work"]
+    "level": [
+      "Work"
+    ]
   },
   {
     "title": "4 Quick Steps to Make a Website Responsive",
@@ -69,7 +86,9 @@
     "categories": [
       "Responsive Web Design"
     ],
-    "level":["Work"]
+    "level": [
+      "Work"
+    ]
   },
   {
     "title": "How to Recreate Material Design Floating Labels",
@@ -78,7 +97,9 @@
     "categories": [
       "Material Design"
     ],
-    "level":["All"]
+    "level": [
+      "All"
+    ]
   },
   {
     "title": "How to Generate Random Background Colors With JavaScript",
@@ -87,7 +108,9 @@
     "categories": [
       "JavaScript"
     ],
-    "level":["All"]
+    "level": [
+      "All"
+    ]
   },
   {
     "title": "Switch Between Color Schemes with CSS Variables and JavaScript",
@@ -97,7 +120,9 @@
       "CSS",
       "JavaScript"
     ],
-    "level":["All"]
+    "level": [
+      "All"
+    ]
   },
   {
     "title": "How to Implement Debounce and Throttle with JavaScript",
@@ -107,7 +132,10 @@
       "JavaScript",
       "Perfomance"
     ],
-    "level": ["All", "Commission"]
+    "level": [
+      "All",
+      "Commission"
+    ]
   },
   {
     "title": "How to Animate on Scroll With Vanilla JavaScript",
@@ -118,6 +146,10 @@
       "Scroll Events",
       "Animation"
     ],
-    "level": ["All", "Featured", "Commission"]
+    "level": [
+      "All",
+      "Featured",
+      "Commission"
+    ]
   }
 ]
