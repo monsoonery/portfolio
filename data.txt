@@ -7,7 +7,7 @@
       "JavaScript",
       "Timer"
     ],
-    "level": "Advanced"
+    "level": ["Advanced"]
   },
   {
     "title": "How to Create a Sortable HTML Table with JavaScript",
@@ -18,7 +18,7 @@
       "Sorting",
       "Data Structures"
     ],
-    "level": "Advanced"
+    "level": ["Advanced"]
   },
   {
     "title": "How to Implement a “Load More” Button With Vanilla JavaScript",
@@ -28,7 +28,7 @@
       "JavaScript",
       "UX"
     ],
-    "level": "Intermediate"
+    "level": ["Intermediate"]
   },
   {
     "title": "How to Implement Infinite Scrolling With JavaScript",
@@ -39,7 +39,7 @@
       "UX",
       "Scroll Events"
     ],
-    "level": "Advanced"
+    "level": ["Advanced"]
   },
   {
     "title": "How to Implement Pagination with Vanilla JavaScript",
@@ -50,7 +50,7 @@
       "UX",
       "Navigation Design"
     ],
-    "level": "Intermediate"
+    "level": ["Intermediate"]
   },
   {
     "title": "How To Build a Simple Carousel With Vanilla JavaScript (14 Lines of Code!)",
