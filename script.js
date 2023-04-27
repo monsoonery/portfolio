@@ -28,7 +28,7 @@ const noResults = document.getElementById("no-posts");
 console.log(levelsContainer);
 
 
-fetch("https://raw.githubusercontent.com/monsoonery/portfolio/60ce24af6a98a135ecc491e7953a1b738f5ccc85/data.json")
+fetch("https://raw.githubusercontent.com/monsoonery/portfolio/052913e790f5eb086ac72bc17074d33859c4f620/data.json")
     .then(async (response) => {
         if (!response.ok) {
             throw new Error(`HTTP error: ${response.status}`);
@@ -217,19 +217,11 @@ const handleFilterPosts = (filters) => {
             })
         );
     }
-
-    postCount.innerText = filteredPosts.length;
-    // voor het geval de gekozen filters geen resultaten opleveren
-    if (filteredPosts.length == 0) {
-        noResults.innerText = "No projects matching the currently selected tags.";
-    } else {
-        noResults.innerText = "";
-    }
-
     console.log("huidige selectie: ");
     console.log(filteredPosts);
 
     // clear post container en plaats de gefilterde posts op de pagina
     postsContainer.innerHTML = "";
+    postCount.innerText = filteredPosts.length;
     filteredPosts.map((post) => createPost(post));
 };
