@@ -14,9 +14,14 @@ document.write('\
       <a href="contact.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>Contact</a>\
     </div>\
     <div class="w3-panel w3-large">\
-      <i class="fa fa-instagram w3-hover-opacity"></i>\
-      <i class="fa fa-twitter w3-hover-opacity"></i>\
-      <i class="fa fa-linkedin w3-hover-opacity"></i>\
+      <a class="fa fa-brands fa-instagram w3-hover-opacity" href="https://instagram.com"></a>\
+      <a class="fa fa-brands fa-twitter w3-hover-opacity" href="https://twitter.com"></a>\
+      <a class="fa fa-brands fa-linkedin w3-hover-opacity" href="https://linkedin.com"></a>\
+      <svg class="fa w3-hover-opacity" width="1em" height="1em" style="vertical-align:middle">\
+        <a href="https://www.printables.com/@monsoonery">\
+        <polygon _ngcontent points="0 94.05 32.61 75.24 0 56.43 0 94.05" transform="scale(0.18 0.18)"></polygon>\
+        <polygon _ngcontent points="32.61 0 0 18.81 32.61 37.62 32.61 75.24 65.22 56.43 65.22 18.81 32.61 0" transform="scale(0.18 0.18)"></polygon>\
+      </svg>\
     </div>\
   </nav>\
   \
