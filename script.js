@@ -68,7 +68,7 @@ const createProject = (projectData) => {
     project.innerHTML = `
     <div class="project-column">
       <a class="project-preview" href="${link}">
-        <img class="project-image" src="${image}">
+        <img class="project-image" src="${image}" alt="${title}">
       </a>
       <div class="project-content">
         <p class="project-title">${title}</p>

@@ -301,6 +301,10 @@ a {
     display: block;
 }
 
+.project-image {
+    width: 100%; 
+    object-fit: cover;
+}
 .project-column {
     padding: 8px;
 }
