@@ -4,7 +4,7 @@
     "link": "https://google.com",
     "image": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81qgeFYg5MjWwTsAzGMNzrXSIsdZbZZZzcWE7aLoCY2_RyFeVJzsjjlYoR0MUQswc6PhUdeZhNgUp3RlvoBkJlhJgW131g=s1600",
     "status": "Completed",
-    "timeline": [2016-06, 2016-06],
+    "timeline": [[2016,6], [2016,6]],
     "categories": [
       "Branding"
     ],
@@ -19,7 +19,7 @@
     "link": "https://google.com",
     "image": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81qgeFYg5MjWwTsAzGMNzrXSIsdZbZZZzcWE7aLoCY2_RyFeVJzsjjlYoR0MUQswc6PhUdeZhNgUp3RlvoBkJlhJgW131g=s1600",
     "status": "On hold",
-    "timeline": [2016-06, 2016-06],
+    "timeline": [[2016,6], [2016,6]],
     "categories": [
       "Hand drawing",
       "Cosplay",
@@ -38,7 +38,7 @@
     "link": "https://google.com",
     "image": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81qgeFYg5MjWwTsAzGMNzrXSIsdZbZZZzcWE7aLoCY2_RyFeVJzsjjlYoR0MUQswc6PhUdeZhNgUp3RlvoBkJlhJgW131g=s1600",
     "status": "In the works",
-    "timeline": [2017-06, "ongoing"],
+    "timeline": [[2017,6], [0,0]],
     "categories": [
       "Branding",
       "Music"
@@ -54,7 +54,7 @@
     "link": "https://google.com",
     "image": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81qgeFYg5MjWwTsAzGMNzrXSIsdZbZZZzcWE7aLoCY2_RyFeVJzsjjlYoR0MUQswc6PhUdeZhNgUp3RlvoBkJlhJgW131g=s1600",
     "status": "In the works",
-    "timeline": [2023-01, "ongoing"],
+    "timeline": [[2023,1], [0,0]],
     "categories": [
       "3D print",
       "Crafting"
@@ -70,7 +70,7 @@
     "link": "https://google.com",
     "image": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81qgeFYg5MjWwTsAzGMNzrXSIsdZbZZZzcWE7aLoCY2_RyFeVJzsjjlYoR0MUQswc6PhUdeZhNgUp3RlvoBkJlhJgW131g=s1600",
     "status": "Completed",
-    "timeline": [2023-03, 2023-03],
+    "timeline": [[2023, 3], [2023,3]],
     "categories": [
       "3D print",
       "Functional model"
@@ -85,7 +85,7 @@
     "link": "https://google.com",
     "image": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81qgeFYg5MjWwTsAzGMNzrXSIsdZbZZZzcWE7aLoCY2_RyFeVJzsjjlYoR0MUQswc6PhUdeZhNgUp3RlvoBkJlhJgW131g=s1600",
     "status": "In the works",
-    "timeline": [2023-03, "ongoing"],
+    "timeline": [[2023, 3], [0,0]],
     "categories": [
       "3D print",
       "Electronics",
@@ -102,7 +102,7 @@
     "link": "https://google.com",
     "image": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81qgeFYg5MjWwTsAzGMNzrXSIsdZbZZZzcWE7aLoCY2_RyFeVJzsjjlYoR0MUQswc6PhUdeZhNgUp3RlvoBkJlhJgW131g=s1600",
     "status": "In the works",
-    "timeline": [2022-11, "ongoing"],
+    "timeline": [[2022, 11], [0,0]],
     "categories": [
       "3D print",
       "Electronics",
@@ -121,7 +121,7 @@
     "link": "https://google.com",
     "image": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81qgeFYg5MjWwTsAzGMNzrXSIsdZbZZZzcWE7aLoCY2_RyFeVJzsjjlYoR0MUQswc6PhUdeZhNgUp3RlvoBkJlhJgW131g=s1600",
     "status": "In the works",
-    "timeline": [2022-03, "ongoing"],
+    "timeline": [[2022, 03], [0,0]],
     "categories": [
       "3D print",
       "Electronics",
@@ -140,7 +140,7 @@
     "link": "https://google.com",
     "image": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81qgeFYg5MjWwTsAzGMNzrXSIsdZbZZZzcWE7aLoCY2_RyFeVJzsjjlYoR0MUQswc6PhUdeZhNgUp3RlvoBkJlhJgW131g=s1600",
     "status": "completed",
-    "timeline": [2022-03, "ongoing"],
+    "timeline": [[2022, 3], [0,0]],
     "categories": [
       "3D print",
       "Electronics",
@@ -158,7 +158,7 @@
     "link": "https://google.com",
     "image": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81qgeFYg5MjWwTsAzGMNzrXSIsdZbZZZzcWE7aLoCY2_RyFeVJzsjjlYoR0MUQswc6PhUdeZhNgUp3RlvoBkJlhJgW131g=s1600",
     "status": "completed",
-    "timeline": [2022-03, "ongoing"],
+    "timeline": [[2022, 03], [0,0]],
     "categories": [
       "3D print",
       "Electronics",
@@ -176,7 +176,7 @@
     "link": "https://google.com",
     "image": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81qgeFYg5MjWwTsAzGMNzrXSIsdZbZZZzcWE7aLoCY2_RyFeVJzsjjlYoR0MUQswc6PhUdeZhNgUp3RlvoBkJlhJgW131g=s1600",
     "status": "completed",
-    "timeline": [2022-03, "ongoing"],
+    "timeline": [[2022, 3], [0,0]],
     "categories": [
       "3D print",
       "Electronics",
@@ -194,7 +194,7 @@
     "link": "https://google.com",
     "image": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81qgeFYg5MjWwTsAzGMNzrXSIsdZbZZZzcWE7aLoCY2_RyFeVJzsjjlYoR0MUQswc6PhUdeZhNgUp3RlvoBkJlhJgW131g=s1600",
     "status": "completed",
-    "timeline": [2022-03, "ongoing"],
+    "timeline": [[2022, 3], [0,0]],
     "categories": [
       "3D print",
       "Electronics",
