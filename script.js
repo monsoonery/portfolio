@@ -16,18 +16,18 @@ function w3_close() {
 let postsData = "";
 let currentFilters = {
     labels: [],
-    level: ["Featured"],
-    sort: "A-Z"
+    tab: ["Featured"],
+    sort: "a-z"
 };
 
 const postsContainer = document.getElementById("posts-container");
 const labelsContainer = document.getElementById("post-labels");
-const levelsContainer = document.getElementById("post-level");
+const tabsContainer = document.getElementById("post-tab");
 const postCount = document.getElementById("post-count");
 const noResults = document.getElementById("no-posts");
 
 // this is where the magic happens
-fetch("https://raw.githubusercontent.com/monsoonery/portfolio/main/data.json")
+fetch("https://raw.githubusercontent.com/monsoonery/portfolio/f4abb3494668ca6ad088c8f2fc6f387dc858fe08/data.json")
     .then(async (response) => {
         if (!response.ok) {
             throw new Error(`HTTP error: ${response.status}`);
@@ -40,8 +40,8 @@ fetch("https://raw.githubusercontent.com/monsoonery/portfolio/main/data.json")
         postCount.innerText = postsData.length;
 
         // voor elk overview filter een knopje maken
-        levelData = ["Featured", "All", "Personal", "Commission", "Work"]
-        levelData.map((level) => createOverview("level", level, levelsContainer)
+        tabData = ["Featured", "All", "Personal", "Commission", "Work"]
+        tabData.map((tab) => createTabButton("tab", tab, tabsContainer)
         );
 
         // scan alle posts om alle mogelijke label tags te verzamelen
@@ -54,14 +54,14 @@ fetch("https://raw.githubusercontent.com/monsoonery/portfolio/main/data.json")
         ]);
         labelsData.sort(); //sorteren op alphabet
         // voor elke categorie een filter knopje maken
-        labelsData.map((label) => createFilter("labels", label, labelsContainer)
+        labelsData.map((label) => createLabelButton("labels", label, labelsContainer)
         );
         handleFilterPosts(currentFilters);
     });
 
 /* POST CREATION FUNCTION */
 const createPost = (postData) => {
-    const { title, link, image, status, timeline, labels, level } = postData;
+    const { title, link, image, status, timeline, labels, tab } = postData;
     const post = document.createElement("div");
     post.className = "post";
     post.innerHTML = `
@@ -80,17 +80,17 @@ const createPost = (postData) => {
 };
 
 /*********** FILTER BUTTON FUNCS **************/
-const createFilter = (key, param, container) => {
+const createLabelButton = (key, param, container) => {
     const filterButton = document.createElement("button");
     filterButton.className = "filter-button";
     filterButton.innerText = param;
     filterButton.setAttribute("data-state", "inactive");
     filterButton.addEventListener("click", (e) =>
-        handleButtonClickFilter(e, key, param, container)
+        handleButtonClickLabel(e, key, param, container)
     );
     container.append(filterButton);
 };
-const handleButtonClickFilter = (e, key, param, container) => {
+const handleButtonClickLabel = (e, key, param, container) => {
     const button = e.target;
     const buttonState = button.getAttribute("data-state");
     // button active/inactive toggle
@@ -103,21 +103,18 @@ const handleButtonClickFilter = (e, key, param, container) => {
         button.setAttribute("data-state", "inactive");
         currentFilters[key] = currentFilters[key].filter((item) => item !== param);
     }
-    console.log("param");
-    console.log(param);
-
     handleFilterPosts(currentFilters);
 };
 
 /*********** OVERVIEW BUTTON FUNCS **************/
-const createOverview = (key, param, container) => {
+const createTabButton = (key, param, container) => {
     const filterButton = document.createElement("button");
     filterButton.className = "overview-button";
     filterButton.id = param;
     console.log(param);
     // make a button click handler
     filterButton.addEventListener("click", (e) =>
-        handleButtonClickOverview(e, key, param, container)
+        handleButtonClickTab(e, key, param, container)
     );
     // when loading page Featured is selected by default
     if (param == "Featured") {
@@ -156,13 +153,13 @@ const resetPosts = () => {
     postsContainer.innerHTML = "";
     postsData.map((post) => createPost(post));
 }
-const handleButtonClickOverview = (e, key, param, container) => {
+const handleButtonClickTab = (e, key, param, container) => {
     const button = e.target;
     // button active/inactive toggle
     const buttonState = button.getAttribute('data-state');
     if (buttonState == 'inactive') {
         resetFilterButtons(button);
-        var otherBtns = document.getElementsByClassName("content");
+        otherBtns = document.getElementsByClassName("content");
         for (var x = 0; x < otherBtns.length; x++) {
             x.setAttribute('data-state', 'inactive');
         }
@@ -191,10 +188,10 @@ const handleFilterPosts = (filters) => {
     console.log(filteredPosts);
 
     // stap 1: filter posts op basis van featured/all/commission etc
-    if (filters.level.length == 1) {
+    if (filters.tab.length == 1) {
         filteredPosts = filteredPosts.filter((post) =>
-            filters.level.some((filter) => {
-                return post.level.includes(filter);
+            filters.tab.some((filter) => {
+                return post.tab.includes(filter);
             })
         );
     } else {
