@@ -1,7 +1,8 @@
 [
   {
+    "projectnr": 1001,
     "title": "#DECADE - A semi-competitive Splatoon team",
-    "link": "https://google.com",
+    "link": "/1001.html",
     "image": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81qgeFYg5MjWwTsAzGMNzrXSIsdZbZZZzcWE7aLoCY2_RyFeVJzsjjlYoR0MUQswc6PhUdeZhNgUp3RlvoBkJlhJgW131g=s1600",
     "status": "Completed",
     "timeline": [[2016,6], [2016,6]],
@@ -9,12 +10,12 @@
       "Branding"
     ],
     "level": [
-      "Featured",
       "All",
       "Commission"
     ]
   },
   {
+    "projectnr": 1001,
     "title": "Glitch Techs: Tech Gauntlet model",
     "link": "https://google.com",
     "image": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81qgeFYg5MjWwTsAzGMNzrXSIsdZbZZZzcWE7aLoCY2_RyFeVJzsjjlYoR0MUQswc6PhUdeZhNgUp3RlvoBkJlhJgW131g=s1600",
@@ -34,6 +35,7 @@
     ]
   },
   {
+    "projectnr": 1001,
     "title": "5thmonthocean - Mashup artist & DJ",
     "link": "https://google.com",
     "image": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81qgeFYg5MjWwTsAzGMNzrXSIsdZbZZZzcWE7aLoCY2_RyFeVJzsjjlYoR0MUQswc6PhUdeZhNgUp3RlvoBkJlhJgW131g=s1600",
@@ -45,7 +47,6 @@
     ],
     "level": [
       "All",
-      "Featured",
       "Personal"
     ]
   },
@@ -61,7 +62,6 @@
     ],
     "level": [
       "All",
-      "Featured",
       "Personal"
     ]
   },
@@ -112,7 +112,6 @@
     ],
     "level": [
       "All",
-      "Featured",
       "Personal"
     ]
   },
@@ -131,7 +130,6 @@
     ],
     "level": [
       "All",
-      "Featured",
       "Personal"
     ]
   },
@@ -201,7 +199,6 @@
     ],
     "level": [
       "All",
-      "Featured",
       "Commission"
     ]
   },
