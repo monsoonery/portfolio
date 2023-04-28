@@ -66,33 +66,36 @@
         <!-- rest vd header, zie je op elk apparaat-->
         <div class="w3-container">
             <h1><b>Projects</b></h1>
-            <div id="post-level" class="filter-container"></div>
+            <div id="project-tabs" class="filter-container"></div>
             <div class="w3-bottombar"></div>
         </div>
     </header>
 
     <!-- Section that contains blocks with projects-->
     <div class="w3-main">
-        <div class="sort-container">
-            <div class="container__title">Filter by project type(s):</div>
-            <div id="post-labels" class="filter-container"></div>
-        </div>
-
-        <div class="sort-container w3-right">
-            <div class="container__title ">Sort results by:</div>
-            <div id="post-sort" class="filter-container">
-                <select id="sort-dropdown" onchange="handleSort()">
-                    <option value="relevance">Relevance</option>
-                    <option value="a-z" selected>A-Z</option>
-                    <option value="z-a">Z-A</option>
-                    <option value="date ascending">Completion date ascending</option>
-                    <option value="date descending">Completion date descending</option>
-                </select>
+        <div id="sorting-filtering-options">
+            <div class="sort-container">
+                <div class="container__title">Filter by project type(s):</div>
+                <div id="project-labels" class="filter-container"></div>
             </div>
+
+            <div class="w3-right">
+                <div class="container__title ">Sort results by:</div>
+                <div id="project-sort" class="filter-container">
+                    <select id="sort-dropdown" onchange="handleSort()">
+                        <option value="relevance">Relevance</option>
+                        <option value="a-z" selected>A-Z</option>
+                        <option value="z-a">Z-A</option>
+                        <option value="date ascending">Completion date ascending</option>
+                        <option value="date descending">Completion date descending</option>
+                    </select>
+                </div>
+            </div>
+            <div class="container__title"> Results (<span id="project-count"></span>)</div>
+
         </div>
 
-        <div class="container__title"> Results (<span id="post-count"></span>)</div>
-        <div id="posts-container"></div>
+        <div id="projects-container"></div>
     </div>
 </body>
 

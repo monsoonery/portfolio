@@ -89,7 +89,7 @@ a {
 /*navbar*/
 .w3-sidebar {
     height: 100%;
-    width: 300px;
+    width: 250px;
     background-color: #decade;
     position: fixed !important;
     z-index: 3;
@@ -238,7 +238,7 @@ a {
 }
 .w3-main,
 #main {
-    margin-left:300px;
+    margin-left:250px;
     transition: margin-left .4s;
     padding: 16px;
     padding-bottom: 0px;
@@ -260,17 +260,17 @@ a {
     color: #000;
 }
 
-#posts-container {
+#projects-container {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
 }
 
-#posts-container:empty::after {
+#projects-container:empty::after {
     content: "hier de no results string";
 }
 
-.post {
+.project {
     float: left;
     width: 25%;
     padding: 4px;
@@ -280,39 +280,44 @@ a {
 
 /* Responsive layout - makes a three column-layout instead of four columns */
 @media screen and (max-width: 1600px) {
-    .post {
+    .project {
         width: 33.333%;
     }
 }
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 1200px) {
-    .post {
+    .project {
         width: 50%;
     }
 }
 /* Responsive layout - make a single column layout*/
 @media screen and (max-width: 600px) {
-    .post {
+    .project {
         width: 100%;
     }
 }
 
-.post-column {
+.sorting-filtering-options {
+    display: block;
+}
+
+.project-column {
     padding: 8px;
 }
-.post-content {
-    background-color: white;
+.project-content {
     padding: 8px;
 }
-.post-title {
+.project-title {
     margin-top: 0;
+    font-size: 16px;
+    font-weight: 700;
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
 }
-.post-preview {
+.project-preview {
     overflow: hidden;
     width: 100%;
     text-align: center;
@@ -321,16 +326,18 @@ a {
     line-height: 0;
     height: 200px;
 }
-.post-tag {
+.project-tag {
     display: inline-block;
+    font-size: 14px;
     margin-right: 3px;
     margin-bottom: 3px;
-    padding: 0 8px;
+    padding: 2px 4px;
     color: #717171;
     border: 1px solid #9b9b9b;
+    border-radius: 3px;
     white-space: nowrap;
 }
-.post-footer {
+.project-footer {
     text-align: right;
     margin-top: auto;
 }
