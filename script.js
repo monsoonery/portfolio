@@ -15,13 +15,13 @@ function w3_close() {
 
 let postsData = "";
 let currentFilters = {
-    categories: [],
-    level: ["All"],
+    labels: [],
+    level: ["Featured"],
     sort: "A-Z"
 };
 
 const postsContainer = document.getElementById("posts-container");
-const categoriesContainer = document.getElementById("post-categories");
+const labelsContainer = document.getElementById("post-labels");
 const levelsContainer = document.getElementById("post-level");
 const postCount = document.getElementById("post-count");
 const noResults = document.getElementById("no-posts");
@@ -39,36 +39,29 @@ fetch("https://raw.githubusercontent.com/monsoonery/portfolio/main/data.json")
         // totaal aantal posts die we hebben
         postCount.innerText = postsData.length;
 
-        // scan alle posts om alle mogelijke overview tags te verzamelen
-        levelData = Array.from([
-            ...new Set(
-                postsData
-                    .map((post) => post.level)
-                    .reduce((acc, curVal) => acc.concat(curVal), [])
-            )
-        ]);
         // voor elk overview filter een knopje maken
+        levelData = ["Featured", "All", "Personal", "Commission", "Work"]
         levelData.map((level) => createOverview("level", level, levelsContainer)
         );
 
-        // scan alle posts om alle mogelijke category tags te verzamelen
-        categoriesData = Array.from([
+        // scan alle posts om alle mogelijke label tags te verzamelen
+        labelsData = Array.from([
             ...new Set(
                 postsData
-                    .map((post) => post.categories)
+                    .map((post) => post.labels)
                     .reduce((acc, curVal) => acc.concat(curVal), [])
             )
         ]);
-        categoriesData.sort(); //sorteren op alphabet
-
+        labelsData.sort(); //sorteren op alphabet
         // voor elke categorie een filter knopje maken
-        categoriesData.map((category) => createFilter("categories", category, categoriesContainer)
+        labelsData.map((label) => createFilter("labels", label, labelsContainer)
         );
+        handleFilterPosts(currentFilters);
     });
 
 /* POST CREATION FUNCTION */
 const createPost = (postData) => {
-    const { title, link, image, status, timeline, categories, level } = postData;
+    const { title, link, image, status, timeline, labels, level } = postData;
     const post = document.createElement("div");
     post.className = "post";
     post.innerHTML = `
@@ -79,7 +72,7 @@ const createPost = (postData) => {
       <div class="post-content">
         <p class="post-title">${title}</p>
         <div class="post-tags">
-          ${categories.map((category) => { return '<span class="post-tag">' + category + "</span>"; }).join("")}
+          ${labels.map((label) => { return '<span class="post-tag">' + label + "</span>"; }).join("")}
         </div>
       </div>
       </div>`;
@@ -110,8 +103,6 @@ const handleButtonClickFilter = (e, key, param, container) => {
         button.setAttribute("data-state", "inactive");
         currentFilters[key] = currentFilters[key].filter((item) => item !== param);
     }
-    console.log("currentFilters[key]")
-    console.log(currentFilters[key]);
     console.log("param");
     console.log(param);
 
@@ -123,7 +114,7 @@ const createOverview = (key, param, container) => {
     const filterButton = document.createElement("button");
     filterButton.className = "overview-button";
     filterButton.id = param;
-    console.log(filterButton.id);
+    console.log(param);
     // make a button click handler
     filterButton.addEventListener("click", (e) =>
         handleButtonClickOverview(e, key, param, container)
@@ -211,10 +202,10 @@ const handleFilterPosts = (filters) => {
     }
 
     // stap 2: filter posts zodat alleen de posts die alle geselecteerde tags bevatten weergegeven worden
-    if (filters.categories.length > 0) {
+    if (filters.labels.length > 0) {
         filteredPosts = filteredPosts.filter((post) =>
-            filters.categories.every((filter) => {
-                return post.categories.includes(filter);
+            filters.labels.every((filter) => {
+                return post.labels.includes(filter);
             })
         );
     } else {
