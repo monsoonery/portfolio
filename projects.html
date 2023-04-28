@@ -39,11 +39,14 @@
             <a class="fa fa-brands fa-instagram social-media-icon" href="https://instagram.com"></a>
             <a class="fa fa-brands fa-twitter social-media-icon" href="https://twitter.com"></a>
             <a class="fa fa-brands fa-linkedin social-media-icon" href="https://linkedin.com"></a>
-            <a class="fa fa-brands fa-github social-media-icon" href="https://github.com/monsoonery?tab=repositories"></a>
+            <a class="fa fa-brands fa-github social-media-icon"
+                href="https://github.com/monsoonery?tab=repositories"></a>
             <svg class="social-media-icon" width="1em" height="1em" style="vertical-align:middle">
                 <a href="https://www.printables.com/@monsoonery" style="padding: 12px 16px;">
-                    <polygon _ngcontent points="0 94.05 32.61 75.24 0 56.43 0 94.05" transform="scale(0.18 0.18)"></polygon>
-                    <polygon _ngcontent points="32.61 0 0 18.81 32.61 37.62 32.61 75.24 65.22 56.43 65.22 18.81 32.61 0" transform="scale(0.18 0.18)"></polygon>
+                    <polygon _ngcontent points="0 94.05 32.61 75.24 0 56.43 0 94.05" transform="scale(0.18 0.18)">
+                    </polygon>
+                    <polygon _ngcontent points="32.61 0 0 18.81 32.61 37.62 32.61 75.24 65.22 56.43 65.22 18.81 32.61 0"
+                        transform="scale(0.18 0.18)"></polygon>
             </svg>
         </div>
     </nav>
@@ -56,8 +59,10 @@
     <!-- Header -->
     <header class="w3-main" id="projects">
         <!-- die twee hieronder zie je alleen wanneer je apparaat klein is-->
-        <a href="#"><img src="iconwatermark.png" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
-        <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+        <a href="#"><img src="iconwatermark.png" style="width:65px;"
+                class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
+        <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i
+                class="fa fa-bars"></i></span>
         <!-- rest vd header, zie je op elk apparaat-->
         <div class="w3-container">
             <h1><b>Projects</b></h1>
@@ -68,18 +73,22 @@
 
     <!-- Section that contains blocks with projects-->
     <div class="w3-main">
-        <div class="container__title">Filter by project type(s):</div>
-        <div id="post-categories" class="filter-container"></div>
+        <div class="sort-container">
+            <div class="container__title">Filter by project type(s):</div>
+            <div id="post-categories" class="filter-container"></div>
+        </div>
 
-        <div class="container__title">Sort results by:</div>
-        <div id="post-sort" class="filter-container">
-            <select id="sort-dropdown" onchange="handleSort()">
-                <option value="relevance">Relevance</option>
-                <option value="a-z" selected>A-Z</option>
-                <option value="z-a">Z-A</option>
-                <option value="date ascending">Completion date ascending</option>
-                <option value="date descending">Completion date descending</option>
-              </select>
+        <div class="sort-container w3-right">
+            <div class="container__title ">Sort results by:</div>
+            <div id="post-sort" class="filter-container">
+                <select id="sort-dropdown" onchange="handleSort()">
+                    <option value="relevance">Relevance</option>
+                    <option value="a-z" selected>A-Z</option>
+                    <option value="z-a">Z-A</option>
+                    <option value="date ascending">Completion date ascending</option>
+                    <option value="date descending">Completion date descending</option>
+                </select>
+            </div>
         </div>
 
         <div class="container__title"> Results (<span id="post-count"></span>)</div>
