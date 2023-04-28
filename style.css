@@ -289,14 +289,14 @@ main.container {
 }
 
 /* Responsive layout - makes a three column-layout instead of four columns */
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1600px) {
     .post {
         width: 33.333%;
     }
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1200px) {
     .post {
         width: 50%;
     }
@@ -356,6 +356,7 @@ main.container {
 }
 
 .filter-button, .overview-button {
+    font-family: "Work Sans";
     border: none;
     display: inline-block;
     padding: 8px 16px;
@@ -367,6 +368,12 @@ main.container {
     text-align: center;
     cursor: pointer;
     white-space: nowrap
+}
+.filter-button{
+    font-size: 13px;
+}
+.overview-button {
+    font-size: 16px;
 }
 .filter-button.is-active, .overview-button.is-active {
     background-color: #000;

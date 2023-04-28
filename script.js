@@ -26,7 +26,7 @@ const postCount = document.getElementById("post-count");
 const noResults = document.getElementById("no-posts");
 
 
-fetch("https://raw.githubusercontent.com/monsoonery/portfolio/12d3156eeb31b7b627c9bffd4679c15133be6d96/data.json")
+fetch("https://raw.githubusercontent.com/monsoonery/portfolio/main/data.json")
     .then(async (response) => {
         if (!response.ok) {
             throw new Error(`HTTP error: ${response.status}`);
