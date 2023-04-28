@@ -11,6 +11,7 @@
     ],
     "level": [
       "All",
+      "Featured",
       "Commission"
     ]
   },
@@ -31,6 +32,7 @@
     ],
     "level": [
       "All",
+      "Featured",
       "Personal"
     ]
   },
@@ -47,10 +49,12 @@
     ],
     "level": [
       "All",
+      "Featured",
       "Personal"
     ]
   },
   {
+    "projectnr": 1001,
     "title": "Custom pins",
     "link": "https://google.com",
     "image": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81qgeFYg5MjWwTsAzGMNzrXSIsdZbZZZzcWE7aLoCY2_RyFeVJzsjjlYoR0MUQswc6PhUdeZhNgUp3RlvoBkJlhJgW131g=s1600",
@@ -62,10 +66,12 @@
     ],
     "level": [
       "All",
+      "Featured",
       "Personal"
     ]
   },
   {
+    "projectnr": 1001,
     "title": "Fuzzy pot - Simple planter",
     "link": "https://google.com",
     "image": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81qgeFYg5MjWwTsAzGMNzrXSIsdZbZZZzcWE7aLoCY2_RyFeVJzsjjlYoR0MUQswc6PhUdeZhNgUp3RlvoBkJlhJgW131g=s1600",
@@ -77,10 +83,12 @@
     ],
     "level": [
       "All",
+      "Featured",
       "Personal"
     ]
   },
   {
+    "projectnr": 1001,
     "title": "Hi-Fi RUSH: 808 (ball form) model",
     "link": "https://google.com",
     "image": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81qgeFYg5MjWwTsAzGMNzrXSIsdZbZZZzcWE7aLoCY2_RyFeVJzsjjlYoR0MUQswc6PhUdeZhNgUp3RlvoBkJlhJgW131g=s1600",
@@ -98,6 +106,7 @@
     ]
   },
   {
+    "projectnr": 1001,
     "title": "Splatoon: Ink Tank prop with working light",
     "link": "https://google.com",
     "image": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81qgeFYg5MjWwTsAzGMNzrXSIsdZbZZZzcWE7aLoCY2_RyFeVJzsjjlYoR0MUQswc6PhUdeZhNgUp3RlvoBkJlhJgW131g=s1600",
@@ -116,6 +125,7 @@
     ]
   },
   {
+    "projectnr": 1001,
     "title": "Splatoon: Splat Charger prop with working laser",
     "link": "https://google.com",
     "image": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81qgeFYg5MjWwTsAzGMNzrXSIsdZbZZZzcWE7aLoCY2_RyFeVJzsjjlYoR0MUQswc6PhUdeZhNgUp3RlvoBkJlhJgW131g=s1600",
@@ -134,6 +144,7 @@
     ]
   },
   {
+    "projectnr": 1001,
     "title": "projeccie numero 3",
     "link": "https://google.com",
     "image": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81qgeFYg5MjWwTsAzGMNzrXSIsdZbZZZzcWE7aLoCY2_RyFeVJzsjjlYoR0MUQswc6PhUdeZhNgUp3RlvoBkJlhJgW131g=s1600",
@@ -148,10 +159,12 @@
     ],
     "level": [
       "All",
+      "Featured",
       "Work"
     ]
   },
   {
+    "projectnr": 1001,
     "title": "???????",
     "link": "https://google.com",
     "image": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81qgeFYg5MjWwTsAzGMNzrXSIsdZbZZZzcWE7aLoCY2_RyFeVJzsjjlYoR0MUQswc6PhUdeZhNgUp3RlvoBkJlhJgW131g=s1600",
@@ -170,6 +183,7 @@
     ]
   },
   {
+    "projectnr": 1001,
     "title": "Lingoino - The Dutch game show on Arduino",
     "link": "https://google.com",
     "image": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81qgeFYg5MjWwTsAzGMNzrXSIsdZbZZZzcWE7aLoCY2_RyFeVJzsjjlYoR0MUQswc6PhUdeZhNgUp3RlvoBkJlhJgW131g=s1600",
@@ -182,9 +196,11 @@
     "level": [
       "All",
       "Personal"
-    ]
+    ],
+    "featured": true
   },
   {
+    "projectnr": 1001,
     "title": "Geen woning geen koning",
     "link": "https://google.com",
     "image": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81qgeFYg5MjWwTsAzGMNzrXSIsdZbZZZzcWE7aLoCY2_RyFeVJzsjjlYoR0MUQswc6PhUdeZhNgUp3RlvoBkJlhJgW131g=s1600",
@@ -200,9 +216,11 @@
     "level": [
       "All",
       "Commission"
-    ]
+    ],
+    "featured": true
   },
   {
+    "projectnr": 1001,
     "title": "This website",
     "link": "https://google.com",
     "image": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81qgeFYg5MjWwTsAzGMNzrXSIsdZbZZZzcWE7aLoCY2_RyFeVJzsjjlYoR0MUQswc6PhUdeZhNgUp3RlvoBkJlhJgW131g=s1600",
@@ -215,6 +233,7 @@
     "level": [
       "All",
       "Work"
-    ]
+    ],
+    "featured": true
   }
 ]

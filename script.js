@@ -11,12 +11,12 @@ function w3_close() {
 
 
 //TODO:
-//re-implement old code
+// change class and function names
 
 let postsData = "";
 let currentFilters = {
     categories: [],
-    level: [],
+    level: ["All"],
     sort: "A-Z"
 };
 
@@ -26,6 +26,7 @@ const levelsContainer = document.getElementById("post-level");
 const postCount = document.getElementById("post-count");
 const noResults = document.getElementById("no-posts");
 
+// this is where the magic happens
 fetch("https://raw.githubusercontent.com/monsoonery/portfolio/main/data.json")
     .then(async (response) => {
         if (!response.ok) {
@@ -131,8 +132,6 @@ const createOverview = (key, param, container) => {
     if (param == "Featured") {
         filterButton.classList.add("is-active");
         filterButton.setAttribute("data-state", "active");
-        currentFilters[key].push(param);
-        handleFilterPosts(currentFilters);
     } else {
         filterButton.classList.remove("is-active");
         filterButton.setAttribute("data-state", "inactive");
