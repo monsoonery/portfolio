@@ -132,7 +132,7 @@ a {
 
 .w3-container,
 .w3-panel {
-    padding: 0.01em 16px
+    padding: 0.01em 8px
 }
 
 .w3-panel {
@@ -233,12 +233,15 @@ a {
 
 /** header stuff **/
 .w3-bottombar{
+    padding-top: 8px;
     border-bottom:6px solid #ccc!important
 }
 .w3-main,
 #main {
     margin-left:300px;
-    transition: margin-left .4s
+    transition: margin-left .4s;
+    padding: 16px;
+    padding-bottom: 0px;
 }
 /**********************************/
 
@@ -247,18 +250,6 @@ a {
 
 
 /******************************************************************************************/
-
-
-
-.container {
-    margin: 0 auto;
-    padding: 0 24px;
-    width: 100%;
-}
-
-main.container {
-    margin-top: 32px;
-}
 
 .container__title {
     font-weight: 700;
@@ -276,15 +267,11 @@ main.container {
     content: "hier de no results string";
 }
 
-/* Add padding BETWEEN each column */
-#posts-container,
-#posts-container > .post {
-  padding: 8px;
-}
-
 .post {
     float: left;
     width: 25%;
+    padding: 4px;
+    background-clip: content-box;
     background-color: white;
 }
 
@@ -294,14 +281,12 @@ main.container {
         width: 33.333%;
     }
 }
-
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 1200px) {
     .post {
         width: 50%;
     }
 }
-
 /* Responsive layout - make a single column layout*/
 @media screen and (max-width: 600px) {
     .post {
@@ -309,7 +294,13 @@ main.container {
     }
 }
 
-
+.post-column {
+    padding: 8px;
+}
+.post-content {
+    background-color: white;
+    padding: 8px;
+}
 .post-title {
     margin-top: 0;
     display: -webkit-box;
@@ -318,11 +309,6 @@ main.container {
     overflow: hidden;
     text-overflow: ellipsis;
 }
-
-.post-content {
-    padding: 16px;
-}
-
 .post-preview {
     overflow: hidden;
     width: 100%;
@@ -332,7 +318,6 @@ main.container {
     line-height: 0;
     height: 200px;
 }
-
 .post-tag {
     display: inline-block;
     margin-right: 3px;
@@ -342,11 +327,12 @@ main.container {
     border: 1px solid #9b9b9b;
     white-space: nowrap;
 }
-
 .post-footer {
     text-align: right;
     margin-top: auto;
 }
+
+
 
 .filter-container {
     display: flex;

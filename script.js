@@ -16,7 +16,8 @@ function w3_close() {
 let postsData = "";
 let currentFilters = {
     categories: [],
-    level: []
+    level: [],
+    sort: "A-Z"
 };
 
 const postsContainer = document.getElementById("posts-container");
@@ -25,43 +26,43 @@ const levelsContainer = document.getElementById("post-level");
 const postCount = document.getElementById("post-count");
 const noResults = document.getElementById("no-posts");
 
-
 fetch("https://raw.githubusercontent.com/monsoonery/portfolio/main/data.json")
     .then(async (response) => {
         if (!response.ok) {
             throw new Error(`HTTP error: ${response.status}`);
         }
         postsData = await response.json();
+
+        // maak een html elementje voor elke post
         postsData.map((post) => createPost(post));
-        console.log("posts created");
-        console.log(postsData);
+        // totaal aantal posts die we hebben
         postCount.innerText = postsData.length;
 
-        categoriesData = [
-            ...new Set(
-                postsData
-                    .map((post) => post.categories)
-                    .reduce((acc, curVal) => acc.concat(curVal), [])
-            )
-        ];
-        // voor elke categorie een filter knopje maken
-        categoriesData.map((category) => createFilter("categories", category, categoriesContainer)
-        );
-        console.log("category filters (categoriesData) created")
-        console.log(categoriesData);
-
-        levelData = [
+        // scan alle posts om alle mogelijke overview tags te verzamelen
+        levelData = Array.from([
             ...new Set(
                 postsData
                     .map((post) => post.level)
                     .reduce((acc, curVal) => acc.concat(curVal), [])
             )
-        ];
+        ]);
         // voor elk overview filter een knopje maken
         levelData.map((level) => createOverview("level", level, levelsContainer)
         );
-        console.log("overview filters (levelData) created")
-        console.log(levelData);
+
+        // scan alle posts om alle mogelijke category tags te verzamelen
+        categoriesData = Array.from([
+            ...new Set(
+                postsData
+                    .map((post) => post.categories)
+                    .reduce((acc, curVal) => acc.concat(curVal), [])
+            )
+        ]);
+        categoriesData.sort(); //sorteren op alphabet
+
+        // voor elke categorie een filter knopje maken
+        categoriesData.map((category) => createFilter("categories", category, categoriesContainer)
+        );
     });
 
 /* POST CREATION FUNCTION */
@@ -69,16 +70,17 @@ const createPost = (postData) => {
     const { title, link, image, status, timeline, categories, level } = postData;
     const post = document.createElement("div");
     post.className = "post";
-    post.classList.add("column");
     post.innerHTML = `
+    <div class="post-column">
       <a class="post-preview" href="${link}">
         <img class="post-image" src="${image}">
       </a>
       <div class="post-content">
         <p class="post-title">${title}</p>
         <div class="post-tags">
-          ${categories.map((category) => {return '<span class="post-tag">' + category + "</span>";}).join("")}
+          ${categories.map((category) => { return '<span class="post-tag">' + category + "</span>"; }).join("")}
         </div>
+      </div>
       </div>`;
     postsContainer.append(post);
 };
@@ -111,6 +113,7 @@ const handleButtonClickFilter = (e, key, param, container) => {
     console.log(currentFilters[key]);
     console.log("param");
     console.log(param);
+
     handleFilterPosts(currentFilters);
 };
 
@@ -133,7 +136,7 @@ const createOverview = (key, param, container) => {
     } else {
         filterButton.classList.remove("is-active");
         filterButton.setAttribute("data-state", "inactive");
-    } 
+    }
     // add appropriate FA icons
     if (param == "Featured") {
         filterButton.innerHTML = `<i class="fa fa-star w3-margin-right"></i>${param}`;
@@ -151,8 +154,6 @@ const createOverview = (key, param, container) => {
 };
 // dit cleart alleen de visuele selectie in html/css NIET de array!
 const resetFilterButtons = (currentButton) => {
-    // TODO: classes zodanig veranderen dat dit alleen effect heeft op de overview filters
-    // want nu reset hij ook 
     const filterButtons = document.querySelectorAll('.overview-button');
     [...filterButtons].map(button => {
         if (button != currentButton) {
@@ -183,57 +184,60 @@ const handleButtonClickOverview = (e, key, param, container) => {
     }
 };
 
+function handleSort() {
+    currentFilters["sort"] = [];
+    currentFilters["sort"].push(this.value);
+    handleFilterPosts(currentFilters);
+}
+document.getElementById("sort-dropdown").onchange = handleSort;
+
 // functie om posts te filteren en vervolgens weer te geven
 const handleFilterPosts = (filters) => {
-    console.log("zojuist gekozen filter:");
+    console.log("zojuist gekozen filters:");
     console.log(filters);
-    // nieuwe arrays maken zodat de originele niet gemutate wordt
+    // nieuwe array maken zodat de originele niet gemutate wordt
     let filteredPosts = [...postsData];
     console.log("array with all my posts:")
     console.log(filteredPosts);
 
-    console.log("succesfully chose to filter by category tag");
+    // stap 1: filter posts op basis van featured/all/commission etc
+    if (filters.level.length == 1) {
+        filteredPosts = filteredPosts.filter((post) =>
+            filters.level.some((filter) => {
+                return post.level.includes(filter);
+            })
+        );
+    } else {
+        alert("dr gaat iets mis met die overview sort");
+    }
 
-    let filterKeys = Object.keys(filters);
-    console.log("filtering keys:")
-    console.log(filterKeys);
-
-    filterKeys.forEach((key) => {
-        let currentKey = filters[key]
-        if (currentKey.length <= 0) {
-            return;
-        }
-
-        filteredPosts = filteredPosts.filter((post) => {
-            let currentValue = post[key]
-            return Array.isArray(currentValue)
-                ? currentValue.some((val) => currentKey.includes(val))
-                : currentKey.includes(currentValue);
-        });
-    });
-
-    // filter posts zodat alleen de posts die alle geselecteerde tags bevatten weergegeven worden
+    // stap 2: filter posts zodat alleen de posts die alle geselecteerde tags bevatten weergegeven worden
     if (filters.categories.length > 0) {
         filteredPosts = filteredPosts.filter((post) =>
             filters.categories.every((filter) => {
                 return post.categories.includes(filter);
             })
         );
+    } else {
+        //als geen tags zijn geselecteerd valt er ook niks te sorten :)
     }
-    console.log("tot nu toe:");
-    console.log(filteredPosts);
 
-    if (filters.level.length > 0) {
-        filteredPosts = filteredPosts.filter((post) =>
-            filters.level.some((filter) => {
-                return post.level.includes(filter);
-            })
-        );
+    // stap 3: sorteer de posts
+    if (filters.sort == "a-z") {
+        filteredPosts.sort(function (a, b) {
+            return a.title.toLowerCase().localeCompare(b.title.toLowerCase());
+        });
+    } else if (filters.sort == "z-a") {
+        filteredPosts.sort(function (a, b) {
+            return b.title.toLowerCase().localeCompare(a.title.toLowerCase());
+        });
+    } else if (filters.sort == "relevance") {
+        // algoritme momentje
     }
-    console.log("huidige selectie: ");
-    console.log(filteredPosts);
 
     // clear post container en plaats de gefilterde posts op de pagina
+    console.log("huidige selectie: ");
+    console.log(filteredPosts);
     postsContainer.innerHTML = "";
     postCount.innerText = filteredPosts.length;
     filteredPosts.map((post) => createPost(post));

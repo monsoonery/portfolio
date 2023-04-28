@@ -71,6 +71,17 @@
         <div class="container__title">Filter by project type(s):</div>
         <div id="post-categories" class="filter-container"></div>
 
+        <div class="container__title">Sort results by:</div>
+        <div id="post-sort" class="filter-container">
+            <select id="sort-dropdown" onchange="handleSort()">
+                <option value="relevance">Relevance</option>
+                <option value="a-z" selected>A-Z</option>
+                <option value="z-a">Z-A</option>
+                <option value="date ascending">Completion date ascending</option>
+                <option value="date descending">Completion date descending</option>
+              </select>
+        </div>
+
         <div class="container__title"> Results (<span id="post-count"></span>)</div>
         <div id="posts-container"></div>
     </div>
