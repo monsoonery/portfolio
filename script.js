@@ -67,7 +67,7 @@ fetch("https://raw.githubusercontent.com/monsoonery/portfolio/main/data.json")
 
 /* POST CREATION FUNCTION */
 const createPost = (postData) => {
-    const { title, link, image, categories, level } = postData;
+    const { title, link, image, status, timeline, categories, level } = postData;
     const post = document.createElement("div");
     post.className = "post";
     post.classList.add("column");
