@@ -27,7 +27,7 @@ const noResults = document.getElementById("no-posts");
 console.log(levelsContainer);
 
 
-fetch("https://raw.githubusercontent.com/monsoonery/portfolio/052913e790f5eb086ac72bc17074d33859c4f620/data.json")
+fetch("https://raw.githubusercontent.com/monsoonery/portfolio/main/data.json")
     .then(async (response) => {
         if (!response.ok) {
             throw new Error(`HTTP error: ${response.status}`);
@@ -118,20 +118,24 @@ const handleButtonClickFilter = (e, key, param, container) => {
 /*********** OVERVIEW BUTTON FUNCS **************/
 const createOverview = (key, param, container) => {
     const filterButton = document.createElement("button");
-    filterButton.className = "filter-button";
-    // when loading page ALL is selected by default
-    if (param == "All") {
-        filterButton.classList.add("is-active");
-        filterButton.setAttribute("data-state", "active");
-    } else {
-        filterButton.classList.remove("is-active");
-        filterButton.setAttribute("data-state", "inactive");
-    }
-    // button click handler
+    filterButton.className = "overview-button";
+    filterButton.id = param;
+    console.log(filterButton.id);
+    // make a button click handler
     filterButton.addEventListener("click", (e) =>
         handleButtonClickOverview(e, key, param, container)
     );
-    // add appropriate FA icons (NOT WORKING RN)
+    // when loading page Featured is selected by default
+    if (param == "Featured") {
+        filterButton.classList.add("is-active");
+        filterButton.setAttribute("data-state", "active");
+        currentFilters[key].push(param);
+        handleFilterPosts(currentFilters);
+    } else {
+        filterButton.classList.remove("is-active");
+        filterButton.setAttribute("data-state", "inactive");
+    } 
+    // add appropriate FA icons
     if (param == "Featured") {
         filterButton.innerHTML = `<i class="fa fa-star w3-margin-right"></i>${param}`;
     } else if (param == "All") {
@@ -149,7 +153,8 @@ const createOverview = (key, param, container) => {
 // dit cleart alleen de visuele selectie in html/css NIET de array!
 const resetFilterButtons = (currentButton) => {
     // TODO: classes zodanig veranderen dat dit alleen effect heeft op de overview filters
-    const filterButtons = document.querySelectorAll('.filter-button');
+    // want nu reset hij ook 
+    const filterButtons = document.querySelectorAll('.overview-button');
     [...filterButtons].map(button => {
         if (button != currentButton) {
             button.classList.remove('is-active');
@@ -163,8 +168,8 @@ const resetPosts = () => {
 }
 const handleButtonClickOverview = (e, key, param, container) => {
     const button = e.target;
-    const buttonState = button.getAttribute('data-state');
     // button active/inactive toggle
+    const buttonState = button.getAttribute('data-state');
     if (buttonState == 'inactive') {
         resetFilterButtons(button);
         var otherBtns = document.getElementsByClassName("content");
@@ -175,8 +180,6 @@ const handleButtonClickOverview = (e, key, param, container) => {
         button.setAttribute('data-state', 'active');
         currentFilters[key] = [];
         currentFilters[key].push(param);
-        console.log("param");
-        console.log(param);
         handleFilterPosts(currentFilters);
     }
 };

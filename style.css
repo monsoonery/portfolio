@@ -355,7 +355,7 @@ main.container {
     gap: 10px;
 }
 
-.filter-button {
+.filter-button, .overview-button {
     border: none;
     display: inline-block;
     padding: 8px 16px;
@@ -368,21 +368,19 @@ main.container {
     cursor: pointer;
     white-space: nowrap
 }
-
-.tag-filters {
-    width: 300px;
-}
-
-.filter-button.is-active {
+.filter-button.is-active, .overview-button.is-active {
     background-color: #000;
     color: #fff;
 }
 
-.filter-button:hover {
+.filter-button:hover, .overview-button:hover {
     color: black;
     background-color: #DECADE;
 }
 
+.tag-filters {
+    width: 300px;
+}
 
 
 /****Responsive stuff*******/
