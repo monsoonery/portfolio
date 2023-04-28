@@ -3,7 +3,8 @@
     "title": "#DECADE - A semi-competitive Splatoon team",
     "link": "https://google.com",
     "image": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81qgeFYg5MjWwTsAzGMNzrXSIsdZbZZZzcWE7aLoCY2_RyFeVJzsjjlYoR0MUQswc6PhUdeZhNgUp3RlvoBkJlhJgW131g=s1600",
-    "status": "completed",
+    "status": "Completed",
+    "timeline": [2016-06, 2016-06],
     "categories": [
       "Branding"
     ],
@@ -11,13 +12,14 @@
       "Featured",
       "All",
       "Commission"
-    ]
+    ],
   },
   {
     "title": "Glitch Techs: Tech Gauntlet model",
     "link": "https://google.com",
     "image": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81qgeFYg5MjWwTsAzGMNzrXSIsdZbZZZzcWE7aLoCY2_RyFeVJzsjjlYoR0MUQswc6PhUdeZhNgUp3RlvoBkJlhJgW131g=s1600",
-    "status": "completed",
+    "status": "On hold",
+    "timeline": [2016-06, 2016-06],
     "categories": [
       "Hand drawing",
       "Cosplay",
@@ -35,7 +37,8 @@
     "title": "5thmonthocean - Mashup artist & DJ",
     "link": "https://google.com",
     "image": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81qgeFYg5MjWwTsAzGMNzrXSIsdZbZZZzcWE7aLoCY2_RyFeVJzsjjlYoR0MUQswc6PhUdeZhNgUp3RlvoBkJlhJgW131g=s1600",
-    "status": "completed",
+    "status": "In the works",
+    "timeline": [2017-06, "ongoing"],
     "categories": [
       "Branding",
       "Music"
@@ -50,7 +53,8 @@
     "title": "Custom pins",
     "link": "https://google.com",
     "image": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81qgeFYg5MjWwTsAzGMNzrXSIsdZbZZZzcWE7aLoCY2_RyFeVJzsjjlYoR0MUQswc6PhUdeZhNgUp3RlvoBkJlhJgW131g=s1600",
-    "status": "completed",
+    "status": "In the works",
+    "timeline": [2023-01, "ongoing"],
     "categories": [
       "3D print",
       "Crafting"
@@ -65,7 +69,8 @@
     "title": "Fuzzy pot - Simple planter",
     "link": "https://google.com",
     "image": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81qgeFYg5MjWwTsAzGMNzrXSIsdZbZZZzcWE7aLoCY2_RyFeVJzsjjlYoR0MUQswc6PhUdeZhNgUp3RlvoBkJlhJgW131g=s1600",
-    "status": "completed",
+    "status": "Completed",
+    "timeline": [2023-03, 2023-03],
     "categories": [
       "3D print",
       "Functional model"
@@ -79,7 +84,8 @@
     "title": "Hi-Fi RUSH: 808 (ball form) model",
     "link": "https://google.com",
     "image": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81qgeFYg5MjWwTsAzGMNzrXSIsdZbZZZzcWE7aLoCY2_RyFeVJzsjjlYoR0MUQswc6PhUdeZhNgUp3RlvoBkJlhJgW131g=s1600",
-    "status": "completed",
+    "status": "In the works",
+    "timeline": [2023-03, "ongoing"],
     "categories": [
       "3D print",
       "Electronics",
@@ -95,7 +101,8 @@
     "title": "Splatoon: Ink Tank prop with working light",
     "link": "https://google.com",
     "image": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81qgeFYg5MjWwTsAzGMNzrXSIsdZbZZZzcWE7aLoCY2_RyFeVJzsjjlYoR0MUQswc6PhUdeZhNgUp3RlvoBkJlhJgW131g=s1600",
-    "status": "completed",
+    "status": "In the works",
+    "timeline": [2022-11, "ongoing"],
     "categories": [
       "3D print",
       "Electronics",
@@ -113,7 +120,8 @@
     "title": "Splatoon: Splat Charger prop with working laser",
     "link": "https://google.com",
     "image": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81qgeFYg5MjWwTsAzGMNzrXSIsdZbZZZzcWE7aLoCY2_RyFeVJzsjjlYoR0MUQswc6PhUdeZhNgUp3RlvoBkJlhJgW131g=s1600",
-    "status": "completed",
+    "status": "In the works",
+    "timeline": [2022-03, "ongoing"],
     "categories": [
       "3D print",
       "Electronics",
@@ -132,6 +140,7 @@
     "link": "https://google.com",
     "image": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81qgeFYg5MjWwTsAzGMNzrXSIsdZbZZZzcWE7aLoCY2_RyFeVJzsjjlYoR0MUQswc6PhUdeZhNgUp3RlvoBkJlhJgW131g=s1600",
     "status": "completed",
+    "timeline": [2022-03, "ongoing"],
     "categories": [
       "3D print",
       "Electronics",
@@ -149,6 +158,7 @@
     "link": "https://google.com",
     "image": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81qgeFYg5MjWwTsAzGMNzrXSIsdZbZZZzcWE7aLoCY2_RyFeVJzsjjlYoR0MUQswc6PhUdeZhNgUp3RlvoBkJlhJgW131g=s1600",
     "status": "completed",
+    "timeline": [2022-03, "ongoing"],
     "categories": [
       "3D print",
       "Electronics",
@@ -166,6 +176,7 @@
     "link": "https://google.com",
     "image": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81qgeFYg5MjWwTsAzGMNzrXSIsdZbZZZzcWE7aLoCY2_RyFeVJzsjjlYoR0MUQswc6PhUdeZhNgUp3RlvoBkJlhJgW131g=s1600",
     "status": "completed",
+    "timeline": [2022-03, "ongoing"],
     "categories": [
       "3D print",
       "Electronics",
@@ -183,6 +194,7 @@
     "link": "https://google.com",
     "image": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81qgeFYg5MjWwTsAzGMNzrXSIsdZbZZZzcWE7aLoCY2_RyFeVJzsjjlYoR0MUQswc6PhUdeZhNgUp3RlvoBkJlhJgW131g=s1600",
     "status": "completed",
+    "timeline": [2022-03, "ongoing"],
     "categories": [
       "3D print",
       "Electronics",
