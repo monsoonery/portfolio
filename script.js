@@ -12,7 +12,6 @@ function w3_close() {
 
 //TODO:
 //re-implement old code
-//make database
 
 let postsData = "";
 let currentFilters = {
@@ -71,19 +70,17 @@ const createPost = (postData) => {
     const { title, link, image, categories, level } = postData;
     const post = document.createElement("div");
     post.className = "post";
+    post.classList.add("column");
     post.innerHTML = `
-      <a class="post-preview" href="${link}" target="_blank">
+      <a class="post-preview" href="${link}">
         <img class="post-image" src="${image}">
       </a>
       <div class="post-content">
         <p class="post-title">${title}</p>
         <div class="post-tags">
-          ${categories.map((category) => {
-        return '<span class="post-tag">' + category + "</span>";
-    }).join("")}
+          ${categories.map((category) => {return '<span class="post-tag">' + category + "</span>";}).join("")}
         </div>
-      </div>
-  `;
+      </div>`;
     postsContainer.append(post);
 };
 
@@ -122,7 +119,7 @@ const handleButtonClickFilter = (e, key, param, container) => {
 const createOverview = (key, param, container) => {
     const filterButton = document.createElement("button");
     filterButton.className = "filter-button";
-    filterButton.innerText = param;
+    // when loading page ALL is selected by default
     if (param == "All") {
         filterButton.classList.add("is-active");
         filterButton.setAttribute("data-state", "active");
@@ -130,9 +127,23 @@ const createOverview = (key, param, container) => {
         filterButton.classList.remove("is-active");
         filterButton.setAttribute("data-state", "inactive");
     }
+    // button click handler
     filterButton.addEventListener("click", (e) =>
         handleButtonClickOverview(e, key, param, container)
     );
+    // add appropriate FA icons (NOT WORKING RN)
+    if (param == "Featured") {
+        filterButton.innerHTML = `<i class="fa fa-star w3-margin-right"></i>${param}`;
+    } else if (param == "All") {
+        filterButton.innerHTML = `<i class="fa fa-globe w3-margin-right"></i>${param}`;
+    } else if (param == "Personal") {
+        filterButton.innerHTML = `<i class="fa fa-user w3-margin-right"></i>${param}`;
+    } else if (param == "Commission") {
+        filterButton.innerHTML = `<i class="fa fa-file-invoice-dollar w3-margin-right"></i>${param}`;
+    } else if (param == "Work") {
+        filterButton.innerHTML = `<i class="fa fa-briefcase w3-margin-right"></i>${param}`;
+    }
+    // alright now add this overview button to the container
     container.append(filterButton);
 };
 // dit cleart alleen de visuele selectie in html/css NIET de array!
