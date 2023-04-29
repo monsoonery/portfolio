@@ -21,6 +21,8 @@ const projectsContainer = document.getElementById("projects-container");
 const labelsContainer = document.getElementById("project-labels");
 const tabsContainer = document.getElementById("project-tabs");
 const filtersContainer = document.getElementById("sort-filter-container");
+filtersContainer.style.maxHeight = null;
+filtersContainer.style.height = "0";
 filtersContainer.style.display = "none";
 const projectCount = document.getElementById("project-count");
 const sortFilterButton = document.getElementById("sort-filter-button");
@@ -110,7 +112,7 @@ const handleButtonClickLabel = (e, key, param, container) => {
 /*********** OVERVIEW BUTTON FUNCS **************/
 const createTabButton = (key, param, container) => {
     const filterButton = document.createElement("button");
-    filterButton.className = "overview-button";
+    filterButton.className = "tab-button";
     filterButton.id = param;
     console.log(param);
     // make a button click handler
@@ -142,7 +144,7 @@ const createTabButton = (key, param, container) => {
 };
 // dit cleart alleen de visuele selectie in html/css NIET de array!
 const resetFilterButtons = (currentButton) => {
-    const filterButtons = document.querySelectorAll('.overview-button');
+    const filterButtons = document.querySelectorAll('.tab-button');
     [...filterButtons].map(button => {
         if (button != currentButton) {
             button.classList.remove('is-active');
@@ -251,12 +253,35 @@ let cardMouseEnter = function () {
     document.querySelector(':root').style.setProperty("--rotate-card", num);
 };
 
-sortFilterButton.addEventListener("click", (e) => {
-    if (filtersContainer.style.display == "none") {
-        filtersContainer.style.display = "block";
-        document.getElementById("sort-filter-icon").className = "fa fa-angles-up";
+let filterContainerExpandFunction = function () {
+    filterIcon = document.getElementById("sort-filter-icon");
+    if (filtersContainer.style.maxHeight) {
+        // currently open, so close it
+        filtersContainer.style.height = "150px";
+        filtersContainer.classList.remove("open");
+        filtersContainer.style.maxHeight = null;
+        filtersContainer.style.height = 0;
+        filterIcon.classList.remove("fa-angles-up");
+        filterIcon.classList.add("fa-angles-down");
     } else {
-        filtersContainer.style.display = "none";
-        document.getElementById("sort-filter-icon").className = "fa fa-angles-down";
+        // currently closed, so open it
+        filtersContainer.style.display = "block";
+        filtersContainer.classList.add("open");
+        filtersContainer.style.height = filtersContainer.scrollHeight + "px";
+        filtersContainer.style.maxHeight = filtersContainer.scrollHeight + "px";
+        filterIcon.classList.remove("fa-angles-down");
+        filterIcon.classList.add("fa-angles-up");
     }
+}
+
+sortFilterButton.addEventListener("click", (e) => {
+    filterContainerExpandFunction();
 });
+
+
+window.addEventListener('resize', function (event) {
+    if (filtersContainer.classList.contains("open")) {
+        filtersContainer.style.height = "auto";
+        filtersContainer.style.maxHeight = filtersContainer.scrollHeight + "px";
+    }
+}, true);

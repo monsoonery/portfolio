@@ -110,7 +110,7 @@
     "projectnr": 1001,
     "title": "Splatoon: Ink Tank prop with working light",
     "link": "https://google.com",
-    "image": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81qgeFYg5MjWwTsAzGMNzrXSIsdZbZZZzcWE7aLoCY2_RyFeVJzsjjlYoR0MUQswc6PhUdeZhNgUp3RlvoBkJlhJgW131g=s1600",
+    "image": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81oVDyr9-P4uW2hZbaqij5jweUOO2EPDDO_iCi3vgAoK2xaUr55N9KTF_ja4R_br5iIgNwYQLdLg4lqeuM4Xf7MM1jSnxw=s1600",
     "status": "In the works",
     "timeline": [[2022, 11], [0,0]],
     "labels": [
@@ -273,5 +273,24 @@
       "Work"
     ],
     "featured": false
+  },
+  {
+    "projectnr": 1001,
+    "title": "Chaddeus Maximus - The battle bot that builds block towers",
+    "link": "https://google.com",
+    "image": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81pgmRHQ3a91RA0DAfo-NX6jNHVJlf7lUq2BYaTNW9PtGGTxE8dwD-30NwlA2cgTibs_5u1fQOvrvmP-JWLjob-g2WSLmw=s1600",
+    "status": "completed",
+    "timeline": [[2022, 3], [0,0]],
+    "labels": [
+      "Coding",
+      "Branding"
+    ],
+    "tab": [
+      "All",
+      "Work"
+    ],
+    "featured": false
   }
 ]
+
+
