@@ -62,7 +62,7 @@ fetch("https://raw.githubusercontent.com/monsoonery/portfolio/main/data.json")
 
 /* project CREATION FUNCTION */
 const createProject = (projectData) => {
-    const { title, link, image, status, timeline, labels, tab } = projectData;
+    const { title, link, icon, image, status, timeline, labels, tab } = projectData;
     const project = document.createElement("div");
     project.className = "project";
     project.innerHTML = `
@@ -71,7 +71,9 @@ const createProject = (projectData) => {
         <img class="project-image" src="${image}" alt="${title}">
       </a>
       <div class="project-content">
-        <p class="project-title">${title}</p>
+        <p class="project-title">
+            <img src="${icon}" style="width:15px; height: 15px;">
+            ${title}</p>
         <div class="project-tags">
           ${labels.map((label) => { return '<span class="project-tag">' + label + "</span>"; }).join("")}
         </div>
