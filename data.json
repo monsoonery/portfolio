@@ -113,7 +113,6 @@
     "timeline": [[2022, 11], [2023,4]],
     "labels": [
       "3D print",
-      "Electronics",
       "CAD",
       "Cosplay"
     ],
@@ -173,7 +172,6 @@
       "3D print",
       "Electronics",
       "CAD",
-      "Cosplay",
       "Prototype"
     ],
     "tab": [
@@ -246,7 +244,6 @@
       "CAD",
       "Branding",
       "Prototype",
-      "Electronics",
       "Render"
     ],
     "tab": [
@@ -294,7 +291,7 @@
   },
   {
     "projectnr": 1001,
-    "title": "Loop Living Coccoon mold",
+    "title": "Loop Living Cocoon mold",
     "link": "https://google.com",
     "image": "https://socialistmodernism.com/wp-content/uploads/2017/07/placeholder-image.png",
     "status": "Completed",
