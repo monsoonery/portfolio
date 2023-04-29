@@ -24,7 +24,7 @@ const filtersContainer = document.getElementById("sort-filter-options");
 const projectCount = document.getElementById("project-count");
 
 // this is where the magic happens
-fetch("https://raw.githubusercontent.com/monsoonery/portfolio/08721beaa16a7c64ecdf56d9212eb2d78674a412/data.json")
+fetch("https://raw.githubusercontent.com/monsoonery/portfolio/main/data.json")
     .then(async (response) => {
         if (!response.ok) {
             throw new Error(`HTTP error: ${response.status}`);

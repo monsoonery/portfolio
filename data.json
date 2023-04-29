@@ -165,7 +165,7 @@
   },
   {
     "projectnr": 1001,
-    "title": "???????",
+    "title": "Engravity - Desktop CNC engraving machine",
     "link": "https://google.com",
     "image": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81qgeFYg5MjWwTsAzGMNzrXSIsdZbZZZzcWE7aLoCY2_RyFeVJzsjjlYoR0MUQswc6PhUdeZhNgUp3RlvoBkJlhJgW131g=s1600",
     "status": "completed",
@@ -201,7 +201,7 @@
   },
   {
     "projectnr": 1001,
-    "title": "Geen woning geen koning",
+    "title": "Ember - Outdoor camping light",
     "link": "https://google.com",
     "image": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81qgeFYg5MjWwTsAzGMNzrXSIsdZbZZZzcWE7aLoCY2_RyFeVJzsjjlYoR0MUQswc6PhUdeZhNgUp3RlvoBkJlhJgW131g=s1600",
     "status": "completed",
@@ -222,6 +222,40 @@
   {
     "projectnr": 1001,
     "title": "This website",
+    "link": "https://google.com",
+    "image": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81qgeFYg5MjWwTsAzGMNzrXSIsdZbZZZzcWE7aLoCY2_RyFeVJzsjjlYoR0MUQswc6PhUdeZhNgUp3RlvoBkJlhJgW131g=s1600",
+    "status": "completed",
+    "timeline": [[2022, 3], [0,0]],
+    "labels": [
+      "Coding",
+      "Branding"
+    ],
+    "tab": [
+      "All",
+      "Work"
+    ],
+    "featured": true
+  },
+  {
+    "projectnr": 1001,
+    "title": "DRIP - Drone delivery box concept",
+    "link": "https://google.com",
+    "image": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81qgeFYg5MjWwTsAzGMNzrXSIsdZbZZZzcWE7aLoCY2_RyFeVJzsjjlYoR0MUQswc6PhUdeZhNgUp3RlvoBkJlhJgW131g=s1600",
+    "status": "completed",
+    "timeline": [[2022, 3], [0,0]],
+    "labels": [
+      "Coding",
+      "Branding"
+    ],
+    "tab": [
+      "All",
+      "Work"
+    ],
+    "featured": true
+  },
+  {
+    "projectnr": 1001,
+    "title": "Coffee Table - Designing 3D-printed connectors for furniture",
     "link": "https://google.com",
     "image": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81qgeFYg5MjWwTsAzGMNzrXSIsdZbZZZzcWE7aLoCY2_RyFeVJzsjjlYoR0MUQswc6PhUdeZhNgUp3RlvoBkJlhJgW131g=s1600",
     "status": "completed",
