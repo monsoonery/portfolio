@@ -182,26 +182,35 @@ const handleFilterProjects = (filters) => {
     // nieuwe array maken zodat de originele niet gemutate wordt
     let filteredProjects = [...projectsData];
 
-    // stap 1: filter projects op basis van featured/all/commission etc
+    // stap 1: filter projects op basis van featured/all/work/personal etc
     if (filters.tab.length == 1) {
         filteredProjects = filteredProjects.filter((project) =>
             filters.tab.some((filter) => {
                 return project.tab.includes(filter);
             })
         );
+        // bij de features tab moet sort & filter disabled zijn
         if (filters.tab[0] == "Featured") {
-            document.getElementById("project-results").style.display = "none";
-            filtersContainer.style.display = "none";
+            console.log(document.querySelectorAll('.hide-on-featured'));
+            document.querySelectorAll('.hide-on-featured').forEach(function(el) {
+                el.style.display = 'none';
+             });
+            //document.getElementById("project-results").style.display = "none";
+            //filtersContainer.style.display = "none";
         } else {
-            document.getElementById("project-results").style.display = "block";
-            filtersContainer.style.display = "flex";
+            document.querySelectorAll('.hide-on-featured').forEach(function(el) {
+                el.style.display = 'block';
+             });
+            //document.getElementById("project-results").style.display = "block";
+            //filtersContainer.style.display = "flex";
         }
     } else {
         alert("dr gaat iets mis met die overview sort");
     }
 
     // stap 2: filter projects zodat alleen de projects die alle geselecteerde tags bevatten weergegeven worden
-    if (filters.labels.length > 0) {
+    // dit moet hoort alleen bij non-featured tab
+    if (filters.tab[0] != "Featured" && filters.labels.length > 0) {
         filteredProjects = filteredProjects.filter((project) =>
             filters.labels.every((filter) => {
                 return project.labels.includes(filter);
@@ -232,8 +241,17 @@ const handleFilterProjects = (filters) => {
     filteredProjects.map((project) => createProject(project));
 };
 
-let cardMouseEnter = function(){
+let cardMouseEnter = function () {
     num = (Math.random() * 1.5 + 0.5) * (Math.random() >= 0.5 ? 1 : -1);
     console.log(num);
     document.querySelector(':root').style.setProperty("--rotate-card", num);
 };
+
+document.getElementById("sort-filter-button").addEventListener("click", (e) => {
+    if (filtersContainer.style.display == "none") {
+        filtersContainer.style.display = "flex";
+
+    } else {
+        filtersContainer.style.display = "none";
+    }
+});

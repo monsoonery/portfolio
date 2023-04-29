@@ -71,9 +71,12 @@
     </header>
 
     <!-- Section that contains blocks with projects-->
+    <div class="main" style="display:flex;align-items:right">
+        <button id="sort-filter-button" style="float:right; width:100px; text-align: right;" onclick="expandSortFilter()">Sort & filter</button>
+    </div>
     <div class="main">
-        <!-- Section with filtering options-->
-        <div id="sort-filter-options">
+        <!-- Section with sorting and filtering options-->
+        <div id="sort-filter-options" class="hide-on-featured">
             <!-- Labels-->
             <div class="w3-container">
                 <div class="container__title">Filter by project type(s):</div>
@@ -94,7 +97,7 @@
             </div>
         </div>
         <!-- Section with results-->
-        <div class="container__title" id="project-results"> Results (<span id="project-count"></span>)</div>
+        <div class="container__title hide-on-featured" id="project-results"> Results (<span id="project-count"></span>)</div>
         <div id="projects-container"></div>
     </div>
 </body>
