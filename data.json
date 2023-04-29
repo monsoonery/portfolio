@@ -23,12 +23,12 @@
     "status": "On hold",
     "timeline": [[2016,6], [2016,6]],
     "labels": [
-      "Hand drawing",
+      "Drawing",
       "Cosplay",
       "3D print",
       "CAD",
       "Electronics",
-      "Functional model"
+      "Prototype"
     ],
     "tab": [
       "All",
@@ -41,7 +41,7 @@
     "title": "5thmonthocean - Mashup artist & DJ",
     "link": "https://google.com",
     "image": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81q20oloupaJhz_1_sP7OCb7WZj_LqGbt33WjsnQunXqq48WIVRJCBjsNoJDuqsPpo9pUgeqhEIvfPUs2xwn0QZTeO_-ig=s1600",
-    "status": "In the works",
+    "status": "Ongoing",
     "timeline": [[2017,6], [0,0]],
     "labels": [
       "Branding",
@@ -58,7 +58,7 @@
     "title": "Custom pins",
     "link": "https://google.com",
     "image": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81qgeFYg5MjWwTsAzGMNzrXSIsdZbZZZzcWE7aLoCY2_RyFeVJzsjjlYoR0MUQswc6PhUdeZhNgUp3RlvoBkJlhJgW131g=s1600",
-    "status": "In the works",
+    "status": "Ongoing",
     "timeline": [[2023,1], [0,0]],
     "labels": [
       "3D print",
@@ -78,8 +78,7 @@
     "status": "Completed",
     "timeline": [[2023, 3], [2023,3]],
     "labels": [
-      "3D print",
-      "Functional model"
+      "3D print"
     ],
     "tab": [
       "All",
@@ -92,13 +91,12 @@
     "title": "Hi-Fi RUSH: 808 (ball form) model",
     "link": "https://google.com",
     "image": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81qgeFYg5MjWwTsAzGMNzrXSIsdZbZZZzcWE7aLoCY2_RyFeVJzsjjlYoR0MUQswc6PhUdeZhNgUp3RlvoBkJlhJgW131g=s1600",
-    "status": "In the works",
+    "status": "Ongoing",
     "timeline": [[2023, 3], [0,0]],
     "labels": [
       "3D print",
       "Electronics",
-      "CAD",
-      "Functional model"
+      "CAD"
     ],
     "tab": [
       "All",
@@ -111,14 +109,13 @@
     "title": "Splatoon: Ink Tank prop with working light",
     "link": "https://google.com",
     "image": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81oVDyr9-P4uW2hZbaqij5jweUOO2EPDDO_iCi3vgAoK2xaUr55N9KTF_ja4R_br5iIgNwYQLdLg4lqeuM4Xf7MM1jSnxw=s1600",
-    "status": "In the works",
-    "timeline": [[2022, 11], [0,0]],
+    "status": "Completed",
+    "timeline": [[2022, 11], [2023,4]],
     "labels": [
       "3D print",
       "Electronics",
       "CAD",
-      "Cosplay",
-      "Functional model"
+      "Cosplay"
     ],
     "tab": [
       "All",
@@ -131,14 +128,13 @@
     "title": "Splatoon: Splat Charger prop with working laser",
     "link": "https://google.com",
     "image": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81qgeFYg5MjWwTsAzGMNzrXSIsdZbZZZzcWE7aLoCY2_RyFeVJzsjjlYoR0MUQswc6PhUdeZhNgUp3RlvoBkJlhJgW131g=s1600",
-    "status": "In the works",
+    "status": "Ongoing",
     "timeline": [[2022, 3], [0,0]],
     "labels": [
       "3D print",
       "Electronics",
       "CAD",
-      "Cosplay",
-      "Functional model"
+      "Cosplay"
     ],
     "tab": [
       "All",
@@ -155,10 +151,10 @@
     "timeline": [[2022, 3], [0,0]],
     "labels": [
       "3D print",
+      "Drawing",
       "Electronics",
       "CAD",
-      "Cosplay",
-      "Functional model"
+      "Prototype"
     ],
     "tab": [
       "All",
@@ -178,7 +174,7 @@
       "Electronics",
       "CAD",
       "Cosplay",
-      "Functional model"
+      "Prototype"
     ],
     "tab": [
       "All",
@@ -195,7 +191,8 @@
     "timeline": [[2021, 11], [2022, 1]],
     "labels": [
       "Electronics",
-      "Coding"
+      "Coding",
+      "Prototype"
     ],
     "tab": [
       "All",
@@ -211,11 +208,9 @@
     "status": "completed",
     "timeline": [[2022, 3], [0,0]],
     "labels": [
-      "3D print",
       "Electronics",
       "CAD",
-      "Cosplay",
-      "Functional model"
+      "Render"
     ],
     "tab": [
       "All",
@@ -248,8 +243,11 @@
     "status": "completed",
     "timeline": [[2022, 3], [0,0]],
     "labels": [
-      "Coding",
-      "Branding"
+      "CAD",
+      "Branding",
+      "Prototype",
+      "Electronics",
+      "Render"
     ],
     "tab": [
       "All",
@@ -265,8 +263,9 @@
     "status": "completed",
     "timeline": [[2022, 3], [0,0]],
     "labels": [
-      "Coding",
-      "Branding"
+      "3D print",
+      "CAD",
+      "Prototype"
     ],
     "tab": [
       "All",
@@ -282,8 +281,43 @@
     "status": "completed",
     "timeline": [[2022, 3], [0,0]],
     "labels": [
-      "Coding",
-      "Branding"
+      "3d print",
+      "CAD",
+      "Electronics",
+      "Prototype"
+    ],
+    "tab": [
+      "All",
+      "Work"
+    ],
+    "featured": false
+  },
+  {
+    "projectnr": 1001,
+    "title": "Loop Living Coccoon mold",
+    "link": "https://google.com",
+    "image": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81pgmRHQ3a91RA0DAfo-NX6jNHVJlf7lUq2BYaTNW9PtGGTxE8dwD-30NwlA2cgTibs_5u1fQOvrvmP-JWLjob-g2WSLmw=s1600",
+    "status": "completed",
+    "timeline": [[2022, 3], [0,0]],
+    "labels": [
+      "CAD"
+    ],
+    "tab": [
+      "All",
+      "Work"
+    ],
+    "featured": false
+  },
+  {
+    "projectnr": 1001,
+    "title": "TT Budweiser - Beer pong machine",
+    "link": "https://google.com",
+    "image": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81pgmRHQ3a91RA0DAfo-NX6jNHVJlf7lUq2BYaTNW9PtGGTxE8dwD-30NwlA2cgTibs_5u1fQOvrvmP-JWLjob-g2WSLmw=s1600",
+    "status": "completed",
+    "timeline": [[2022, 3], [0,0]],
+    "labels": [
+      "Electronics",
+      "3D print"
     ],
     "tab": [
       "All",
