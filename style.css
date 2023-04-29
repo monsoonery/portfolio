@@ -217,6 +217,11 @@ a {
     user-select: none
 }
 
+#sort-filter-container {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
 .w3-button:hover {
     color: #000 !important;
     background-color: white !important;
@@ -256,30 +261,30 @@ a {
     border-bottom: 6px solid #ccc !important
 }
 
+.w3-bottombarblack {
+    border-top: 2px solid #000 !important
+}
+
 .main {
     margin-left: 250px;
     transition: margin-left .4s;
-    padding: 16px;
+    padding: 8px;
     padding-top: 0px;
     padding-bottom: 0px;
 }
 
-.sort-container {
-    display: inline-block;
-}
-
-.sorting-options {
-    float: right !important
-}
-
 /**********************************/
 
-
+.spacer {
+    padding:16px;
+}
 
 
 
 /*********************projects stuff*****************/
 .container__title {
+    padding-top: 4px;
+    padding-bottom: 4px;
     font-weight: 700;
     font-size: 14px;
     color: #000;
@@ -292,7 +297,7 @@ a {
 }
 
 #projects-container:empty::after {
-    content: "hier de no results string";
+    content: "No projects matching the currently selected tags";
 }
 
 .project {
@@ -329,8 +334,8 @@ a {
     }
 }
 
-.sort-filter-options {
-    display: block;
+#sort-filter-container {
+    display: none;
 }
 
 .project-preview {
@@ -392,9 +397,19 @@ a {
     justify-content: flex-start;
     gap: 10px;
 }
+
+#sort-filter-subsection {
+    background-color: #ccc!important;
+}
+
 #sort-filter-button {
-    display: flex;
-    float: left;
+    background-color: inherit;
+    padding: 6px;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-weight: 700;
+    font-size: 14px;
 }
 .labels-container {
     display: flex;
@@ -499,4 +514,43 @@ a {
     .w3-auto {
         max-width: 100%
     }
+}
+
+.w3-animate-opacity{
+    animation:opac 0.8s
+}
+@keyframes opac{
+    from{
+        opacity:0
+    }
+     to{
+        opacity:1
+    }
+}
+
+
+.w3-row:after,
+.w3-row:before,
+.w3-row-padding:after,
+.w3-row-padding:before {
+    content: "";
+    display: table;
+    clear: both
+}
+.w3-row-padding,
+.w3-row-padding>.w3-half,
+.w3-row-padding>.w3-third,
+.w3-row-padding>.w3-twothird,
+.w3-row-padding>.w3-threequarter,
+.w3-row-padding>.w3-quarter,
+.w3-row-padding>.w3-col {
+    padding: 0 8px
+}
+
+.w3-rest{
+    overflow:hidden
+}
+.w3-col,.w3-half,.w3-third,.w3-twothird,.w3-threequarter,.w3-quarter{
+    float:left;
+    width:100%
 }

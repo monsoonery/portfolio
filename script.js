@@ -20,8 +20,10 @@ let currentFilters = {
 const projectsContainer = document.getElementById("projects-container");
 const labelsContainer = document.getElementById("project-labels");
 const tabsContainer = document.getElementById("project-tabs");
-const filtersContainer = document.getElementById("sort-filter-options");
+const filtersContainer = document.getElementById("sort-filter-container");
+filtersContainer.style.display = "none";
 const projectCount = document.getElementById("project-count");
+const sortFilterButton = document.getElementById("sort-filter-button");
 
 // this is where the magic happens
 fetch("https://raw.githubusercontent.com/monsoonery/portfolio/main/data.json")
@@ -53,7 +55,7 @@ fetch("https://raw.githubusercontent.com/monsoonery/portfolio/main/data.json")
         // voor elke categorie een filter knopje maken
         labelsData.map((label) => createLabelButton("labels", label, labelsContainer));
 
-        // filteren sort de projects (featured en a-z on page load)
+        // filter, sort and finally display the projects (featured en a-z on page load)
         handleFilterProjects(currentFilters);
     });
 
@@ -170,6 +172,7 @@ const handleButtonClickTab = (e, key, param, container) => {
     }
 };
 
+// functie voor als de waarde in de sort dropdown wordt veranderd
 function handleSort() {
     currentFilters["sort"] = [];
     currentFilters["sort"].push(this.value);
@@ -184,32 +187,33 @@ const handleFilterProjects = (filters) => {
 
     // stap 1: filter projects op basis van featured/all/work/personal etc
     if (filters.tab.length == 1) {
-        filteredProjects = filteredProjects.filter((project) =>
-            filters.tab.some((filter) => {
-                return project.tab.includes(filter);
-            })
-        );
-        // bij de features tab moet sort & filter disabled zijn
+        //exceptions for featured tab
         if (filters.tab[0] == "Featured") {
+            filteredProjects = filteredProjects.filter((project) => {
+                return project.featured;
+            });
+            // bij de features tab moet sort & filter disabled zijn
             console.log(document.querySelectorAll('.hide-on-featured'));
-            document.querySelectorAll('.hide-on-featured').forEach(function(el) {
+            document.querySelectorAll('.hide-on-featured').forEach(function (el) {
                 el.style.display = 'none';
-             });
-            //document.getElementById("project-results").style.display = "none";
-            //filtersContainer.style.display = "none";
+            });
         } else {
-            document.querySelectorAll('.hide-on-featured').forEach(function(el) {
+            filteredProjects = filteredProjects.filter((project) =>
+                filters.tab.some((filter) => {
+                    return project.tab.includes(filter);
+                })
+            );
+            document.querySelectorAll('.hide-on-featured').forEach(function (el) {
                 el.style.display = 'block';
-             });
-            //document.getElementById("project-results").style.display = "block";
-            //filtersContainer.style.display = "flex";
+            });
         }
+        console.log(filteredProjects);
     } else {
         alert("dr gaat iets mis met die overview sort");
     }
 
     // stap 2: filter projects zodat alleen de projects die alle geselecteerde tags bevatten weergegeven worden
-    // dit moet hoort alleen bij non-featured tab
+    // dit moet alleen bij non-featured tab
     if (filters.tab[0] != "Featured" && filters.labels.length > 0) {
         filteredProjects = filteredProjects.filter((project) =>
             filters.labels.every((filter) => {
@@ -247,11 +251,12 @@ let cardMouseEnter = function () {
     document.querySelector(':root').style.setProperty("--rotate-card", num);
 };
 
-document.getElementById("sort-filter-button").addEventListener("click", (e) => {
+sortFilterButton.addEventListener("click", (e) => {
     if (filtersContainer.style.display == "none") {
-        filtersContainer.style.display = "flex";
-
+        filtersContainer.style.display = "block";
+        document.getElementById("sort-filter-icon").className = "fa fa-angles-up";
     } else {
         filtersContainer.style.display = "none";
+        document.getElementById("sort-filter-icon").className = "fa fa-angles-down";
     }
 });
