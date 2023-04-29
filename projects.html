@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="//unpkg.com/fast-average-color/dist/index.min.js"></script>
     <script src="script.js" defer></script>
 </head>
 
@@ -58,31 +57,32 @@
     <!-- Main page content-->
 
     <!-- Header (page title + main tabs) -->
-    <header class="w3-main" id="projects">
+    <header class="main" id="projects">
         <!-- die twee hieronder zie je alleen wanneer je apparaat klein is-->
-        <a href="#"><img src="iconwatermark.png" style="width:65px;"
-                class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
-        <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i
-                class="fa fa-bars"></i></span>
+        <a href="#"><img src="iconwatermark.png" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
+        <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
         <!-- rest vd header, zie je op elk apparaat-->
         <div class="w3-container">
             <h1><b>Projects</b></h1>
-            <div id="project-tabs" class="filter-container"></div>
+            <div class="tabs-container" id="project-tabs">
+            </div>
             <div class="w3-bottombar"></div>
         </div>
     </header>
 
     <!-- Section that contains blocks with projects-->
-    <div class="w3-main">
-        <div id="sorting-filtering-options">
-            <div class="sort-container">
+    <div class="main">
+        <!-- Section with filtering options-->
+        <div id="sort-filter-options">
+            <!-- Labels-->
+            <div class="w3-container">
                 <div class="container__title">Filter by project type(s):</div>
-                <div id="project-labels" class="filter-container"></div>
+                <div class="labels-container" id="project-labels"></div>
             </div>
-
-            <div class="w3-right">
+            <!-- Sorting-->
+            <div class="sorting-options">
                 <div class="container__title ">Sort results by:</div>
-                <div id="project-sort" class="filter-container">
+                <div class="sort-container" id="project-sort">
                     <select id="sort-dropdown" onchange="handleSort()">
                         <option value="relevance">Relevance</option>
                         <option value="a-z" selected>A-Z</option>
@@ -92,10 +92,9 @@
                     </select>
                 </div>
             </div>
-            <div class="container__title"> Results (<span id="project-count"></span>)</div>
-
         </div>
-
+        <!-- Section with results-->
+        <div class="container__title" id="project-results"> Results (<span id="project-count"></span>)</div>
         <div id="projects-container"></div>
     </div>
 </body>

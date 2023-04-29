@@ -9,10 +9,7 @@ function w3_close() {
     document.getElementById("myOverlay").style.display = "none";
 }
 
-
 //TODO:
-// change class and function names
-
 let projectsData = "";
 let currentFilters = {
     labels: [],
@@ -23,11 +20,11 @@ let currentFilters = {
 const projectsContainer = document.getElementById("projects-container");
 const labelsContainer = document.getElementById("project-labels");
 const tabsContainer = document.getElementById("project-tabs");
-const filtersContainer = document.getElementById("sorting-filtering-options");
+const filtersContainer = document.getElementById("sort-filter-options");
 const projectCount = document.getElementById("project-count");
 
 // this is where the magic happens
-fetch("https://raw.githubusercontent.com/monsoonery/portfolio/f32a2a64878b246944ee34d570011ecb1706f930/data.json")
+fetch("https://raw.githubusercontent.com/monsoonery/portfolio/08721beaa16a7c64ecdf56d9212eb2d78674a412/data.json")
     .then(async (response) => {
         if (!response.ok) {
             throw new Error(`HTTP error: ${response.status}`);
@@ -41,7 +38,7 @@ fetch("https://raw.githubusercontent.com/monsoonery/portfolio/f32a2a64878b246944
         projectsData.map((project) => createProject(project));
 
         // voor elke tab een knopje maken
-        tabData = ["Featured", "All", "Personal", "Commission", "Work"]
+        tabData = ["Featured", "All", "Personal", "Work"]
         tabData.map((tab) => createTabButton("tab", tab, tabsContainer));
 
         // scan alle projects om alle mogelijke label tags te verzamelen
@@ -77,6 +74,7 @@ const createProject = (projectData) => {
         </div>
       </div>
       </div>`;
+    project.onmouseenter = cardMouseEnter;
     projectsContainer.append(project);
 };
 
@@ -127,15 +125,15 @@ const createTabButton = (key, param, container) => {
     }
     // add appropriate FA icons
     if (param == "Featured") {
-        filterButton.innerHTML = `<i class="fa fa-star w3-margin-right"></i>${param}`;
+        filterButton.innerHTML = `<i class="fa fa-star filterbutton-margin"></i>${param}`;
     } else if (param == "All") {
-        filterButton.innerHTML = `<i class="fa fa-globe w3-margin-right"></i>${param}`;
+        filterButton.innerHTML = `<i class="fa fa-globe filterbutton-margin"></i>${param}`;
     } else if (param == "Personal") {
-        filterButton.innerHTML = `<i class="fa fa-user w3-margin-right"></i>${param}`;
+        filterButton.innerHTML = `<i class="fa fa-user filterbutton-margin"></i>${param}`;
     } else if (param == "Commission") {
-        filterButton.innerHTML = `<i class="fa fa-file-invoice-dollar w3-margin-right"></i>${param}`;
+        filterButton.innerHTML = `<i class="fa fa-file-invoice-dollar filterbutton-margin"></i>${param}`;
     } else if (param == "Work") {
-        filterButton.innerHTML = `<i class="fa fa-briefcase w3-margin-right"></i>${param}`;
+        filterButton.innerHTML = `<i class="fa fa-briefcase filterbutton-margin"></i>${param}`;
     }
     // alright now add this overview button to the container
     container.append(filterButton);
@@ -181,15 +179,8 @@ document.getElementById("sort-dropdown").onchange = handleSort;
 
 // functie om projects te filteren en vervolgens weer te geven
 const handleFilterProjects = (filters) => {
-    console.log("zojuist gekozen filters:");
-    console.log(filters);
     // nieuwe array maken zodat de originele niet gemutate wordt
     let filteredProjects = [...projectsData];
-    console.log("array with all my projects:")
-    console.log(filteredProjects);
-
-    console.log("saus")
-    console.log(filters.tab)
 
     // stap 1: filter projects op basis van featured/all/commission etc
     if (filters.tab.length == 1) {
@@ -199,8 +190,10 @@ const handleFilterProjects = (filters) => {
             })
         );
         if (filters.tab[0] == "Featured") {
+            document.getElementById("project-results").style.display = "none";
             filtersContainer.style.display = "none";
         } else {
+            document.getElementById("project-results").style.display = "block";
             filtersContainer.style.display = "flex";
         }
     } else {
@@ -237,4 +230,10 @@ const handleFilterProjects = (filters) => {
     projectsContainer.innerHTML = "";
     projectCount.innerText = filteredProjects.length;
     filteredProjects.map((project) => createProject(project));
+};
+
+let cardMouseEnter = function(){
+    num = (Math.random() * 1.5 + 0.5) * (Math.random() >= 0.5 ? 1 : -1);
+    console.log(num);
+    document.querySelector(':root').style.setProperty("--rotate-card", num);
 };
