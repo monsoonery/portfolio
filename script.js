@@ -9,7 +9,6 @@ function w3_close() {
     document.getElementById("myOverlay").style.display = "none";
 }
 
-//TODO:
 let projectsData = "";
 let currentFilters = {
     labels: [],
@@ -28,7 +27,7 @@ const projectCount = document.getElementById("project-count");
 const sortFilterButton = document.getElementById("sort-filter-button");
 
 // this is where the magic happens
-fetch("https://raw.githubusercontent.com/monsoonery/portfolio/369e3fbe17e562c00342180ff1b2499c8b4f4613/data.json")
+fetch("https://raw.githubusercontent.com/monsoonery/portfolio/main/data.json")
     .then(async (response) => {
         if (!response.ok) {
             throw new Error(`HTTP error: ${response.status}`);
