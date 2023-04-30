@@ -74,7 +74,7 @@ function getTimeline(timeline) {
     if (JSON.stringify(startDate).trim() == JSON.stringify(endDate).trim()) {
         // format for single-month projects
         return getMonthName(startDate[1]) + ' ' + startDate[0];
-    } else if (JSON.stringify(endDate).trim() == "[0,0]") {
+    } else if (JSON.stringify(endDate).trim() == "[9999,99]") {
         // format for ongoing/no end date projects
         return getMonthName(startDate[1]) + ' ' + startDate[0] + ' &ndash; ';
     } else {
