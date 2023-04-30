@@ -271,8 +271,14 @@ const handleFilterProjects = (filters) => {
                 console.log("date asc");
                 filteredProjects.sort(function (a, b) {
                     if (a.timeline[1][0] < b.timeline[1][0]) {
+                        return -1;
+                    } else if (a.timeline[1][0] > b.timeline[1][0]) {
+                        return 1;  
+                    } else {
                         if (a.timeline[1][1] < b.timeline[1][1]) {
                             return -1;
+                        } else if (a.timeline[1][1] > b.timeline[1][1]) {
+                            return 1;
                         }
                     }
                 });
