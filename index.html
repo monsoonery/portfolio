@@ -12,18 +12,23 @@
   <script src="script.js"></script>
 </head>
 
-<body class="ewaja" style="max-width:1600px; background-image:url('https://lh3.googleusercontent.com/drive-viewer/AFGJ81qoxpBSISZofzDszExImVDEZ8mjQHWxkIPONNo4LevDBCHvGQYtp5FbyGZEzjnlRyFuwAJ4lrMoV_LjcSelpUQOuURUIw=s1600'); background-attachment: fixed; background-repeat: no-repeat; background-position: center">
+<body class="ewaja"
+  style="max-width:1600px; background-image:url('https://lh3.googleusercontent.com/drive-viewer/AFGJ81qoxpBSISZofzDszExImVDEZ8mjQHWxkIPONNo4LevDBCHvGQYtp5FbyGZEzjnlRyFuwAJ4lrMoV_LjcSelpUQOuURUIw=s1600'); background-attachment: fixed; background-repeat: no-repeat; background-position: center">
   <script src="nav.js"></script>
 
   <!-- Main page content-->
-  <div class="w3-main" style="margin-left:300px">
+  <div class="main">
     <!-- Header -->
-    <header id="home">
-      <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:65px;"
-          class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
-      <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i
-          class="fa fa-bars"></i></span>
-      <div class="w3-container">
+    <header id="header-home">
+      <div class="hide-on-large-screens">
+        <span id="hamburger-menu-button" class="float-left hover-text-grey" style="margin:16px;" onclick="w3_open()">
+          <i class="fa fa-bars fa-3x"></i>
+        </span>
+        <a href="#" class="float-right" style="margin:16px; width:48px; height:48px">
+          <img src="42.webp" style="max-height: 100%;">
+        </a>
+      </div>
+      <div class="default-container">
         <h1><b>test</b></h1>
         welcome!
       </div>

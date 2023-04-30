@@ -1,10 +1,10 @@
 function getMonthName(monthNumber) {
     const date = new Date();
+    date.setDate(15);
     date.setMonth(monthNumber - 1);
-  
-    return date.toLocaleString('en-US', { month: 'long' });
-  }
-  
+
+    return date.toLocaleString('en-US', {month: 'long',});
+}
 
 // Script to open and close sidebar
 function w3_open() {
@@ -71,19 +71,23 @@ fetch("https://raw.githubusercontent.com/monsoonery/portfolio/main/data.json")
 function getTimeline(timeline) {
     var startDate = timeline[0];
     var endDate = timeline[1];
-    if (JSON.stringify(startDate) == JSON.stringify(endDate)) {
-        // format for same month / single-day projects
-        return timelineString = getMonthName(startDate[1]) + ' ' + startDate[0];
-    } else if (JSON.stringify(endDate) == "[0,0]"){
+    console.log("bro");
+    console.log(JSON.stringify(startDate).trim());
+    console.log(JSON.stringify(endDate).trim());
+    if (JSON.stringify(startDate).trim() == JSON.stringify(endDate).trim()) {
+        // format for single-month projects
+        return getMonthName(startDate[1]) + ' ' + startDate[0];
+    } else if (JSON.stringify(endDate).trim() == "[0,0]") {
         // format for ongoing/no end date projects
-        return timelineString = getMonthName(startDate[1]) + ' ' + startDate[0] + ' - ';
+        return getMonthName(startDate[1]) + ' ' + startDate[0] + ' &ndash; ';
     } else {
         if (startDate[0] == endDate[0]) {
             // format for multi-month projects, but completed within the same year
-            return timelineString = getMonthName(startDate[1]) + ' - ' + getMonthName(endDate[1]) + ' ' + endDate[0]
+            console.log("here");
+            return getMonthName(startDate[1]) + ' &ndash; ' + getMonthName(endDate[1]) + ' ' + endDate[0]
         } else {
             // everything else
-            return timelineString = getMonthName(startDate[1]) + ' ' + startDate[0] + ' - ' + getMonthName(endDate[1]) + ' ' + endDate[0]
+            return getMonthName(startDate[1]) + ' ' + startDate[0] + ' &ndash; ' + getMonthName(endDate[1]) + ' ' + endDate[0]
         }
     }
     return "no date"
@@ -123,7 +127,7 @@ const createProject = (projectData) => {
 /*********** FILTER BUTTON FUNCS **************/
 const createLabelButton = (key, param, container) => {
     const filterButton = document.createElement("button");
-    filterButton.className = "filter-button";
+    filterButton.className = "label-button";
     filterButton.innerText = param;
     filterButton.setAttribute("data-state", "inactive");
     filterButton.addEventListener("click", (e) =>
@@ -152,7 +156,6 @@ const createTabButton = (key, param, container) => {
     const filterButton = document.createElement("button");
     filterButton.className = "tab-button";
     filterButton.id = param;
-    console.log(param);
     // make a button click handler
     filterButton.addEventListener("click", (e) =>
         handleButtonClickTab(e, key, param, container)
@@ -167,15 +170,15 @@ const createTabButton = (key, param, container) => {
     }
     // add appropriate FA icons
     if (param == "Featured") {
-        filterButton.innerHTML = `<i class="fa fa-star filterbutton-margin"></i>${param}`;
+        filterButton.innerHTML = `<i class="fa fa-star FA-tab-margin"></i>${param}`;
     } else if (param == "All") {
-        filterButton.innerHTML = `<i class="fa fa-globe filterbutton-margin"></i>${param}`;
+        filterButton.innerHTML = `<i class="fa fa-globe FA-tab-margin"></i>${param}`;
     } else if (param == "Personal") {
-        filterButton.innerHTML = `<i class="fa fa-user filterbutton-margin"></i>${param}`;
+        filterButton.innerHTML = `<i class="fa fa-user FA-tab-margin"></i>${param}`;
     } else if (param == "Commission") {
-        filterButton.innerHTML = `<i class="fa fa-file-invoice-dollar filterbutton-margin"></i>${param}`;
+        filterButton.innerHTML = `<i class="fa fa-file-invoice-dollar FA-tab-margin"></i>${param}`;
     } else if (param == "Work") {
-        filterButton.innerHTML = `<i class="fa fa-briefcase filterbutton-margin"></i>${param}`;
+        filterButton.innerHTML = `<i class="fa fa-briefcase FA-tab-margin"></i>${param}`;
     }
     // alright now add this overview button to the container
     container.append(filterButton);
@@ -233,7 +236,6 @@ const handleFilterProjects = (filters) => {
                 return project.featured;
             });
             // bij de features tab moet sort & filter disabled zijn
-            console.log(document.querySelectorAll('.hide-on-featured'));
             document.querySelectorAll('.hide-on-featured').forEach(function (el) {
                 el.style.display = 'none';
             });
@@ -247,7 +249,6 @@ const handleFilterProjects = (filters) => {
                 el.style.display = 'block';
             });
         }
-        console.log(filteredProjects);
     } else {
         alert("dr gaat iets mis met die overview sort");
     }
@@ -287,7 +288,6 @@ const handleFilterProjects = (filters) => {
 
 let cardMouseEnter = function () {
     num = (Math.random() * 1.5 + 0.5) * (Math.random() >= 0.5 ? 1 : -1);
-    console.log(num);
     document.querySelector(':root').style.setProperty("--rotate-card", num);
 };
 

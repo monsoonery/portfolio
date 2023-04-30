@@ -103,12 +103,6 @@ a {
 
 /****************************/
 
-/* for padding next to FA icons*/
-.filterbutton-margin {
-    margin-right: 8px !important
-}
-
-
 /*navbar*/
 .w3-sidebar {
     height: 100%;
@@ -249,6 +243,10 @@ a {
 /**********************************/
 
 /** header stuff **/
+.FA-tab-margin {
+    margin-right: 8px !important
+}
+
 .dividing-bar {
     padding-top: 8px;
     border-bottom: 6px solid #ccc !important
@@ -444,11 +442,10 @@ a {
 }
 
 .tab-button,
-.filter-button {
+.label-button {
     font-family: "Work Sans";
     border: none;
     display: inline-block;
-    padding: 8px 12px;
     vertical-align: middle;
     overflow: hidden;
     text-decoration: none;
@@ -459,22 +456,28 @@ a {
     white-space: nowrap
 }
 
+.label-button {
+    font-size: 13px;
+    padding: 4px 6px;
+}
+
 .tab-button {
+    padding: 8px 12px;
     font-size: 16px;
     font-weight: bold;
 }
 
-.filter-button {
+.label-button {
     font-size: 13px;
 }
 
-.filter-button.is-active,
+.label-button.is-active,
 .tab-button.is-active {
     background-color: #000;
     color: #fff;
 }
 
-.filter-button:hover,
+.label-button:hover,
 .tab-button:hover {
     color: black;
     background-color: #DECADE;
