@@ -1,3 +1,11 @@
+function getMonthName(monthNumber) {
+    const date = new Date();
+    date.setMonth(monthNumber - 1);
+  
+    return date.toLocaleString('en-US', { month: 'long' });
+  }
+  
+
 // Script to open and close sidebar
 function w3_open() {
     document.getElementById("mySidebar").style.display = "block";
@@ -65,20 +73,37 @@ const createProject = (projectData) => {
     const { title, link, icon, image, status, timeline, labels, tab } = projectData;
     const project = document.createElement("div");
     project.className = "project";
+    // determine how to display month / date etc
+    var timelineString = "";
+    var startDate = timeline[0];
+    var endDate = timeline[1];
+    if (JSON.stringify(startDate) == JSON.stringify(endDate)) {
+        timelineString = getMonthName(startDate[1]) + ' ' + startDate[0];
+    } else if (JSON.stringify(endDate) == "[0,0]"){
+        timelineString = getMonthName(startDate[1]) + ' ' + startDate[0] + ' - ';
+    } else {
+        timelineString = getMonthName(startDate[1]) + ' ' + startDate[0] + ' - ' + getMonthName(endDate[1]) + ' ' + endDate[0]
+    }
     project.innerHTML = `
     <div class="project-column">
-      <a class="project-preview" href="${link}">
-        <img class="project-image" src="${image}" alt="${title}">
-      </a>
-      <div class="project-content">
-        <p class="project-title">
-            <img src="${icon}" style="width:15px; height: 15px;">
-            ${title}</p>
-        <div class="project-tags">
-          ${labels.map((label) => { return '<span class="project-tag">' + label + "</span>"; }).join("")}
-        </div>
-      </div>
-      </div>`;
+        <a href="${link}">
+            <div class="project-preview">
+                <img class="project-image" src="${image}" alt="${title}">
+            </div>
+            <div class="project-content">
+                <p class="project-title">
+                    <img src="${icon}" style="width:15px; height: 15px;">
+                    ${title}
+                </p>
+                <div class="project-status">
+                    ${status} (` + timelineString + `)
+                </div>
+                <div class="project-tags">
+                    ${labels.map((label) => { return '<span class="project-tag">' + label + "</span>"; }).join("")}
+                </div>
+            </div>
+        </a>
+    </div>`;
     project.onmouseenter = cardMouseEnter;
     projectsContainer.append(project);
 };
