@@ -428,6 +428,7 @@ a {
 
 .project-status {
     vertical-align: bottom;
+    margin-bottom: 8px;
 }
 
 .project-footer {

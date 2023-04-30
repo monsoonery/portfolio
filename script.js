@@ -68,22 +68,34 @@ fetch("https://raw.githubusercontent.com/monsoonery/portfolio/main/data.json")
         handleFilterProjects(currentFilters);
     });
 
+function getTimeline(timeline) {
+    var startDate = timeline[0];
+    var endDate = timeline[1];
+    if (JSON.stringify(startDate) == JSON.stringify(endDate)) {
+        // format for same month / single-day projects
+        return timelineString = getMonthName(startDate[1]) + ' ' + startDate[0];
+    } else if (JSON.stringify(endDate) == "[0,0]"){
+        // format for ongoing/no end date projects
+        return timelineString = getMonthName(startDate[1]) + ' ' + startDate[0] + ' - ';
+    } else {
+        if (startDate[0] == endDate[0]) {
+            // format for multi-month projects, but completed within the same year
+            return timelineString = getMonthName(startDate[1]) + ' - ' + getMonthName(endDate[1]) + ' ' + endDate[0]
+        } else {
+            // everything else
+            return timelineString = getMonthName(startDate[1]) + ' ' + startDate[0] + ' - ' + getMonthName(endDate[1]) + ' ' + endDate[0]
+        }
+    }
+    return "no date"
+}
+
 /* project CREATION FUNCTION */
 const createProject = (projectData) => {
     const { title, link, icon, image, status, timeline, labels, tab } = projectData;
     const project = document.createElement("div");
     project.className = "project";
     // determine how to display month / date etc
-    var timelineString = "";
-    var startDate = timeline[0];
-    var endDate = timeline[1];
-    if (JSON.stringify(startDate) == JSON.stringify(endDate)) {
-        timelineString = getMonthName(startDate[1]) + ' ' + startDate[0];
-    } else if (JSON.stringify(endDate) == "[0,0]"){
-        timelineString = getMonthName(startDate[1]) + ' ' + startDate[0] + ' - ';
-    } else {
-        timelineString = getMonthName(startDate[1]) + ' ' + startDate[0] + ' - ' + getMonthName(endDate[1]) + ' ' + endDate[0]
-    }
+    var timelineString = getTimeline(timeline);
     project.innerHTML = `
     <div class="project-column">
         <a href="${link}">
