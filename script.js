@@ -3,7 +3,7 @@ function getMonthName(monthNumber) {
     date.setDate(15);
     date.setMonth(monthNumber - 1);
 
-    return date.toLocaleString('en-US', {month: 'long',});
+    return date.toLocaleString('en-US', { month: 'long', });
 }
 
 // Script to open and close sidebar
@@ -96,7 +96,7 @@ const createProject = (projectData) => {
     project.className = "project";
     if (icon == "") {
 
-    } 
+    }
     // determine how to display month / date etc 
     project.innerHTML = `
     <div class="project-column">
@@ -106,9 +106,9 @@ const createProject = (projectData) => {
             </div>
             <div class="project-content">
                 <p class="project-title">`
-                    // insert FA icon or custom icon depending on whether or not this post has a custom icon
-                    + (icon == "" ? `<i class="fa fa-circle-half-stroke"> </i>` : `<img src="${icon}" style="width:15px; height: 15px;">`) +
-                    ` ${title}
+        // insert FA icon or custom icon depending on whether or not this post has a custom icon
+        + (icon == "" ? `<i class="fa fa-circle fa-xs"> </i>` : `<img src="${icon}" style="width:15px; height: 15px;">`) +
+        ` ${title}
                 </p>
                 <div class="project-status">
                     ${status} (` + getTimeline(timeline) + `)
@@ -224,57 +224,62 @@ document.getElementById("sort-dropdown").onchange = handleSort;
 
 // functie om projects te filteren en vervolgens weer te geven
 const handleFilterProjects = (filters) => {
-    // nieuwe array maken zodat de originele niet gemutate wordt
     let filteredProjects = [...projectsData];
 
-    // stap 1: filter projects op basis van featured/all/work/personal etc
     if (filters.tab.length == 1) {
-        //exceptions for featured tab
+        // speciale filterregels voor featured tab
         if (filters.tab[0] == "Featured") {
             filteredProjects = filteredProjects.filter((project) => {
                 return project.featured;
             });
-            // bij de features tab moet sort & filter disabled zijn
+            // bij de featured tab moet sort & filter disabled zijn
             document.querySelectorAll('.hide-on-featured').forEach(function (el) {
                 el.style.display = 'none';
             });
         } else {
+            // stap 1: filteren adhv all/work/personal
             filteredProjects = filteredProjects.filter((project) =>
                 filters.tab.some((filter) => {
                     return project.tab.includes(filter);
                 })
             );
+            // bij deze tabs moeten de filters wel zichtbaar zijn
             document.querySelectorAll('.hide-on-featured').forEach(function (el) {
                 el.style.display = 'block';
             });
+
+            // stap 2: filteren adhv eventueel geselecteerde labels
+            if (filters.labels.length > 0) {
+                filteredProjects = filteredProjects.filter((project) =>
+                    filters.labels.every((filter) => {
+                        return project.labels.includes(filter);
+                    })
+                );
+            }
+            // stap 3: sorteren adhv sort by dropdown
+            if (filters.sort == "a-z") {
+                filteredProjects.sort(function (a, b) {
+                    return a.title.toLowerCase().localeCompare(b.title.toLowerCase());
+                });
+            } else if (filters.sort == "z-a") {
+                filteredProjects.sort(function (a, b) {
+                    return b.title.toLowerCase().localeCompare(a.title.toLowerCase());
+                });
+            } else if (filters.sort == "relevance") {
+                // algoritme momentje
+            } else if (filters.sort == "date ascending") {
+                console.log("date asc");
+                filteredProjects.sort(function (a, b) {
+                    if (a.timeline[1][0] < b.timeline[1][0]) {
+                        return -1;
+                    }
+                });
+            } else if (filters.sort == "date descending") {
+                console.log("date desc");
+            }
         }
     } else {
         alert("dr gaat iets mis met die overview sort");
-    }
-
-    // stap 2: filter projects zodat alleen de projects die alle geselecteerde tags bevatten weergegeven worden
-    // dit moet alleen bij non-featured tab
-    if (filters.tab[0] != "Featured" && filters.labels.length > 0) {
-        filteredProjects = filteredProjects.filter((project) =>
-            filters.labels.every((filter) => {
-                return project.labels.includes(filter);
-            })
-        );
-    } else {
-        //als geen tags zijn geselecteerd valt er ook niks te sorten :)
-    }
-
-    // stap 3: sorteer de projects
-    if (filters.sort == "a-z") {
-        filteredProjects.sort(function (a, b) {
-            return a.title.toLowerCase().localeCompare(b.title.toLowerCase());
-        });
-    } else if (filters.sort == "z-a") {
-        filteredProjects.sort(function (a, b) {
-            return b.title.toLowerCase().localeCompare(a.title.toLowerCase());
-        });
-    } else if (filters.sort == "relevance") {
-        // algoritme momentje
     }
 
     // clear project container en plaats de gefilterde projects op de pagina
