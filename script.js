@@ -71,9 +71,6 @@ fetch("https://raw.githubusercontent.com/monsoonery/portfolio/main/data.json")
 function getTimeline(timeline) {
     var startDate = timeline[0];
     var endDate = timeline[1];
-    console.log("bro");
-    console.log(JSON.stringify(startDate).trim());
-    console.log(JSON.stringify(endDate).trim());
     if (JSON.stringify(startDate).trim() == JSON.stringify(endDate).trim()) {
         // format for single-month projects
         return getMonthName(startDate[1]) + ' ' + startDate[0];
@@ -83,7 +80,6 @@ function getTimeline(timeline) {
     } else {
         if (startDate[0] == endDate[0]) {
             // format for multi-month projects, but completed within the same year
-            console.log("here");
             return getMonthName(startDate[1]) + ' &ndash; ' + getMonthName(endDate[1]) + ' ' + endDate[0]
         } else {
             // everything else
@@ -98,8 +94,10 @@ const createProject = (projectData) => {
     const { title, link, icon, image, status, timeline, labels, tab } = projectData;
     const project = document.createElement("div");
     project.className = "project";
-    // determine how to display month / date etc
-    var timelineString = getTimeline(timeline);
+    if (icon == "") {
+
+    } 
+    // determine how to display month / date etc 
     project.innerHTML = `
     <div class="project-column">
         <a href="${link}">
@@ -107,12 +105,13 @@ const createProject = (projectData) => {
                 <img class="project-image" src="${image}" alt="${title}">
             </div>
             <div class="project-content">
-                <p class="project-title">
-                    <img src="${icon}" style="width:15px; height: 15px;">
-                    ${title}
+                <p class="project-title">`
+                    // insert FA icon or custom icon depending on whether or not this post has a custom icon
+                    + (icon == "" ? `<i class="fa fa-circle-half-stroke"> </i>` : `<img src="${icon}" style="width:15px; height: 15px;">`) +
+                    ` ${title}
                 </p>
                 <div class="project-status">
-                    ${status} (` + timelineString + `)
+                    ${status} (` + getTimeline(timeline) + `)
                 </div>
                 <div class="project-tags">
                     ${labels.map((label) => { return '<span class="project-tag">' + label + "</span>"; }).join("")}
