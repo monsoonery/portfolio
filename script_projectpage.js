@@ -1,24 +1,25 @@
-const images = [
-    "decade_icon_transparent.png",
-    "decade_banner_squidboards.png",
-    "sniper.png",
-    "decade_banner_squidboards.png",
-    "sniper.png",
-    "decade_banner_squidboards.png",
-    "sniper.png",
-    "decade_banner_squidboards.png",
-    "sniper.png",
-    "decade_banner_squidboards.png",
-    "sniper.png",
-    "decade_banner_squidboards.png",
-    "sniper.png",
-    "decade_banner_squidboards.png",
-    "sniper.png"
-];
+// const images = [
+//     "decade_icon_transparent.png",
+//     "decade_banner_squidboards.png",
+//     "sniper.png",
+//     "decade_banner_squidboards.png",
+//     "sniper.png",
+//     "decade_banner_squidboards.png",
+//     "sniper.png",
+//     "decade_banner_squidboards.png",
+//     "sniper.png",
+//     "decade_banner_squidboards.png",
+//     "sniper.png",
+//     "decade_banner_squidboards.png",
+//     "sniper.png",
+//     "decade_banner_squidboards.png",
+//     "sniper.png"
+// ];
 
 // variables
-dotContainer = document.getElementById("dot-container");
-currentImage = document.getElementById("current-image");
+const dotContainer = document.getElementById("dot-container");
+const currentImage = document.getElementById("current-image");
+var images;
 
 fetch("https://raw.githubusercontent.com/monsoonery/portfolio/main/data.json")
     .then(async (response) => {
@@ -27,8 +28,7 @@ fetch("https://raw.githubusercontent.com/monsoonery/portfolio/main/data.json")
         }
         projectsData = await response.json();
 
-        console.log(projectsData[0]);
-
+        // find the project data associated with this page
         loopy:for (i = 0; i< projectsData.length; i++) {
             if (projectsData[i]["projectnr"] == "1001") {
                 currentProjectData = projectsData[i];
@@ -36,9 +36,27 @@ fetch("https://raw.githubusercontent.com/monsoonery/portfolio/main/data.json")
             };
         }
 
-        const {projectnr, title, link, icon, thumbnail, status, timeline, labels, tab, featured, images, video, intro, description} = currentProjectData;
-
+        //data van dit project uit json halen
+        const {projectnr, title, link, icon, thumbnail, status, timeline, labels, tab, featured, video, intro, description} = currentProjectData;
+        //images apart definieren omdat het een global var is (moet vanwege eventhandlers)
+        images = currentProjectData["images"];
+        console.log(projectnr);
+        console.log(title);
         console.log(link);
+        console.log(icon);
+        console.log(thumbnail);
+        console.log(status);
+        console.log(timeline);
+        console.log(labels);
+        console.log(tab);
+        console.log(featured);
+        console.log(images)
+        console.log(video);
+        console.log(intro);
+        console.log(description);
+        
+
+        
 
         // generate dots below slideshow
         for (i = 0; i < images.length; i++) {
@@ -49,14 +67,15 @@ fetch("https://raw.githubusercontent.com/monsoonery/portfolio/main/data.json")
             dotContainer.append(dot);
         }
 
-        //initializing the slideshow
+        //initialize the slideshow
         updateSlideshow(0);
+
+        // embed the video
+        console.log(video);
+        document.getElementById("current-video").src = video;
     }).catch(error => {
         console.log('There was an error', error);
     });
-
-
-
 
 // eventhandler for dot click
 function updateSlideshow(i) {
@@ -73,7 +92,6 @@ function updateSlideshow(i) {
 // eventhandler for button left/right click
 function plusSlides(dir) {
     currentImageNr += dir;
-    console.log(currentImageNr);
     if (currentImageNr >= images.length) {
         currentImageNr -= images.length;
     } else if (currentImageNr < 0) {

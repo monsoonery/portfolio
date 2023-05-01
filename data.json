@@ -20,12 +20,16 @@
       "decade_banner_squidboards.png",
       "sniper.png"
     ],
-    "video": "",
-    "intro": "",
-    "description": ["", "", "", ""]
+    "video": "https://www.youtube.com/embed/dCTqd8zk0AE",
+    "intro": "Designing a brand identity for a semi-competitive Splatoon team. Some more text in case the introduction is longer for some reason. Actually maybe longer intro and smaller desc is better. We gaan zien. TODO introduction ook als 2 kolommen testen / als onderdeel van de description cause this reads like shit on large monitor.",
+    "description": [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas lobortis, lectus ac laoreet sagittis, nisl sem malesuada tortor, sed semper ligula felis ac lectus. Pellentesque ut sagittis libero.", 
+      "Cras sed odio at elit convallis cursus vitae in tellus. Etiam sed leo arcu. Curabitur vitae volutpat lacus. Sed aliquet maximus libero sed aliquet. Nullam ut ante convallis, viverra massa vitae, eleifend justo. Mauris accumsan ultrices est vitae dignissim. Nullam viverra tristique nulla. Sed massa tellus, interdum at pellentesque interdum, pellentesque vitae ligula.", 
+      "Pellentesque condimentum eu lectus ut pretium. Proin lacinia a turpis eu tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec pharetra eu ipsum eu sollicitudin.", 
+      "Mauris metus elit, commodo eget ex sed, ultrices laoreet leo. Maecenas vulputate urna est, non auctor augue pharetra imperdiet."]
   },
   {
-    "projectnr": 1001,
+    "projectnr": 1002,
     "title": "Glitch Techs: Tech Gauntlet model",
     "link": "https://google.com",
     "icon": "",
@@ -55,7 +59,7 @@
     "description": ["", "", "", ""]
   },
   {
-    "projectnr": 1001,
+    "projectnr": 1003,
     "title": "5thmonthocean - Mashup artist & DJ",
     "link": "https://google.com",
     "icon": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81pY84UrCghp9IWIz5sOS7dRmaZw-Xury9nEIeWBleOs6eXOdDmDFOo02UnTEr6RCDJWT5NmScrk2335cTUOxNxHBMeLnA=s2560",
