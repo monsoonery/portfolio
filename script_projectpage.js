@@ -24,8 +24,6 @@ const descriptionSection = document.getElementById("description-container");
 const vidSection = document.getElementById("video-container");
 const gallerySection = document.getElementById("gallery-container");
 
-
-
 fetch("https://raw.githubusercontent.com/monsoonery/portfolio/main/data.json")
     .then(async (response) => {
         if (!response.ok) {
@@ -37,7 +35,7 @@ fetch("https://raw.githubusercontent.com/monsoonery/portfolio/main/data.json")
         ID = document.querySelector(".project-identifier").id;
         // find the project data associated with this number
         loopy: for (i = 0; i < projectsData.length; i++) {
-            if (projectsData[i]["projectnr"] == "1001") {
+            if (projectsData[i]["projectnr"] == ID) {
                 currentProjectData = projectsData[i];
                 break loopy;
             };
@@ -47,6 +45,9 @@ fetch("https://raw.githubusercontent.com/monsoonery/portfolio/main/data.json")
         const { projectnr, title, link, icon, thumbnail, status, timeline, labels, tab, featured, video, intro, description } = currentProjectData;
         //images apart definieren omdat het een global var is (moet vanwege eventhandlers)
         images = currentProjectData["images"];
+
+        document.querySelector("h1").innerHTML = title.split(' - ', 1)[0];
+        document.querySelectorAll(".breadcrumb-item")[2].innerHTML = title.split(' - ', 1)[0];
 
         // embed the video (if there is one)
         if (video) {
