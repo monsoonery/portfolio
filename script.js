@@ -1,3 +1,4 @@
+// date & timeline processing functions
 function getMonthName(monthNumber) {
     const date = new Date();
     date.setDate(15);
@@ -5,68 +6,6 @@ function getMonthName(monthNumber) {
 
     return date.toLocaleString('en-US', { month: 'long', });
 }
-
-// Script to open and close sidebar
-function w3_open() {
-    document.getElementById("mySidebar").style.display = "block";
-    document.getElementById("myOverlay").style.display = "block";
-}
-
-function w3_close() {
-    document.getElementById("mySidebar").style.display = "none";
-    document.getElementById("myOverlay").style.display = "none";
-}
-
-let projectsData = "";
-let currentFilters = {
-    labels: [],
-    tab: ["Featured"],
-    sort: "a-z"
-};
-
-const projectsContainer = document.getElementById("projects-container");
-const labelsContainer = document.getElementById("project-labels");
-const tabsContainer = document.getElementById("project-tabs");
-const filtersContainer = document.getElementById("sort-filter-container");
-filtersContainer.style.maxHeight = null;
-filtersContainer.style.height = "0";
-filtersContainer.style.display = "none";
-const projectCount = document.getElementById("project-count");
-const sortFilterButton = document.getElementById("sort-filter-button");
-
-// this is where the magic happens
-fetch("https://raw.githubusercontent.com/monsoonery/portfolio/main/data.json")
-    .then(async (response) => {
-        if (!response.ok) {
-            throw new Error(`HTTP error: ${response.status}`);
-        }
-        projectsData = await response.json();
-
-        // totaal aantal projects die we hebben
-        projectCount.innerText = projectsData.length;
-
-        // maak een html elementje voor elk project
-        projectsData.map((project) => createProject(project));
-
-        // voor elke tab een knopje maken
-        tabData = ["Featured", "All", "Personal", "Work"]
-        tabData.map((tab) => createTabButton("tab", tab, tabsContainer));
-
-        // scan alle projects om alle mogelijke label tags te verzamelen
-        labelsData = Array.from([
-            ...new Set(
-                projectsData
-                    .map((project) => project.labels)
-                    .reduce((acc, curVal) => acc.concat(curVal), [])
-            )
-        ]);
-        labelsData.sort(); //sorteren op alphabet
-        // voor elke categorie een filter knopje maken
-        labelsData.map((label) => createLabelButton("labels", label, labelsContainer));
-
-        // filter, sort and finally display the projects (featured en a-z on page load)
-        handleFilterProjects(currentFilters);
-    });
 
 function getTimeline(timeline) {
     var startDate = timeline[0];
@@ -89,15 +28,98 @@ function getTimeline(timeline) {
     return "no date"
 }
 
+// sorting functions
+function dateAscending(a, b) {
+    if (a.timeline[1][0] < b.timeline[1][0]) {
+        return -1;
+    } else if (a.timeline[1][0] > b.timeline[1][0]) {
+        return 1;
+    } else {
+        if (a.timeline[1][1] < b.timeline[1][1]) {
+            return -1;
+        } else if (a.timeline[1][1] > b.timeline[1][1]) {
+            return 1;
+        }
+    }
+}
+
+function alphabeticalAZ(a, b) {
+    return a.title.toLowerCase().localeCompare(b.title.toLowerCase());
+}
+
+// functions to open and close sidebar
+function openSidebar() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+
+function closeSidebar() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+
+// variables for project data
+let projectsData = "";
+let currentFilters = {
+    labels: [],
+    tab: ["Featured"], //default tab on page load
+    sort: "date descending" //default sort on page load
+};
+const projectsContainer = document.getElementById("projects-container");
+const labelsContainer = document.getElementById("project-labels");
+const tabsContainer = document.getElementById("project-tabs");
+const projectCount = document.getElementById("project-count");
+const sortFilterButton = document.getElementById("sort-filter-button");
+const filtersContainer = document.getElementById("sort-filter-container");
+filtersContainer.style.maxHeight = null;
+filtersContainer.style.height = "0";
+filtersContainer.style.display = "none";
+
+// this is where the magic happens
+fetch("https://raw.githubusercontent.com/monsoonery/portfolio/main/data.json")
+    .then(async (response) => {
+        if (!response.ok) {
+            throw new Error(`HTTP error: ${response.status}`);
+        }
+        projectsData = await response.json();
+
+        // totaal aantal projects die we hebben
+        projectCount.innerText = projectsData.length;
+
+        // maak een html elementje voor elk project
+        projectsData.map((project) => createProject(project));
+
+        // voor elke tab een knopje maken
+        tabData = ["Featured", "All", "Personal", "Work"]
+        tabData.map((tab) => createTabButton(tab, tabsContainer));
+
+        // check alle projects om alle label tags te verzamelen
+        // bewaar ze in een set en reduce zodat er geen doubles zijn
+        // en converteer naar array zodat je alfabetisch kan sorten
+        labelsData = Array.from([
+            ...new Set(
+                projectsData
+                    .map((project) => project.labels)
+                    .reduce((acc, curVal) => acc.concat(curVal), [])
+            )
+        ]).sort();
+
+        // voor elke categorie een filter knopje maken
+        labelsData.map((label) => createLabelButton("labels", label, labelsContainer));
+
+        // filter, sort and finally display the projects (featured en a-z on page load)
+        handleFilterProjects(currentFilters);
+    }).catch(error => {
+        console.log('There was an error', error);
+        projectsContainer.textContent = "\r\nCan't load projects right now. Please try again later.";
+    });
+
 /* project CREATION FUNCTION */
 const createProject = (projectData) => {
     const { title, link, icon, image, status, timeline, labels, tab } = projectData;
     const project = document.createElement("div");
     project.className = "project";
-    if (icon == "") {
-
-    }
-    // determine how to display month / date etc 
+    // generate HTML for a project card 
     project.innerHTML = `
     <div class="project-column">
         <a href="${link}">
@@ -105,25 +127,69 @@ const createProject = (projectData) => {
                 <img class="project-image" src="${image}" alt="${title}">
             </div>
             <div class="project-content">
-                <p class="project-title">`
-        // insert FA icon or custom icon depending on whether or not this post has a custom icon
-        + (icon == "" ? `<i class="fa fa-circle fa-xs"> </i>` : `<img src="${icon}" style="width:15px; height: 15px;">`) +
+                <p class="project-title">` +
+        // insert FA icon or img depending on whether or not this project has a custom icon in data.json
+        (icon == "" ? `<i class="fa fa-circle fa-xs"> </i>` : `<img src="${icon}" style="width:15px; height: 15px;">`) +
         ` ${title}
                 </p>
                 <div class="project-status">
                     ${status} (` + getTimeline(timeline) + `)
                 </div>
                 <div class="project-tags">
-                    ${labels.map((label) => { return '<span class="project-tag">' + label + "</span>"; }).join("")}
+                    ${labels.map((label) => {
+            return '<span class="project-tag">' + label + "</span>";
+        }).join("")}
                 </div>
             </div>
         </a>
     </div>`;
-    project.onmouseenter = cardMouseEnter;
+    // add eventlistener for rotation animation on hovering over card
+    project.addEventListener("mouseenter", cardMouseEnter);
     projectsContainer.append(project);
 };
 
-/*********** FILTER BUTTON FUNCS **************/
+// generate  (for broad category filtering: work vs personal (+ featured))
+function createTabButton(param, container) {
+    currentButton = document.querySelector("#" + param);
+    // add a button click handler
+    currentButton.addEventListener("click", (e) => handleButtonClickTab(e, param));
+    // when loading page Featured is selected by default
+    if (param == "Featured") {
+        currentButton.setAttribute("data-state", "active");
+    } else {
+        currentButton.setAttribute("data-state", "inactive");
+    }
+}
+
+function resetFilterButtons(currentButton) {
+    const filterButtons = document.querySelectorAll('.tab-button');
+    [...filterButtons].map(button => {
+        if (button != currentButton) {
+            button.classList.remove('is-active');
+            button.setAttribute('data-state', 'inactive');
+        }
+    });
+}
+
+// eventlistener voor tab buttons
+function handleButtonClickTab(e, param) {
+    const button = e.target;
+    // button active/inactive toggle
+    const buttonState = button.getAttribute('data-state');
+    if (buttonState == 'inactive') {
+        // de functie hieronder cleart alleen de visuele selectie in html/css NIET de array! dat gebeurt eronder pas
+        resetFilterButtons(button);
+        button.classList.add('is-active');
+        button.setAttribute('data-state', 'active');
+        currentFilters["tab"] = [];
+        currentFilters["tab"].push(param);
+        console.log(currentFilters);
+        handleFilterProjects(currentFilters);
+    }
+    window.scrollTo(0,0); 
+}
+
+// generate a label button (for filtering by project type)
 const createLabelButton = (key, param, container) => {
     const filterButton = document.createElement("button");
     filterButton.className = "label-button";
@@ -134,7 +200,9 @@ const createLabelButton = (key, param, container) => {
     );
     container.append(filterButton);
 };
-const handleButtonClickLabel = (e, key, param, container) => {
+
+// eventlistener voor label buttons
+function handleButtonClickLabel(e, key, param, container) {
     const button = e.target;
     const buttonState = button.getAttribute("data-state");
     // button active/inactive toggle
@@ -148,105 +216,38 @@ const handleButtonClickLabel = (e, key, param, container) => {
         currentFilters[key] = currentFilters[key].filter((item) => item !== param);
     }
     handleFilterProjects(currentFilters);
-};
-
-/*********** OVERVIEW BUTTON FUNCS **************/
-const createTabButton = (key, param, container) => {
-    const filterButton = document.createElement("button");
-    filterButton.className = "tab-button";
-    filterButton.id = param;
-    // make a button click handler
-    filterButton.addEventListener("click", (e) =>
-        handleButtonClickTab(e, key, param, container)
-    );
-    // when loading page Featured is selected by default
-    if (param == "Featured") {
-        filterButton.classList.add("is-active");
-        filterButton.setAttribute("data-state", "active");
-    } else {
-        filterButton.classList.remove("is-active");
-        filterButton.setAttribute("data-state", "inactive");
-    }
-    // add appropriate FA icons
-    if (param == "Featured") {
-        filterButton.innerHTML = `<i class="fa fa-star FA-tab-margin"></i>${param}`;
-    } else if (param == "All") {
-        filterButton.innerHTML = `<i class="fa fa-globe FA-tab-margin"></i>${param}`;
-    } else if (param == "Personal") {
-        filterButton.innerHTML = `<i class="fa fa-user FA-tab-margin"></i>${param}`;
-    } else if (param == "Commission") {
-        filterButton.innerHTML = `<i class="fa fa-file-invoice-dollar FA-tab-margin"></i>${param}`;
-    } else if (param == "Work") {
-        filterButton.innerHTML = `<i class="fa fa-briefcase FA-tab-margin"></i>${param}`;
-    }
-    // alright now add this overview button to the container
-    container.append(filterButton);
-};
-// dit cleart alleen de visuele selectie in html/css NIET de array!
-const resetFilterButtons = (currentButton) => {
-    const filterButtons = document.querySelectorAll('.tab-button');
-    [...filterButtons].map(button => {
-        if (button != currentButton) {
-            button.classList.remove('is-active');
-            button.setAttribute('data-state', 'inactive')
-        }
-    })
 }
-const resetProjects = () => {
-    projectsContainer.innerHTML = "";
-    projectsData.map((project) => createProject(project));
-}
-const handleButtonClickTab = (e, key, param, container) => {
-    const button = e.target;
-    // button active/inactive toggle
-    const buttonState = button.getAttribute('data-state');
-    if (buttonState == 'inactive') {
-        resetFilterButtons(button);
-        otherBtns = document.getElementsByClassName("content");
-        for (var x = 0; x < otherBtns.length; x++) {
-            x.setAttribute('data-state', 'inactive');
-        }
-        button.classList.add('is-active');
-        button.setAttribute('data-state', 'active');
-        currentFilters[key] = [];
-        currentFilters[key].push(param);
-        handleFilterProjects(currentFilters);
-    }
-};
 
-// functie voor als de waarde in de sort dropdown wordt veranderd
-function handleSort() {
+// eventlistener voor "sort by" dropdown (not dependent on json or project data, so doesnt need to be generated!)
+document.getElementById("sort-dropdown").addEventListener("change", (event) => {
     currentFilters["sort"] = [];
-    currentFilters["sort"].push(this.value);
+    currentFilters["sort"].push(event.target.value);
     handleFilterProjects(currentFilters);
-}
-document.getElementById("sort-dropdown").onchange = handleSort;
+});
 
-// functie om projects te filteren en vervolgens weer te geven
-const handleFilterProjects = (filters) => {
+
+// filters, sorts and displays projects based on the info in currentFilters
+function handleFilterProjects(filters) {
     let filteredProjects = [...projectsData];
 
     if (filters.tab.length == 1) {
         // speciale filterregels voor featured tab
         if (filters.tab[0] == "Featured") {
+            // laat alleen projects zien die ik wil featuren ("featured": true in json)
             filteredProjects = filteredProjects.filter((project) => {
                 return project.featured;
             });
-            // bij de featured tab moet sort & filter disabled zijn
+            // bij de featured tab moeten de sort & filter opties disabled zijn
             document.querySelectorAll('.hide-on-featured').forEach(function (el) {
                 el.style.display = 'none';
             });
         } else {
-            // stap 1: filteren adhv all/work/personal
+            // niet featured? --> stap 1: filteren adhv all/work/personal
             filteredProjects = filteredProjects.filter((project) =>
                 filters.tab.some((filter) => {
                     return project.tab.includes(filter);
                 })
             );
-            // bij deze tabs moeten de filters wel zichtbaar zijn
-            document.querySelectorAll('.hide-on-featured').forEach(function (el) {
-                el.style.display = 'block';
-            });
 
             // stap 2: filteren adhv eventueel geselecteerde labels
             if (filters.labels.length > 0) {
@@ -256,54 +257,43 @@ const handleFilterProjects = (filters) => {
                     })
                 );
             }
+
             // stap 3: sorteren adhv sort by dropdown
-            if (filters.sort == "a-z") {
-                filteredProjects.sort(function (a, b) {
-                    return a.title.toLowerCase().localeCompare(b.title.toLowerCase());
-                });
-            } else if (filters.sort == "z-a") {
-                filteredProjects.sort(function (a, b) {
-                    return b.title.toLowerCase().localeCompare(a.title.toLowerCase());
-                });
-            } else if (filters.sort == "relevance") {
-                // algoritme momentje
-            } else if (filters.sort == "date ascending") {
-                console.log("date asc");
-                filteredProjects.sort(function (a, b) {
-                    if (a.timeline[1][0] < b.timeline[1][0]) {
-                        return -1;
-                    } else if (a.timeline[1][0] > b.timeline[1][0]) {
-                        return 1;  
-                    } else {
-                        if (a.timeline[1][1] < b.timeline[1][1]) {
-                            return -1;
-                        } else if (a.timeline[1][1] > b.timeline[1][1]) {
-                            return 1;
-                        }
-                    }
-                });
-            } else if (filters.sort == "date descending") {
-                console.log("date desc");
-            }
+            if (filters.sort == "a-z") { filteredProjects.sort(alphabeticalAZ) }
+            else if (filters.sort == "z-a") { filteredProjects.sort(alphabeticalAZ).reverse() }
+            // else if (filters.sort == "relevance") {filteredProjects.sort(relevance)} 
+            else if (filters.sort == "date ascending") { filteredProjects.sort(dateAscending) }
+            else if (filters.sort == "date descending") { filteredProjects.sort(dateAscending).reverse() }
+
+            // last step: bij deze tabs moeten de sort & filter opties wel zichtbaar zijn
+            document.querySelectorAll('.hide-on-featured').forEach(function (el) {
+                el.style.display = 'block';
+            });
         }
     } else {
         alert("dr gaat iets mis met die overview sort");
     }
 
     // clear project container en plaats de gefilterde projects op de pagina
-    console.log("huidige selectie: ");
-    console.log(filteredProjects);
     projectsContainer.innerHTML = "";
     projectCount.innerText = filteredProjects.length;
+    if (filteredProjects.length == 0) {
+        projectsContainer.textContent = "\r\nNo projects matching the currently selected filters.";
+    }
     filteredProjects.map((project) => createProject(project));
-};
+}
 
-let cardMouseEnter = function () {
+function cardMouseEnter() {
     num = (Math.random() * 1.5 + 0.5) * (Math.random() >= 0.5 ? 1 : -1);
     document.querySelector(':root').style.setProperty("--rotate-card", num);
 };
 
-let filterContainerExpandFunction = function () {
+// eventlistener voor de sort & filter knop (die moet expanden/collapsen)
+sortFilterButton.addEventListener("click", (e) => {
+    filterContainerExpandCollapse();
+});
+
+function filterContainerExpandCollapse() {
     filterIcon = document.getElementById("sort-filter-icon");
     if (filtersContainer.style.maxHeight) {
         // currently open, so close it
@@ -323,11 +313,6 @@ let filterContainerExpandFunction = function () {
         filterIcon.classList.add("fa-angles-up");
     }
 }
-
-sortFilterButton.addEventListener("click", (e) => {
-    filterContainerExpandFunction();
-});
-
 
 window.addEventListener('resize', function (event) {
     if (filtersContainer.classList.contains("open")) {

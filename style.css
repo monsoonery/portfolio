@@ -1,3 +1,142 @@
+/* Gallery stuff */
+.prev,
+.next {
+    background-color: rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    position: absolute;
+    bottom: 45%;
+    width: auto;
+    align-items: center;
+    height: auto;
+    padding: 16px;
+    color: #000;
+    font-size: 18px;
+    opacity: 0.8;
+    transition: 0.2s ease;
+    user-select: none;
+    z-index: 10;
+    border:none;
+}
+
+.prev {
+    left: 0;
+    border-radius: 0 5px 5px 0;
+}
+
+.next {
+    right: 0;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.prev:hover,
+.next:hover {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.slideshow-container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: #eee;
+}
+
+.slide {
+    width: auto;
+    overflow: hiddem;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    line-height: 0;
+    height: 600px;
+    max-height: 600px;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down
+}
+
+#numbertext {
+    color: #000;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 0px 0px 5px 0px;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 8px 12px;
+    position: absolute;
+    text-align:center;
+    top: 1;
+    overflow:visible;
+    white-space: nowrap;
+    z-index: 100;
+    width: 75px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.2s;
+}
+
+.dot:hover {
+    background-color: #444;
+}
+
+.dot.active {
+    background-color: #222;
+}
+
+/*********************************/
+
+/* video stuff */
+
+.videowrapper {
+    float: none;
+    clear: both;
+    width: 100%;
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    height: 0;
+}
+
+.videowrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/*********************************/
+
+
+/*** description stuff **/
+.intro {
+    width:49%;
+    text-align: justify;
+}
+
+.description>p{
+    text-align: justify;
+}
+.description>p:first-child {
+    margin-top: 0;
+}
+
+.description>p:last-child {
+    margin-bottom: 0;
+}
+
+/***********************************/
 /*general*/
 :root {
     --rotate-card: -2deg;
@@ -5,6 +144,10 @@
 
 * {
     box-sizing: border-box;
+}
+
+i {
+    font-style: normal;
 }
 
 html {
@@ -71,7 +214,7 @@ a {
     border: none;
     color: inherit;
     background-color: inherit;
-    
+
 }
 
 /****************************/
@@ -144,6 +287,10 @@ a {
 
 /****************************/
 
+.hide-on-featured {
+    display: none;
+}
+
 .default-container:after,
 .default-container:before,
 .w3-row:after,
@@ -160,6 +307,7 @@ a {
 .float-right {
     float: right !important
 }
+
 .float-left {
     float: left !important
 }
@@ -270,12 +418,52 @@ a {
 
 /**********************************/
 
+/*breadcrumb*/
+ul.breadcrumb {
+    display: flexbox;
+    list-style: none;
+    padding: 0;
+}
+
+ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+    color: #666;
+}
+
+ul.breadcrumb li+li:before {
+    font-family: 'FontAwesome';
+    content: "\f105";
+}
+
+.breadcrumb-item {
+    padding: 4px 6px;
+}
+
+/* a breadcrumb zijn klikbare previous steps, i breadcrumb is de huidige pagina (niet klikbaar)*/
+a.breadcrumb-item {
+    border-radius: 4px;
+}
+
+a.breadcrumb-item:hover {
+    color: black;
+    background-color: #DECADE;
+    transition: background-color 0.2s;
+}
+
+i.breadcrumb-item {
+    color: black;
+    font-weight: bold;
+}
+
+
 
 /*********************projects stuff*****************/
 .projects-container-title {
     padding-top: 8px;
     padding-bottom: 4px;
     font-weight: 700;
+    font-style: normal !important;
     font-size: 14px;
     color: #000;
 }
@@ -284,12 +472,11 @@ a {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    white-space: pre;
 }
 
 #projects-container:empty::after {
-    white-space: pre;
-    font-style: italic;
-    content: "\a No projects matching the currently selected tags.";
+    content: "\aLoading projects..."
 }
 
 .project {
@@ -299,6 +486,7 @@ a {
     background-clip: content-box;
     background-color: white;
     transition: transform .2s;
+    white-space: normal;
 }
 
 /* Responsive layout - makes a three column-layout instead of four columns */
@@ -441,6 +629,11 @@ a {
     gap: 5px;
 }
 
+.labels-container:empty::after {
+    font-size: 13px;
+    content: "[No filters available]";
+}
+
 .tab-button,
 .label-button {
     font-family: "Work Sans";
@@ -466,6 +659,10 @@ a {
     font-size: 16px;
     font-weight: bold;
 }
+/* voorkomen dat FA icon de button deels onklikbaar maakt */
+button > i {
+    pointer-events: none;
+} 
 
 .label-button {
     font-size: 13px;
@@ -485,21 +682,8 @@ a {
 
 
 /****Responsive stuff*******/
-@media (max-width:768px) {
-    .w3-modal-content {
-        width: 500px
-    }
-
-    .w3-modal {
-        padding-top: 50px
-    }
-}
-
+/* desktop layout*/
 @media (min-width:993px) {
-    .w3-modal-content {
-        width: 900px
-    }
-
     .hide-on-large-screens {
         display: none !important
     }
@@ -507,14 +691,25 @@ a {
     .w3-sidebar.w3-collapse {
         display: block !important
     }
-}
 
-@media (max-width:992px) and (min-width:601px) {
-    .hide-on-medium-screens {
-        display: none !important
+    .description {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
     }
 }
 
+/* sticky header on large monitors*/
+@media (min-height:850px) and (min-width:993px) {
+    header {
+        background: #f1f1f1;
+        position: sticky !important;
+        top: 0;
+        z-index: 999;
+    }
+}
+
+/* mobile layout*/
 @media (max-width:992px) {
     .w3-sidebar.w3-collapse {
         display: none
@@ -525,6 +720,7 @@ a {
         margin-right: 0 !important;
     }
 }
+
 
 .w3-animate-opacity {
     animation: opac 0.8s
@@ -566,10 +762,7 @@ a {
 
 .w3-col,
 .w3-half,
-.w3-third,
-.w3-twothird,
-.w3-threequarter,
-.w3-quarter {
+.w3-third {
     float: left;
     width: 100%
 }

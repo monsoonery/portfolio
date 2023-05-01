@@ -18,7 +18,7 @@
             <!-- Top area -->
             <div class="default-container">
                 <!-- Close sidebar menu (visible on small screens only) -->
-                <a href="#" onclick="w3_close()"
+                <a href="#" onclick="closeSidebar()"
                     class="hide-on-large-screens float-right w3-jumbo w3-padding hover-text-grey unlinkify"
                     title="close menu">
                     <i class="fa fa-remove"></i>
@@ -32,13 +32,13 @@
             </div>
             <!-- Menu items -->
             <div class="menu-block">
-                <a href="index.html" onclick="w3_close()" class="menu-item unlinkify"><i
+                <a href="index.html" onclick="closeSidebar()" class="menu-item unlinkify"><i
                         class="fa fa-house fa-fw fa-lg w3-margin-right"></i>Home</a>
-                <a href="projects.html" onclick="w3_close()" class="menu-item unlinkify"><i
+                <a href="projects.html" onclick="closeSidebar()" class="menu-item unlinkify"><i
                         class="fa fa-th-large fa-fw fa-lg w3-margin-right"></i>Projects</a>
-                <a href="store.html" onclick="w3_close()" class="menu-item unlinkify"><i
+                <a href="store.html" onclick="closeSidebar()" class="menu-item unlinkify"><i
                         class="fa fa-store fa-fw fa-lg w3-margin-right"></i>Store</a>
-                <a href="contact.html" onclick="w3_close()" class="menu-item unlinkify"><i
+                <a href="contact.html" onclick="closeSidebar()" class="menu-item unlinkify"><i
                         class="fa fa-envelope fa-fw fa-lg w3-margin-right"></i>Contact</a>
             </div>
             <!-- Socials -->
@@ -63,7 +63,7 @@
         </nav>
     
         <!-- Overlay effect when opening sidebar on small screens -->
-        <div class="overlay hide-on-large-screens" onclick="w3_close()" style="cursor:pointer" title="close side menu"
+        <div class="overlay hide-on-large-screens" onclick="closeSidebar()" style="cursor:pointer" title="close side menu"
             id="myOverlay"></div>
     </div>
     
@@ -74,7 +74,7 @@
             <!-- die twee hieronder zie je alleen wanneer je apparaat klein is-->
             <div class="hide-on-large-screens">
                 <span id="hamburger-menu-button" class="float-left hover-text-grey" style="margin:16px;"
-                    onclick="w3_open()">
+                    onclick="openSidebar()">
                     <i class="fa fa-bars fa-3x"></i>
                 </span>
                 <a href="#" class="float-right" style="margin:16px; width:48px; height:48px">
@@ -85,9 +85,13 @@
             <div class="default-container">
                 <h1><b>My Projects</b></h1>
                 <div class="tabs-container" id="project-tabs">
+                    <button class="tab-button is-active" data-state="active" id="Featured"> <i class="fa fa-star FA-tab-margin"> </i>Featured</button>
+                    <button class="tab-button" id="All"> <i class="fa fa-globe FA-tab-margin"> </i>All</button>
+                    <button class="tab-button" id="Work"> <i class="fa fa-briefcase FA-tab-margin"> </i>Work</button>
+                    <button class="tab-button" id="Personal"> <i class="fa fa-user FA-tab-margin"> </i>Personal</button>
                 </div>
                 <div class="dividing-bar"></div>
-            </div>
+            </div> 
         </header>
         <!-- Major section that contains blocks with projects-->
         <div class="default-container">
@@ -107,11 +111,11 @@
                             <div class="container__title">Sort results by:</div>
                             <div class="sort-container" id="project-sort">
                                 <select id="sort-dropdown" onchange="handleSort()">
-                                    <option value="relevance">Relevance</option>
-                                    <option value="a-z" selected>A-Z</option>
-                                    <option value="z-a">Z-A</option>
-                                    <option value="date ascending">Completion date ascending</option>
-                                    <option value="date descending">Completion date descending</option>
+                                    <option value="date descending" selected>Completion date (descending)</option>
+                                    <option value="date ascending">Completion date (ascending)</option>
+                                    <option value="a-z">Title (A-Z)</option>
+                                    <option value="z-a">Title (Z-A)</option>
+                                    <!-- <option value="relevance">Relevance</option> -->
                                 </select>
                             </div>
                         </div>
@@ -126,9 +130,10 @@
 
             <!-- Subsection with results-->
             <div class="projects-container-title hide-on-featured" id="project-results"> Results (<span
-                    id="project-count"></span>)</div>
+                    id="project-count">0</span>)</div>
             <div id="projects-container"></div>
         </div>
+        <br>
     </div>
 
 </body>

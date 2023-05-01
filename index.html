@@ -13,29 +13,31 @@
 </head>
 
 <body class="ewaja"
-  style="max-width:1600px; background-image:url('https://lh3.googleusercontent.com/drive-viewer/AFGJ81qoxpBSISZofzDszExImVDEZ8mjQHWxkIPONNo4LevDBCHvGQYtp5FbyGZEzjnlRyFuwAJ4lrMoV_LjcSelpUQOuURUIw=s1600'); background-attachment: fixed; background-repeat: no-repeat; background-position: center">
+  style="max-width:1600px; background-image: placeholder.jpg; background-attachment: fixed; background-repeat: no-repeat; background-position: center">
+  <!--url('https://lh3.googleusercontent.com/drive-viewer/AFGJ81qoxpBSISZofzDszExImVDEZ8mjQHWxkIPONNo4LevDBCHvGQYtp5FbyGZEzjnlRyFuwAJ4lrMoV_LjcSelpUQOuURUIw=s1600')-->
+  <!-- Sidebar/menu -->
   <script src="nav.js"></script>
 
-  <!-- Main page content-->
+  <!-- Main page content, alles hierin heeft margin-right 200 px voor de sidebar-->
   <div class="main">
-    <!-- Header -->
+    <!-- Header (page title + eventuele tabs) -->
     <header id="header-home">
+      <!-- die twee hieronder zie je alleen wanneer je apparaat klein is-->
       <div class="hide-on-large-screens">
-        <span id="hamburger-menu-button" class="float-left hover-text-grey" style="margin:16px;" onclick="w3_open()">
+        <span id="hamburger-menu-button" class="float-left hover-text-grey" style="margin:16px;"
+          onclick="openSidebar()">
           <i class="fa fa-bars fa-3x"></i>
         </span>
         <a href="#" class="float-right" style="margin:16px; width:48px; height:48px">
           <img src="42.webp" style="max-height: 100%;">
         </a>
       </div>
+      <!-- rest vd header, zie je op elk apparaat-->
       <div class="default-container">
         <h1><b>test</b></h1>
         welcome!
       </div>
     </header>
-
-    <div>
-    </div>
   </div>
 
 </body>

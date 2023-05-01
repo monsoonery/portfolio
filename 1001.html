@@ -2,36 +2,100 @@
 <html>
 
 <head>
-  <title>Welcome!</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="./style.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="script.js"></script>
+    <title>DECADE</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="script_projectpage.js" defer></script>
 </head>
 
-<body class="ewaja" style="max-width:1600px">
-  <script src="nav.js"></script>
+<body>
+    <!-- Sidebar/menu -->
+    <script src="nav.js"></script>
 
-  <!-- Main page content-->
-  <div class="w3-main" style="margin-left:300px">
-    <!-- Header -->
-    <header id="home">
-      <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:65px;"
-          class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
-      <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i
-          class="fa fa-bars"></i></span>
-      <div class="w3-container">
-        DECADE!!!!!!!!!!!!!!!!
-      </div>
-    </header>
+    <!-- Main page content-->
+    <div class="main">
+        <!-- Header (page title + eventuele tabs) -->
+        <header id="header-home">
+            <!-- die twee hieronder zie je alleen wanneer je apparaat klein is-->
+            <div class="hide-on-large-screens">
+                <span id="hamburger-menu-button" class="float-left hover-text-grey" style="margin:16px;"
+                    onclick="openSidebar()">
+                    <i class="fa fa-bars fa-3x"></i>
+                </span>
+                <a href="#" class="float-right" style="margin:16px; width:48px; height:48px">
+                    <img src="42.webp" style="max-height: 100%;">
+                </a>
+            </div>
+            <!-- rest vd header, zie je op elk apparaat-->
+            <div class="default-container">
+                <div class="pagination">
+                    <ul class="breadcrumb">
+                        <li> <a href="./index.html" class="breadcrumb-item"> <i class="fa fa-home fa-sm"></i></a></li>
+                        <li> <a href="./projects.html" class="breadcrumb-item">Projects</a></li>
+                        <li> <i class="breadcrumb-item">#DECADE</i></li>
+                    </ul>
+                </div>
+                <h1 style="margin-bottom:0">#DECADE</h1>
+                <div class="dividing-bar"></div>
+            </div>
+        </header>
 
-    <div>
+        <!-- Major section with info about project -->
+        <div class="default-container">
+            <br>
+            <section id="description-container" class="description">
+                <p><b>Designing a brand identity for a semi-competitive Splatoon team. Some more text in case the
+                    introduction is longer for some reason. Actually maybe longer intro and smaller desc is better.
+                    We gaan zien. TODO introduction ook als 2 kolommen testen / als onderdeel van de description
+                    cause this reads like shit on large monitor.</b></p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+                    lobortis, lectus ac laoreet sagittis, nisl sem malesuada tortor, sed semper ligula felis ac lectus.
+                    Pellentesque ut sagittis libero. </p>
+                <p>Cras sed odio at elit convallis cursus vitae in tellus. Etiam sed leo
+                    arcu. Curabitur vitae volutpat lacus. Sed aliquet maximus libero sed aliquet. Nullam ut ante
+                    convallis, viverra massa vitae, eleifend justo. Mauris accumsan ultrices est vitae dignissim. Nullam
+                    viverra tristique nulla. Sed massa tellus, interdum at pellentesque interdum, pellentesque vitae
+                    ligula. </p>
+                <p>Pellentesque condimentum eu lectus ut pretium. Proin lacinia a turpis eu
+                    tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                    Donec pharetra eu ipsum eu sollicitudin.</p>
+                <p>Mauris metus elit, commodo eget ex sed, ultrices laoreet leo. Maecenas
+                    vulputate urna est, non auctor augue pharetra imperdiet. </p>
+            </section>
+
+            <section id="gallery-container">
+                <h3>Gallery</h3>
+                <div class="slideshow-container">
+                    <div id="numbertext">1 / 3</div>
+                    <div class="slide">
+                        <img id="current-image">
+                        <!-- dit is waar de slideshow foto verschijnt-->
+                    </div>
+                    <button class="prev fa fa-angle-left" onclick="plusSlides(-1)"></button>
+                    <button class="next fa fa-angle-right" onclick="plusSlides(1)"></button>
+                </div>
+                <br>
+                <div id="dot-container" style="text-align:center">
+                    <!-- dit is waar de dots verschijnen-->
+                </div>
+            </section>
+
+            <section id="video-container" class="video">
+                <h3>Video</h3>
+                <div class="videowrapper">
+                    <iframe src="https://www.youtube.com/embed/dCTqd8zk0AE" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </section>
+            <br>
+
+        </div>
     </div>
-  </div>
 
+
+    </div>
 </body>
 
 </html>
