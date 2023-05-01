@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>DECADE</title>
+    <title>#DECADE</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="./style.css">
@@ -12,6 +12,9 @@
 </head>
 
 <body>
+    <!-- IMPORTANT! EDIT ID NUMBER BELOW TO SET CORRECT PROJECT TO BE RENDERED IN THIS HTML FILE! -->
+    <div class="project-identifier" id="1001"></div>
+
     <!-- Sidebar/menu -->
     <script src="nav.js"></script>
 
@@ -44,53 +47,20 @@
         </header>
 
         <!-- Major section with info about project -->
-        <div class="default-container">
+        <div id="content-container" class="default-container">
             <br>
             <section id="description-container" class="description">
-                <p><b>Designing a brand identity for a semi-competitive Splatoon team. Some more text in case the
-                    introduction is longer for some reason. Actually maybe longer intro and smaller desc is better.
-                    We gaan zien. TODO introduction ook als 2 kolommen testen / als onderdeel van de description
-                    cause this reads like shit on large monitor.</b></p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-                    lobortis, lectus ac laoreet sagittis, nisl sem malesuada tortor, sed semper ligula felis ac lectus.
-                    Pellentesque ut sagittis libero. </p>
-                <p>Cras sed odio at elit convallis cursus vitae in tellus. Etiam sed leo
-                    arcu. Curabitur vitae volutpat lacus. Sed aliquet maximus libero sed aliquet. Nullam ut ante
-                    convallis, viverra massa vitae, eleifend justo. Mauris accumsan ultrices est vitae dignissim. Nullam
-                    viverra tristique nulla. Sed massa tellus, interdum at pellentesque interdum, pellentesque vitae
-                    ligula. </p>
-                <p>Pellentesque condimentum eu lectus ut pretium. Proin lacinia a turpis eu
-                    tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                    Donec pharetra eu ipsum eu sollicitudin.</p>
-                <p>Mauris metus elit, commodo eget ex sed, ultrices laoreet leo. Maecenas
-                    vulputate urna est, non auctor augue pharetra imperdiet. </p>
+                <!-- hier komt de intro en desription van het project -->
             </section>
 
             <section id="gallery-container">
-                <h3>Gallery</h3>
-                <div class="slideshow-container">
-                    <div id="numbertext"></div>
-                    <div class="slide">
-                        <img id="current-image">
-                        <!-- dit is waar de slideshow foto verschijnt-->
-                    </div>
-                    <button class="prev fa fa-angle-left" onclick="plusSlides(-1)"></button>
-                    <button class="next fa fa-angle-right" onclick="plusSlides(1)"></button>
-                </div>
-                <br>
-                <div id="dot-container" style="text-align:center">
-                    <!-- dit is waar de dots verschijnen-->
-                </div>
+                <!-- hier komt de slideshow -->
             </section>
 
             <section id="video-container" class="video">
-                <h3>Video</h3>
-                <div class="videowrapper">
-                    <iframe id="current-video" src="" frameborder="0" allowfullscreen></iframe>
-                </div>
+                <!-- hier komt de video section maar alleen als een project uberhaupt een video heeft-->
             </section>
             <br>
-
         </div>
     </div>
 
