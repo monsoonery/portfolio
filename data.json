@@ -20,7 +20,7 @@
       "decade_banner_squidboards.png",
       "sniper.png"
     ],
-    "video": "https://www.youtube.com/embed/dCTqd8zk0AE",
+    "video": "",
     "intro": "#DECADE was a semi-competitive Splatoon team in 2016 that competed in Season 2 of Leagues Under The Ink (Z division). Aside from being the team’s co-captain and co-founder, I designed the logo, branding, and other material.",
     "description": [
       "The name #DECADE is an HTML color code, which translates to the soft pink color found in the branding and remains its most iconic feature. With the design, I wanted to create something timeless that expresses the team’s core value of diversity, both in terms of different playstyles and the backgrounds of our members. As long as we had fun, no match was impossible!"]
@@ -77,38 +77,12 @@
       "decade_banner_squidboards.png",
       "sniper.png"
     ],
-    "video": "",
+    "video": "https://www.youtube.com/watch?v=fPzi96MMIME",
     "intro": "",
     "description": ["", "", "", ""]
   },
   {
-    "projectnr": 1001,
-    "title": "Custom pins",
-    "link": "https://google.com",
-    "icon": "",
-    "thumbnail": "https://socialistmodernism.com/wp-content/uploads/2017/07/placeholder-image.png",
-    "status": "Ongoing",
-    "timeline": [[2023,1], [9999,99]],
-    "labels": [
-      "3D print",
-      "Crafting"
-    ],
-    "tab": [
-      "All",
-      "Work"
-    ],
-    "featured": false,
-    "images": [
-      "decade_icon_transparent.png",
-      "decade_banner_squidboards.png",
-      "sniper.png"
-    ],
-    "video": "",
-    "intro": "",
-    "description": ["", "", "", ""]
-  },
-  {
-    "projectnr": 1001,
+    "projectnr": 1004,
     "title": "Fuzzy pot - Simple planter",
     "link": "https://google.com",
     "icon": "",
@@ -133,7 +107,7 @@
     "description": ["", "", "", ""]
   },
   {
-    "projectnr": 1001,
+    "projectnr": 1005,
     "title": "Hi-Fi RUSH: 808 (ball form) model",
     "link": "https://google.com",
     "icon": "",
@@ -160,7 +134,7 @@
     "description": ["", "", "", ""]
   },
   {
-    "projectnr": 1001,
+    "projectnr": 1006,
     "title": "Splatoon: Ink Tank",
     "link": "https://google.com",
     "icon": "",
@@ -187,7 +161,7 @@
     "description": ["", "", "", ""]
   },
   {
-    "projectnr": 1001,
+    "projectnr": 1007,
     "title": "Splatoon: Splat Charger",
     "link": "https://google.com",
     "icon": "",
@@ -215,7 +189,7 @@
     "description": ["", "", "", ""]
   },
   {
-    "projectnr": 1001,
+    "projectnr": 1008,
     "title": "Litore - The beach cleaning crab",
     "link": "https://google.com",
     "icon": "",
@@ -244,7 +218,7 @@
     "description": ["", "", "", ""]
   },
   {
-    "projectnr": 1001,
+    "projectnr": 1009,
     "title": "Engravity - Desktop CNC engraving machine",
     "link": "https://google.com",
     "icon": "",
@@ -272,7 +246,7 @@
     "description": ["", "", "", ""]
   },
   {
-    "projectnr": 1001,
+    "projectnr": 1010,
     "title": "Lingoino - The Dutch game show on Arduino",
     "link": "https://google.com",
     "icon": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81pY84UrCghp9IWIz5sOS7dRmaZw-Xury9nEIeWBleOs6eXOdDmDFOo02UnTEr6RCDJWT5NmScrk2335cTUOxNxHBMeLnA=s2560",
@@ -299,7 +273,7 @@
     "description": ["", "", "", ""]
   },
   {
-    "projectnr": 1001,
+    "projectnr": 1011,
     "title": "Ember - Outdoor camping light",
     "link": "https://google.com",
     "icon": "",
@@ -326,7 +300,7 @@
     "description": ["", "", "", ""]
   },
   {
-    "projectnr": 1001,
+    "projectnr": 1012,
     "title": "This website",
     "link": "https://google.com",
     "icon": "",
@@ -352,7 +326,7 @@
     "description": ["", "", "", ""]
   },
   {
-    "projectnr": 1001,
+    "projectnr": 1013,
     "title": "DRIP - Drone delivery box concept",
     "link": "https://google.com",
     "icon": "",
@@ -380,7 +354,7 @@
     "description": ["", "", "", ""]
   },
   {
-    "projectnr": 1001,
+    "projectnr": 1014,
     "title": "Coffee Table - Designing 3D-printed connectors for DIY furniture",
     "link": "https://google.com",
     "icon": "",
@@ -402,12 +376,12 @@
       "decade_banner_squidboards.png",
       "sniper.png"
     ],
-    "video": "",
+    "video": "https://www.youtube.com/embed/dCTqd8zk0AE",
     "intro": "",
     "description": ["", "", "", ""]
   },
   {
-    "projectnr": 1001,
+    "projectnr": 1015,
     "title": "Chaddeus Maximus - The battle bot that builds block towers",
     "link": "https://google.com",
     "icon": "",
@@ -431,11 +405,12 @@
       "sniper.png"
     ],
     "video": "",
-    "intro": "",
-    "description": ["", "", "", ""]
+    "intro": "Chaddius Maximus is a wirelessly controlled block tower bulding robot that competed in the 2022 Design Engineering Contest at the Faculty of Industrial Design Engineering at TU Delft. I built this robot in a team with 3 other students and we placed second!",
+    "description": [
+      "The competition had us battle other team’s robots one-on-one to build the highest block tower in 5 minutes. Our robot featured a unique grabber and conveyor belt mechanism to collect blocks and stack them inside a square tube in the back. This allowed us to carry our tower with us at all times, protecting it from the enemy team. Once the stack of blocks was ready, we deployed the tower on the buildplate with a press of a button."]
   },
   {
-    "projectnr": 1001,
+    "projectnr": 1016,
     "title": "Loop Living Cocoon mold",
     "link": "https://google.com",
     "icon": "",
@@ -460,7 +435,7 @@
     "description": ["", "", "", ""]
   },
   {
-    "projectnr": 1001,
+    "projectnr": 1017,
     "title": "TT Budweiser - Beer pong machine",
     "link": "https://google.com",
     "icon": "",
@@ -486,7 +461,7 @@
     "description": ["", "", "", ""]
   }, 
   {
-    "projectnr": 1001,
+    "projectnr": 1018,
     "title": "3D print service",
     "link": "https://google.com",
     "icon": "",
@@ -503,6 +478,32 @@
       "Work"
     ],
     "featured": true,
+    "images": [
+      "decade_icon_transparent.png",
+      "decade_banner_squidboards.png",
+      "sniper.png"
+    ],
+    "video": "",
+    "intro": "",
+    "description": ["", "", "", ""]
+  },
+  {
+    "projectnr": 1019,
+    "title": "Custom pins",
+    "link": "https://google.com",
+    "icon": "",
+    "thumbnail": "https://socialistmodernism.com/wp-content/uploads/2017/07/placeholder-image.png",
+    "status": "Ongoing",
+    "timeline": [[2023,1], [9999,99]],
+    "labels": [
+      "3D print",
+      "Crafting"
+    ],
+    "tab": [
+      "All",
+      "Work"
+    ],
+    "featured": false,
     "images": [
       "decade_icon_transparent.png",
       "decade_banner_squidboards.png",
