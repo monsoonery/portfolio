@@ -95,7 +95,7 @@
       "All",
       "Work"
     ],
-    "featured": true,
+    "featured": false,
     "images": [
       "decade_icon_transparent.png",
       "decade_banner_squidboards.png",
@@ -150,7 +150,7 @@
       "All",
       "Personal"
     ],
-    "featured": false,
+    "featured": true,
     "images": [
       "decade_icon_transparent.png",
       "decade_banner_squidboards.png",
@@ -261,7 +261,7 @@
       "All",
       "Work"
     ],
-    "featured": false,
+    "featured": true,
     "images": [
       "decade_icon_transparent.png",
       "decade_banner_squidboards.png",
@@ -449,7 +449,7 @@
       "All",
       "Work"
     ],
-    "featured": true,
+    "featured": false,
     "images": [
       "decade_icon_transparent.png",
       "decade_banner_squidboards.png",
