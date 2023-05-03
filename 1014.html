@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>#DECADE</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="script_projectpage.js" defer></script>
+</head>
+
+<body>
+    <!-- IMPORTANT! EDIT ID NUMBER BELOW TO SET CORRECT PROJECT TO BE RENDERED IN THIS HTML FILE! -->
+    <div class="project-identifier" id="1014"></div>
+
+    <!-- Sidebar/menu -->
+    <script src="nav.js"></script>
+
+    <!-- Main page content-->
+    <div class="main">
+        <!-- Header (page title + eventuele tabs) -->
+        <header id="header-home">
+            <!-- die twee hieronder zie je alleen wanneer je apparaat klein is-->
+            <div class="hide-on-large-screens">
+                <span id="hamburger-menu-button" class="float-left hover-text-grey" style="margin:16px;"
+                    onclick="openSidebar()">
+                    <i class="fa fa-bars fa-3x"></i>
+                </span>
+                <a href="#" class="float-right" style="margin:16px; width:48px; height:48px">
+                    <img src="42.webp" style="max-height: 100%;">
+                </a>
+            </div>
+            <!-- rest vd header, zie je op elk apparaat-->
+            <div class="default-container">
+                <div class="pagination">
+                    <ul class="breadcrumb">
+                        <li> <a href="./index.html" class="breadcrumb-item"> <i class="fa fa-home fa-sm"></i></a></li>
+                        <li> <a href="./projects.html" class="breadcrumb-item">Projects</a></li>
+                        <li> <i class="breadcrumb-item"></i></li>
+                    </ul>
+                </div>
+                <h1 style="margin-bottom:0"></h1>
+                <div class="dividing-bar"></div>
+            </div>
+        </header>
+
+        <!-- Major section with info about project -->
+        <div id="content-container" class="default-container">
+            <br>
+            <section id="description-container" class="description">
+                <!-- hier komt de intro en desription van het project -->
+            </section>
+
+            <section id="gallery-container">
+                <!-- hier komt de slideshow -->
+            </section>
+
+            <section id="video-container" class="video">
+                <!-- hier komt de video section maar alleen als een project uberhaupt een video heeft-->
+            </section>
+            <br>
+        </div>
+    </div>
+
+
+    </div>
+</body>
+
+</html>
