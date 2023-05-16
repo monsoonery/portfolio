@@ -74,6 +74,8 @@ const filtersContainer = document.getElementById("sort-filter-container");
 filtersContainer.style.maxHeight = null;
 filtersContainer.style.height = "0";
 filtersContainer.style.display = "none";
+let cookietab = sessionStorage.getItem("tab");
+console.log(cookietab);
 
 // this is where the magic happens
 fetch("https://raw.githubusercontent.com/monsoonery/portfolio/main/data.json")
@@ -108,6 +110,11 @@ fetch("https://raw.githubusercontent.com/monsoonery/portfolio/main/data.json")
         labelsData.map((label) => createLabelButton("labels", label, labelsContainer));
 
         // filter, sort and finally display the projects (featured en a-z on page load)
+        if (!cookietab) {
+        } else {
+            currentFilters["tab"] = [];
+            currentFilters["tab"].push(cookietab);
+        }
         handleFilterProjects(currentFilters);
     }).catch(error => {
         console.log('There was an error', error);
@@ -154,10 +161,31 @@ function createTabButton(param, container) {
     // add a button click handler
     currentButton.addEventListener("click", (e) => handleButtonClickTab(e, param));
     // when loading page Featured is selected by default
-    if (param == "Featured") {
-        currentButton.setAttribute("data-state", "active");
+    console.log(sessionStorage.getItem("tab"));
+    if (!cookietab) {
+        if (param == "Featured") {
+            currentButton.setAttribute("data-state", "active");
+            currentButton.classList.add('is-active');
+            console.log("defaulted to featured");
+            console.log(param);
+        } else {
+            currentButton.setAttribute("data-state", "inactive");
+            currentButton.classList.remove('is-active');
+            console.log("de rest inactief");
+            console.log(param);
+        }
     } else {
-        currentButton.setAttribute("data-state", "inactive");
+        if (param == cookietab) {
+            currentButton.setAttribute("data-state", "active");
+            currentButton.classList.add('is-active');
+            console.log("2");
+            console.log(param);
+        } else {
+            currentButton.setAttribute("data-state", "inactive");
+            currentButton.classList.remove('is-active');
+            console.log("3");
+            console.log(param);
+        }
     }
 }
 
@@ -181,12 +209,14 @@ function handleButtonClickTab(e, param) {
         resetFilterButtons(button);
         button.classList.add('is-active');
         button.setAttribute('data-state', 'active');
+        sessionStorage.setItem("tab", param);
         currentFilters["tab"] = [];
         currentFilters["tab"].push(param);
         console.log(currentFilters);
         handleFilterProjects(currentFilters);
     }
-    window.scrollTo(0,0); 
+    sessionStorage.setItem("tab", param);
+    window.scrollTo(0, 0);
 }
 
 // generate a label button (for filtering by project type)
@@ -320,3 +350,4 @@ window.addEventListener('resize', function (event) {
         filtersContainer.style.maxHeight = filtersContainer.scrollHeight + "px";
     }
 }, true);
+
