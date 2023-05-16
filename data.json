@@ -304,7 +304,7 @@
     "title": "DRIP - Drone delivery box concept",
     "link": "./1013.html",
     "icon": "",
-    "thumbnail": "https://socialistmodernism.com/wp-content/uploads/2017/07/placeholder-image.png",
+    "thumbnail": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81o01yVSwAh35P4zI8hzmWbCBF7tQHtuqeyN91fdYlvSN7DmtFl5JbniJCXV2y8bOLHhk5wF2Umznkef66CRPsDx1J4vng=s1600",
     "status": "Completed",
     "timeline": [[2022, 4], [2022,6]],
     "labels": [
@@ -319,12 +319,12 @@
     ],
     "featured": false,
     "images": [
-      "decade_icon_transparent.png",
+      "https://lh3.googleusercontent.com/drive-viewer/AFGJ81o01yVSwAh35P4zI8hzmWbCBF7tQHtuqeyN91fdYlvSN7DmtFl5JbniJCXV2y8bOLHhk5wF2Umznkef66CRPsDx1J4vng=s1600",
       "decade_banner_squidboards.png",
       "sniper.png"
     ],
-    "video": "",
-    "intro": "",
+    "video": "https://www.youtube.com/embed/et-1wuo4u8E",
+    "intro": "Bachelor Final Project - Commissioned by TU Delft and U-Lab",
     "description": ["", "", "", ""]
   },
   {
