@@ -313,8 +313,8 @@
     ],
     "video": "https://www.youtube.com/embed/et-1wuo4u8E",
     "intro": "DRIP was my Bachelor Industrial Design Final Project, commissioned by TU Delft and U-Lab.",
-    "description": ["DRIP is a weather- and hufterproof smart drone delivery mailbox in the shape of a large drawer. The box communicates with incoming drones through a server. It comes with a companion app for the user, which can be used to unlock the box alongside a digital tag.", 
-    "I designed this concept for a hypothetical pilot in The Netherlands with the goal of assessing the viability and feasibility of drone delivery in the near future (~5 years).", 
+    "description": ["DRIP is a weather- and hufterproof smart drone delivery mailbox in the shape of a large drawer. The box wirelessly communicates with incoming drones through the internet. It comes with a companion app for the user, which can be used to unlock the box alongside a digital tag.", 
+    "I designed this concept with a hypothetical pilot in mind, with the goal of assessing the viability and feasibility of drone delivery in The Netherlands in the near future (~5 years). Special attention was paid to making DRIP as low-tech and as easy to manufacture as possible to speed up the development process for U-Lab.", 
     "Watch the video below to see DRIP in action!", ""]
   },
   {
