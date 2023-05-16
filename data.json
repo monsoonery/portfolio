@@ -320,12 +320,14 @@
     "featured": false,
     "images": [
       "https://lh3.googleusercontent.com/drive-viewer/AFGJ81o01yVSwAh35P4zI8hzmWbCBF7tQHtuqeyN91fdYlvSN7DmtFl5JbniJCXV2y8bOLHhk5wF2Umznkef66CRPsDx1J4vng=s1600",
-      "decade_banner_squidboards.png",
-      "sniper.png"
+      "https://lh3.googleusercontent.com/drive-viewer/AFGJ81rAEKK5bndMZvdb0HZEKs3EZFPXBDT-cRQ6hbsy7mR1L3uCIUUSWpoyjG2CaovqVVRK_vWvPLoanjcCnNL-6mWCjzPd-w=s1600",
+      "https://lh3.googleusercontent.com/drive-viewer/AFGJ81rRVDajZM4CmXUgBQAGUrdrSROrtQA-bahK2YqXmzx1LM0WbVsTaKrYCuTpiSozWVjDufjAcGqG8eOwYS8mh1v65qi1Ng=s1600"
     ],
     "video": "https://www.youtube.com/embed/et-1wuo4u8E",
-    "intro": "Bachelor Final Project - Commissioned by TU Delft and U-Lab",
-    "description": ["", "", "", ""]
+    "intro": "DRIP was my Bachelor Industrial Design Final Project, commissioned by TU Delft and U-Lab.",
+    "description": ["DRIP is a weather- and hufterproof smart drone delivery mailbox in the shape of a large drawer. The box communicates with incoming drones through a server. It comes with a companion app for the user, which can be used to unlock the box alongside a digital tag.", 
+    "I designed this concept for a hypothetical pilot in The Netherlands with the goal of assessing the viability and feasibility of drone delivery in the near future (~5 years).", 
+    "Watch the video below to see DRIP in action!", ""]
   },
   {
     "projectnr": 1014,
