@@ -120,6 +120,10 @@
 
 
 /*** description stuff **/
+.description {
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+}
 .intro {
     width:49%;
     text-align: justify;
@@ -696,6 +700,7 @@ button > i {
         -webkit-column-count: 2;
         -moz-column-count: 2;
         column-count: 2;
+        column-gap: 4%;
     }
 }
 
