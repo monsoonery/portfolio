@@ -221,6 +221,15 @@ a {
 
 }
 
+
+.description a {
+    text-decoration: underline;
+    border: none;
+    color: inherit;
+    background-color: inherit;
+    font-weight: 700;
+}
+
 /****************************/
 
 /* social media icons shit*/
