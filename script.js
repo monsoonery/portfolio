@@ -113,7 +113,7 @@ fetch("https://raw.githubusercontent.com/monsoonery/portfolio/main/data.json")
 
 /* project CREATION FUNCTION */
 const createProject = (projectData) => {
-    const { projectnr, title, link, icon, thumbnail, status, timeline, labels, tab } = projectData;
+    const { projectnr, title, icon, thumbnail, status, timeline, labels, tab } = projectData;
     const project = document.createElement("div");
     project.className = "project";
     // generate HTML for a project card 
