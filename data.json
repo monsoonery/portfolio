@@ -53,7 +53,8 @@
     "timeline": [[2017,6], [9999,99]],
     "labels": [
       "Branding",
-      "Music"
+      "Music",
+      "Video editing"
     ],
     "tab": "Work",
     "featured": true,
@@ -143,7 +144,8 @@
       "Electronics",
       "CAD",
       "Prototype",
-      "Branding"
+      "Branding",
+      "Video editing"
     ],
     "tab": "Work",
     "featured": true,
@@ -285,7 +287,8 @@
     "labels": [
       "3D print",
       "CAD",
-      "Prototype"
+      "Prototype",
+      "Video editing"
     ],
     "tab": "Work",
     "featured": false,
