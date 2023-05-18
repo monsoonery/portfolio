@@ -65,3 +65,5 @@ function closeSidebar() {
     document.getElementById("mySidebar").style.visibility = "hidden";
     document.getElementById("myOverlay").style.visibility = "hidden";
 }
+
+console.log(document.location.pathname);
