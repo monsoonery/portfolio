@@ -1,21 +1,3 @@
-// const images = [
-//     "decade_icon_transparent.png",
-//     "decade_banner_squidboards.png",
-//     "sniper.png",
-//     "decade_banner_squidboards.png",
-//     "sniper.png",
-//     "decade_banner_squidboards.png",
-//     "sniper.png",
-//     "decade_banner_squidboards.png",
-//     "sniper.png",
-//     "decade_banner_squidboards.png",
-//     "sniper.png",
-//     "decade_banner_squidboards.png",
-//     "sniper.png",
-//     "decade_banner_squidboards.png",
-//     "sniper.png"
-// ];
-
 // variables
 var dotContainer;
 var currentImage;
@@ -23,6 +5,12 @@ var images;
 const descriptionSection = document.getElementById("description-container");
 const vidSection = document.getElementById("video-container");
 const gallerySection = document.getElementById("gallery-container");
+
+var pagenr = window.location.pathname
+        .split("/")
+        .filter(function (c) { return c.length;})
+        .pop().slice(0, -5);
+console.log(pagenr);
 
 fetch("https://raw.githubusercontent.com/monsoonery/portfolio/main/data.json")
     .then(async (response) => {
@@ -32,7 +20,7 @@ fetch("https://raw.githubusercontent.com/monsoonery/portfolio/main/data.json")
         projectsData = await response.json();
 
         // get project nr from html (it's just a number in an invisible div lol)
-        ID = document.querySelector(".project-identifier").id;
+        ID = pagenr;
         // find the project data associated with this number
         loopy: for (i = 0; i < projectsData.length; i++) {
             if (projectsData[i]["projectnr"] == ID) {
