@@ -164,11 +164,11 @@
     "status": "Completed",
     "timeline": [[2021, 9], [2022,2]],
     "labels": [
-      "3D print",
       "Drawing",
       "Electronics",
       "CAD",
-      "Prototype"
+      "Prototype",
+      "Branding"
     ],
     "tab": [
       "All",
@@ -180,8 +180,9 @@
       "https://socialistmodernism.com/wp-content/uploads/2017/07/placeholder-image.png"
     ],
     "video": "",
-    "intro": "",
-    "description": ["", "", "", ""]
+    "intro": "Contrary to popular belief, plastic bottles and straws are not the worst pollutant on beaches. It's cigarette butts. Filled with toxic chemicals, they are actually the biggest danger to our coastlines right now.Sand sifting machines, the conventional tools for large-scale beach-cleaning, cannot remove these smaller pieces of trash effectively because of net size limitations. Denser nets would filter out seashells and organic life, too. That's why we designed Litore.     ",
+    "description": ["Litore is a friendly and inviting crab-like robot on an ambitious mission: to effectively rid beaches of cigarettes and other small waste with its two tele-operated arms. Through the 360 camera on the front, its operator can control it from a distance to pick up and analyze trash around. Litore comes equipped with a built-in trashcan, so beachgoers are encouraged to help contribute to safer and cleaner beaches.", 
+    "Litore was my Robotics minor project, commissioned by <b>Techtics</b> in collaboration with <b>TU Delft</b>. Since it is an interfacultary minor, I did this project with 6 other students from Mechanical Engineering, Electrical Enginering, and Computer Science. Together we worked under the team name <b>Robust</b>. As the team's sole Industrial Designer, I was responsible for Litore's exterior design, human-robot-interaction and user experience, ethics, business aspects, and promotional material such as branding, renders & videos. In addition, I was in charge of the stream setup during the live demo shown in the video below.", "", ""]
   },
   {
     "projectnr": 1009,

@@ -1,7 +1,8 @@
 /* Gallery stuff */
 .prev,
 .next {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
     cursor: pointer;
     position: absolute;
     bottom: 45%;
@@ -9,7 +10,6 @@
     align-items: center;
     height: auto;
     padding: 16px;
-    color: #000;
     font-size: 18px;
     opacity: 0.8;
     transition: 0.2s ease;
@@ -30,27 +30,29 @@
 
 .prev:hover,
 .next:hover {
-    color: #fff;
-    background-color: rgba(0, 0, 0, 0.5);
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 .slideshow-container {
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
-    max-height:100%;
     background-color: #222;
+    height:100%;
+    width: 100%;
+    max-height: 80vh;
 }
 
 .slide {
-    width: auto;
     overflow: hidden;
     text-align: center;
     display: block;
     margin: 0 auto;
     line-height: 0;
     height:50vw;
+    width: auto;
+    max-height: 80vh;
 }
 
 .slide img {
@@ -61,7 +63,7 @@
 
 #numbertext {
     color: #000;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: #f1f1f1;
     border-radius: 0px 0px 5px 0px;
     font-size: 16px;
     font-weight: 700;
