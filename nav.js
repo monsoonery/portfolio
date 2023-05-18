@@ -26,7 +26,7 @@ document.write(`
                 <a href="/store.html" onclick="closeSidebar()" class="menu-item unlinkify"><i
                         class="fa fa-store fa-fw fa-lg w3-margin-right"></i>Store</a>
                 <a href="/contact.html" onclick="closeSidebar()" class="menu-item unlinkify"><i
-                        class="fa fa-envelope fa-fw fa-lg w3-margin-right"></i>Contact</a>
+                        class="fa fa-envelope fa-fw fa-lg w3-margin-right"></i>Contsact</a>
             </div>
             <!-- Socials -->
             <div class="socials-panel">
