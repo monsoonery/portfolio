@@ -52,7 +52,7 @@ function alphabeticalAZ(a, b) {
 let projectsData = "";
 let currentFilters = {
     labels: [],
-    tab: ["Featured"], //default tab on page load
+    tab: "Featured", //default tab on page load
     sort: "date descending" //default sort on page load
 };
 const projectsContainer = document.getElementById("projects-container");
@@ -200,8 +200,7 @@ function handleButtonClickTab(e, param) {
         button.classList.add('is-active');
         button.setAttribute('data-state', 'active');
         sessionStorage.setItem("tab", param);
-        currentFilters["tab"] = []; //clear tab filters
-        currentFilters["tab"].push(param); //add this tab to filter
+        currentFilters["tab"] = param;
         console.log(currentFilters);
         handleFilterProjects(currentFilters);
     }
@@ -249,51 +248,43 @@ document.getElementById("sort-dropdown").addEventListener("change", (event) => {
 function handleFilterProjects(filters) {
     let filteredProjects = [...projectsData];
 
-    if (filters.tab.length == 1) {
-        // speciale filterregels voor featured tab
-        if (filters.tab[0] == "Featured") {
-            // laat alleen projects zien die ik wil featuren ("featured": true in json)
-            filteredProjects = filteredProjects.filter((project) => {
-                return project.featured;
-            });
-            // bij de featured tab moeten de sort & filter opties disabled zijn
-            document.querySelectorAll('.hide-on-featured').forEach(function (el) {
-                el.style.display = 'none';
-            });
-        } else {
-            // niet featured? --> stap 1: filteren adhv all/work/personal
+    if (filters.tab == "Featured") {
+        // only show featured projects ("featured": true in json)
+        filteredProjects = filteredProjects.filter((project) => {
+            return project.featured;
+        });
+        // bij de featured tab moeten de sort & filter opties disabled zijn
+        document.querySelectorAll('.hide-on-featured').forEach(function (el) {
+            el.style.display = 'none';
+        });
+    } else {
+        // stap 1: filteren adhv of het een work of personal project
+        if (filters.tab != "All") {
             filteredProjects = filteredProjects.filter((project) =>
-                filters.tab.some((filter) => {
-                    return project.tab.includes(filter);
+                    project.tab == filters.tab
+            );
+        }
+        // stap 2: filteren adhv geselecteerde labels
+        if (filters.labels.length > 0) {
+            filteredProjects = filteredProjects.filter((project) =>
+                filters.labels.every((filter) => {
+                    return project.labels.includes(filter);
                 })
             );
-
-            // stap 2: filteren adhv eventueel geselecteerde labels
-            if (filters.labels.length > 0) {
-                filteredProjects = filteredProjects.filter((project) =>
-                    filters.labels.every((filter) => {
-                        return project.labels.includes(filter);
-                    })
-                );
-            }
-
-            // stap 3: sorteren adhv sort by dropdown
-            if (filters.sort == "a-z") { filteredProjects.sort(alphabeticalAZ) }
-            else if (filters.sort == "z-a") { filteredProjects.sort(alphabeticalAZ).reverse() }
-            // else if (filters.sort == "relevance") {filteredProjects.sort(relevance)} 
-            else if (filters.sort == "date ascending") { filteredProjects.sort(dateAscending) }
-            else if (filters.sort == "date descending") { filteredProjects.sort(dateAscending).reverse() }
-
-            // last step: bij deze tabs moeten de sort & filter opties wel zichtbaar zijn
-            document.querySelectorAll('.hide-on-featured').forEach(function (el) {
-                el.style.display = 'block';
-            });
         }
-    } else {
-        alert("dr gaat iets mis met die overview sort");
-    }
+        // stap 3: sorteren adhv sort by dropdown
+        if (filters.sort == "a-z") { filteredProjects.sort(alphabeticalAZ) }
+        else if (filters.sort == "z-a") { filteredProjects.sort(alphabeticalAZ).reverse() }
+        //else if (filters.sort == "relevance") {filteredProjects.sort(relevance)} 
+        else if (filters.sort == "date ascending") { filteredProjects.sort(dateAscending) }
+        else if (filters.sort == "date descending") { filteredProjects.sort(dateAscending).reverse() }
 
-    // clear project container en plaats de gefilterde projects op de pagina
+        // de sort & filter opties moeten hier wel zichtbaar zijn
+        document.querySelectorAll('.hide-on-featured').forEach(function (el) {
+            el.style.display = 'block';
+        });
+    }
+    // clear projects container and re-generate project cards
     projectsContainer.innerHTML = "";
     projectCount.innerText = filteredProjects.length;
     if (filteredProjects.length == 0) {
