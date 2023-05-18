@@ -155,12 +155,12 @@ const createProject = (projectData) => {
     projectsContainer.append(project);
 };
 
-// generate  (for broad category filtering: work vs personal (+ featured))
+// generate tab buttons (for broad category filtering: work vs personal (+ featured))
 function createTabButton(param, container) {
     currentButton = document.querySelector("#" + param);
-    // add a button click handler
     currentButton.addEventListener("click", (e) => handleButtonClickTab(e, param));
-    // when loading page Featured is selected by default
+    // when loading page, go to tab currently stored in cookie data
+    // if no cookie data present, go to featured tab by default
     console.log(sessionStorage.getItem("tab"));
     if (!cookietab) {
         if (param == "Featured") {
@@ -199,7 +199,7 @@ function resetFilterButtons(currentButton) {
     });
 }
 
-// eventlistener voor tab buttons
+// EL voor tab buttons
 function handleButtonClickTab(e, param) {
     const button = e.target;
     // button active/inactive toggle
@@ -210,8 +210,8 @@ function handleButtonClickTab(e, param) {
         button.classList.add('is-active');
         button.setAttribute('data-state', 'active');
         sessionStorage.setItem("tab", param);
-        currentFilters["tab"] = [];
-        currentFilters["tab"].push(param);
+        currentFilters["tab"] = []; //clear tab filters
+        currentFilters["tab"].push(param); //add this tab to filter
         console.log(currentFilters);
         handleFilterProjects(currentFilters);
     }
@@ -231,7 +231,7 @@ const createLabelButton = (key, param, container) => {
     container.append(filterButton);
 };
 
-// eventlistener voor label buttons
+// EL for label buttons
 function handleButtonClickLabel(e, key, param, container) {
     const button = e.target;
     const buttonState = button.getAttribute("data-state");
@@ -248,15 +248,14 @@ function handleButtonClickLabel(e, key, param, container) {
     handleFilterProjects(currentFilters);
 }
 
-// eventlistener voor "sort by" dropdown (not dependent on json or project data, so doesnt need to be generated!)
+// EL for "sort by" dropdown
 document.getElementById("sort-dropdown").addEventListener("change", (event) => {
     currentFilters["sort"] = [];
     currentFilters["sort"].push(event.target.value);
     handleFilterProjects(currentFilters);
 });
 
-
-// filters, sorts and displays projects based on the info in currentFilters
+// filters, sorts and displays project cards based on selection in currentFilters
 function handleFilterProjects(filters) {
     let filteredProjects = [...projectsData];
 
@@ -313,17 +312,14 @@ function handleFilterProjects(filters) {
     filteredProjects.map((project) => createProject(project));
 }
 
+// Generates random rotation angle on project card mouse hover
 function cardMouseEnter() {
     num = (Math.random() * 1.5 + 0.5) * (Math.random() >= 0.5 ? 1 : -1);
     document.querySelector(':root').style.setProperty("--rotate-card", num);
 };
 
-// eventlistener voor de sort & filter knop (die moet expanden/collapsen)
+// EL for sort & filter button (expand/collapse section)
 sortFilterButton.addEventListener("click", (e) => {
-    filterContainerExpandCollapse();
-});
-
-function filterContainerExpandCollapse() {
     filterIcon = document.getElementById("sort-filter-icon");
     if (filtersContainer.style.maxHeight) {
         // currently open, so close it
@@ -342,8 +338,9 @@ function filterContainerExpandCollapse() {
         filterIcon.classList.remove("fa-angles-down");
         filterIcon.classList.add("fa-angles-up");
     }
-}
+});
 
+// EL to resize sort & filter section with window resize
 window.addEventListener('resize', function (event) {
     if (filtersContainer.classList.contains("open")) {
         filtersContainer.style.height = "auto";

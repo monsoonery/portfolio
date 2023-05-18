@@ -221,13 +221,13 @@ a {
 
 }
 
-
 .description a {
     text-decoration: underline;
-    border: none;
-    color: inherit;
-    background-color: inherit;
     font-weight: 700;
+}
+
+.description a:hover {
+    color: #888;
 }
 
 /****************************/
