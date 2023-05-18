@@ -2,7 +2,6 @@
   {
     "projectnr": 2525,
     "title": "#DECADE - A semi-competitive Splatoon team",
-    "link": "./1001.html",
     "icon": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81oPcLFRkfUdu7jU0TZ4SV-mFIqK59nREXEOBzqfIgjQ6c0T_LQ_5zGteSSeA9bZzGYeOY6bTeKi6ijA8rIX_6lywDSi7A=s1600",
     "thumbnail": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81pSyaeBjBdguoEmtZIoCXRzGiVoEej6IQqyoH1KEJvH8M_YiE6bc008kp6FcfmuXHNo8wCIYyLxIB7ro8u9Z3eKu8K8uw=s1600",
     "status": "Completed",
@@ -22,9 +21,8 @@
       "The name #DECADE is an HTML color code, which translates to the soft pink color found in the branding and remains its most iconic feature. With the design, I wanted to create something timeless that expresses the team’s core value of diversity, both in terms of different playstyles and the backgrounds of our members. As long as we had fun, no match was impossible!"]
   },
   {
-    "projectnr": 1002,
+    "projectnr": 3684,
     "title": "Glitch Techs: Tech Gauntlet model",
-    "link": "./1002.html",
     "icon": "",
     "thumbnail": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81rldYbNeQtvgh6nKR9jXbMRfJA4Gw-AluMyZXH8mNWb0_aPMA7NoNqT1ZvxhLlHwuaenFVSX6JClX3fSIIUk2IPSDbbQg=s1600",
     "status": "On hold",
@@ -47,9 +45,8 @@
     "description": ["", "", "", ""]
   },
   {
-    "projectnr": 1003,
+    "projectnr": 7233,
     "title": "5thmonthocean - Mashup artist & DJ",
-    "link": "./1003.html",
     "icon": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81ppic4GRJVsYbjTN9fC_E5oN5Nf1bVA0yO_bHSs8_dQbGfZS1YWYPxIdrbfMiyr0oX1zZXLW96D6bTv-MDDZffEntFM=s1600",
     "thumbnail": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81q20oloupaJhz_1_sP7OCb7WZj_LqGbt33WjsnQunXqq48WIVRJCBjsNoJDuqsPpo9pUgeqhEIvfPUs2xwn0QZTeO_-ig=s1600",
     "status": "Ongoing",
@@ -72,7 +69,6 @@
   {
     "projectnr": 1004,
     "title": "Fuzzy pot - Simple planter",
-    "link": "./1004.html",
     "icon": "",
     "thumbnail": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81pAyZYPPGF6GrQWCTQTkyznBZa7HriREHSvpSyt4SCNyG90G66eX24Yn4_RotTq7IDemLY0XceiK0lIKcKCoKVaIQn_xA=s1600",
     "status": "Completed",
@@ -92,7 +88,6 @@
   {
     "projectnr": 1006,
     "title": "Splatoon: Ink Tank",
-    "link": "./1006.html",
     "icon": "",
     "thumbnail": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81oVDyr9-P4uW2hZbaqij5jweUOO2EPDDO_iCi3vgAoK2xaUr55N9KTF_ja4R_br5iIgNwYQLdLg4lqeuM4Xf7MM1jSnxw=s1600",
     "status": "Completed",
@@ -114,7 +109,6 @@
   {
     "projectnr": 1007,
     "title": "Splatoon: Splat Charger",
-    "link": "./1007.html",
     "icon": "",
     "thumbnail": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81qq6qFOAYdKq6SJbokJqYKFD0isEKw-l6YT3SHDdfBaQOqKcbHfW7cip-d9HnoSIgnCdky13c-NPtEgDDFrNXgK9n-zOg=s1600",
     "status": "Completed",
@@ -140,7 +134,6 @@
   {
     "projectnr": 1008,
     "title": "Litore - The beach cleaning crab",
-    "link": "./1008.html",
     "icon": "",
     "thumbnail": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81oEVjOn5eVhw0QB7JPTsSwPpsDtXCYR9OjfhGXWs6_dhAY0Og4t7_a55iJpZZKc1H4jjE7FIBMoqay1wsFe3hpeu2V0-w=s1600",
     "status": "Completed",
@@ -169,7 +162,6 @@
   {
     "projectnr": 1009,
     "title": "Engravity - Desktop CNC engraving machine",
-    "link": "./1009.html",
     "icon": "",
     "thumbnail": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81qgeFYg5MjWwTsAzGMNzrXSIsdZbZZZzcWE7aLoCY2_RyFeVJzsjjlYoR0MUQswc6PhUdeZhNgUp3RlvoBkJlhJgW131g=s1600",
     "status": "Completed",
@@ -193,7 +185,6 @@
   {
     "projectnr": 1010,
     "title": "Lingoino - The Dutch game show on Arduino",
-    "link": "./1010.html",
     "icon": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81pY84UrCghp9IWIz5sOS7dRmaZw-Xury9nEIeWBleOs6eXOdDmDFOo02UnTEr6RCDJWT5NmScrk2335cTUOxNxHBMeLnA=s2560",
     "thumbnail": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81qeSBPGX-a0WFpJBCCZB0Az9aecBuYKMXFM9KtzleUXfkBWIcBWdmjho9UjcofX8J0_2-kcT5k0Dpk5JjSkyZvTRj2Epg=s1600",
     "status": "Completed",
@@ -215,7 +206,6 @@
   {
     "projectnr": 1011,
     "title": "Ember - Outdoor camping light",
-    "link": "./1011.html",
     "icon": "",
     "thumbnail": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81rUUjf0Mc33AE41FdSySSIRDPNLmnL6-v0NB2sXbsM-5YqUo63vrBiCgz3Bir1TSOkkwMSLF_WHhNhl01SgehgsgLv3Jg=s1600",
     "status": "Completed",
@@ -242,7 +232,6 @@
   {
     "projectnr": 1012,
     "title": "This website",
-    "link": "./1012.html",
     "icon": "",
     "thumbnail": "https://socialistmodernism.com/wp-content/uploads/2017/07/placeholder-image.png",
     "status": "Completed",
@@ -263,7 +252,6 @@
   {
     "projectnr": 1013,
     "title": "DRIP - Drone delivery box concept",
-    "link": "./1013.html",
     "icon": "",
     "thumbnail": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81o01yVSwAh35P4zI8hzmWbCBF7tQHtuqeyN91fdYlvSN7DmtFl5JbniJCXV2y8bOLHhk5wF2Umznkef66CRPsDx1J4vng=s1600",
     "status": "Completed",
@@ -290,7 +278,6 @@
   {
     "projectnr": 1014,
     "title": "Coffee Table - Designing 3D-printed connectors for DIY furniture",
-    "link": "./1014.html",
     "icon": "",
     "thumbnail": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81qsMHcOSTUWSEy9iqDgfc-5d4U9OWneTycajJxWPbwlP32XLlXC7ThFhMpn65JxKtfHtrt7CLsHRx88NCUFXdVSOI8r6A=s1600",
     "status": "Completed",
@@ -313,7 +300,6 @@
   {
     "projectnr": 1015,
     "title": "Chaddius Maximus - The battle bot that builds block towers",
-    "link": "./1015.html",
     "icon": "",
     "thumbnail": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81pgmRHQ3a91RA0DAfo-NX6jNHVJlf7lUq2BYaTNW9PtGGTxE8dwD-30NwlA2cgTibs_5u1fQOvrvmP-JWLjob-g2WSLmw=s1600",
     "status": "Completed",
@@ -338,7 +324,6 @@
   {
     "projectnr": 1016,
     "title": "Loop Living Cocoon mold",
-    "link": "./1016.html",
     "icon": "",
     "thumbnail": "https://socialistmodernism.com/wp-content/uploads/2017/07/placeholder-image.png",
     "status": "Completed",
@@ -358,7 +343,6 @@
   {
     "projectnr": 1017,
     "title": "TT Budweiser - Beer pong machine",
-    "link": "./1017.html",
     "icon": "",
     "thumbnail": "https://socialistmodernism.com/wp-content/uploads/2017/07/placeholder-image.png",
     "status": "Completed",
@@ -379,7 +363,6 @@
   {
     "projectnr": 1018,
     "title": "3D print service",
-    "link": "./1018.html",
     "icon": "",
     "thumbnail": "https://socialistmodernism.com/wp-content/uploads/2017/07/placeholder-image.png",
     "status": "Ongoing",
@@ -401,7 +384,6 @@
   {
     "projectnr": 1019,
     "title": "Custom pins",
-    "link": "./1019.html",
     "icon": "",
     "thumbnail": "https://socialistmodernism.com/wp-content/uploads/2017/07/placeholder-image.png",
     "status": "Ongoing",
