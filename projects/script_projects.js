@@ -118,7 +118,7 @@ const createProject = (projectData) => {
     // generate HTML for a project card 
     project.innerHTML = `
     <div class="project-column">
-        <a href="./projects/${projectnr}.html">
+        <a href="./${projectnr}/index.html">
             <div class="project-preview">
                 <img class="project-thumbnail" src="${thumbnail}" alt="${title}">
             </div>
