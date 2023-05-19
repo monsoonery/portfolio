@@ -5,9 +5,9 @@ const descriptionSection = document.getElementById("description-container");
 const vidSection = document.getElementById("video-container");
 const gallerySection = document.getElementById("gallery-container");
 
-//construct project page ID from url
+// construct project page ID from url
 var pagenr = window.location.pathname.split("/").pop();
-//remove .html from ID
+// remove .html from ID
 if (!containsOnlyNumbers(pagenr)) {
     pagenr = pagenr.slice(0, -5);
 }
