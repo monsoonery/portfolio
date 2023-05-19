@@ -5,11 +5,16 @@ const descriptionSection = document.getElementById("description-container");
 const vidSection = document.getElementById("video-container");
 const gallerySection = document.getElementById("gallery-container");
 
-var pagenr = window.location.pathname
-        .split("/")
-        .filter(function (c) { return c.length;})
-        .pop().slice(0, -5);
-        console.log(window.location.pathname);
+//construct project page ID from url
+var pagenr = window.location.pathname.split("/").pop();
+//remove .html from ID
+if (!containsOnlyNumbers(pagenr)) {
+    pagenr = pagenr.slice(0, -5);
+}
+
+function containsOnlyNumbers(str) {
+    return /^\d+$/.test(str);
+}
 
 fetch("https://raw.githubusercontent.com/monsoonery/portfolio/main/data.json")
     .then(async (response) => {
