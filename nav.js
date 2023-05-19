@@ -1,3 +1,11 @@
+function dirLevelUp() {
+    if (document.location.pathname.includes("/projects/")) {
+        return "../"
+    } else {
+        return ""
+    }
+}
+
 document.write(`
 <!-- Sidebar/menu -->
 <div>
@@ -19,14 +27,14 @@ document.write(`
             </div>
             <!-- Menu items -->
             <div class="menu-block">
-                <a href="/index.html" onclick="closeSidebar()" class="menu-item unlinkify"><i
+                <a href="`+ dirLevelUp() + `index.html" onclick="closeSidebar()" class="menu-item unlinkify"><i
                         class="fa fa-house fa-fw fa-lg w3-margin-right"></i>Home</a>
-                <a href="/projects.html" onclick="closeSidebar()" class="menu-item unlinkify"><i
+                <a href="`+ dirLevelUp() + `projects.html" onclick="closeSidebar()" class="menu-item unlinkify"><i
                         class="fa fa-th-large fa-fw fa-lg w3-margin-right"></i>Projects</a>
-                <a href="/store.html" onclick="closeSidebar()" class="menu-item unlinkify"><i
+                <a href="`+ dirLevelUp() + `store.html" onclick="closeSidebar()" class="menu-item unlinkify"><i
                         class="fa fa-store fa-fw fa-lg w3-margin-right"></i>Store</a>
-                <a href="/contact.html" onclick="closeSidebar()" class="menu-item unlinkify"><i
-                        class="fa fa-envelope fa-fw fa-lg w3-margin-right"></i>Contsact</a>
+                <a href="`+ dirLevelUp() + `contact.html" onclick="closeSidebar()" class="menu-item unlinkify"><i
+                        class="fa fa-envelope fa-fw fa-lg w3-margin-right"></i>Contact</a>
             </div>
             <!-- Socials -->
             <div class="socials-panel">
@@ -66,4 +74,4 @@ function closeSidebar() {
     document.getElementById("myOverlay").style.visibility = "hidden";
 }
 
-console.log(document.location.pathname);
+

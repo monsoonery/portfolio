@@ -1,4 +1,3 @@
-// variables
 var dotContainer;
 var currentImage;
 var images;
@@ -10,7 +9,6 @@ var pagenr = window.location.pathname
         .split("/")
         .filter(function (c) { return c.length;})
         .pop().slice(0, -5);
-console.log(pagenr);
 
 fetch("https://raw.githubusercontent.com/monsoonery/portfolio/main/data.json")
     .then(async (response) => {

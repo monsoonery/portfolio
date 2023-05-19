@@ -65,7 +65,6 @@ filtersContainer.style.maxHeight = null;
 filtersContainer.style.height = "0";
 filtersContainer.style.display = "none";
 let cookietab = sessionStorage.getItem("tab");
-console.log(cookietab);
 
 // this is where the magic happens
 fetch("https://raw.githubusercontent.com/monsoonery/portfolio/main/data.json")
@@ -151,30 +150,21 @@ function createTabButton(param, container) {
     currentButton.addEventListener("click", (e) => handleButtonClickTab(e, param));
     // when loading page, go to tab currently stored in cookie data
     // if no cookie data present, go to featured tab by default
-    console.log(sessionStorage.getItem("tab"));
     if (!cookietab) {
         if (param == "Featured") {
             currentButton.setAttribute("data-state", "active");
             currentButton.classList.add('is-active');
-            console.log("defaulted to featured");
-            console.log(param);
         } else {
             currentButton.setAttribute("data-state", "inactive");
             currentButton.classList.remove('is-active');
-            console.log("de rest inactief");
-            console.log(param);
         }
     } else {
         if (param == cookietab) {
             currentButton.setAttribute("data-state", "active");
             currentButton.classList.add('is-active');
-            console.log("2");
-            console.log(param);
         } else {
             currentButton.setAttribute("data-state", "inactive");
             currentButton.classList.remove('is-active');
-            console.log("3");
-            console.log(param);
         }
     }
 }
