@@ -9,6 +9,7 @@ var pagenr = window.location.pathname
         .split("/")
         .filter(function (c) { return c.length;})
         .pop().slice(0, -5);
+        console.log(window.location.pathname);
 
 fetch("https://raw.githubusercontent.com/monsoonery/portfolio/main/data.json")
     .then(async (response) => {
@@ -25,6 +26,10 @@ fetch("https://raw.githubusercontent.com/monsoonery/portfolio/main/data.json")
                 currentProjectData = projectsData[i];
                 break loopy;
             };
+        }
+
+        if (!currentProjectData) {
+            throw new Error(`Invalid or missing project ID for this page`);
         }
 
         //data entries van dit project uit json halen
