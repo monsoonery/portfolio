@@ -27,7 +27,7 @@ document.write(`
             </div>
             <!-- Menu items -->
             <div class="menu-block">
-                <a href="`+ dirLevelUp() + `./" onclick="closeSidebar()" class="menu-item unlinkify"><i
+                <a href="`+ dirLevelUp() + `/" onclick="closeSidebar()" class="menu-item unlinkify"><i
                         class="fa fa-house fa-fw fa-lg w3-margin-right"></i>Home</a>
                 <a href="`+ dirLevelUp() + `projects.html" onclick="closeSidebar()" class="menu-item unlinkify"><i
                         class="fa fa-th-large fa-fw fa-lg w3-margin-right"></i>Projects</a>
