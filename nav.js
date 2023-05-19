@@ -20,10 +20,10 @@ document.write(`
                 </a>
                 <!-- Logo -->
                 <a href="index.html">
-                    <img src="iconwatermark.png" style="width:45%;" class="w3-round"><br><br>
+                    <img src="/icon.png" style="width:45%;" class="w3-round"><br><br>
                 </a>
                 <!-- Website name -->
-                <h4><b>[name].design</b></h4>
+                <h4><b>monsoon's design</b></h4>
             </div>
             <!-- Menu items -->
             <div class="menu-block">
