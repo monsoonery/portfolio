@@ -42,8 +42,11 @@ fetch("https://raw.githubusercontent.com/monsoonery/portfolio/main/data.json")
         //images apart definieren omdat het een global var is (moet vanwege eventhandlers)
         images = currentProjectData["images"];
 
-        document.querySelector("h1").innerHTML = title.split(' - ', 1)[0];
-        document.querySelectorAll(".breadcrumb-item")[2].innerHTML = title.split(' - ', 1)[0];
+        // set title on page, browser tab and breadcrumbs
+        var pageTitle = title.split(' - ', 1)[0]
+        document.querySelector("h1").innerHTML = pageTitle;
+        document.querySelectorAll(".breadcrumb-item")[2].innerHTML = pageTitle;
+        document.title = pageTitle;
 
         // embed the video (if there is one)
         if (video) {
