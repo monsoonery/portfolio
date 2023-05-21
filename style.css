@@ -698,57 +698,6 @@ button>i {
 }
 
 
-/****Responsive stuff*******/
-/* desktop layout*/
-@media (min-width:993px) {
-    /**** hamborgir menu icon enzo ***/
-    .hide-on-large-screens {
-        display: none !important;
-        opacity: 0;
-    }
-
-    .description {
-        -webkit-column-count: 2;
-        -moz-column-count: 2;
-        column-count: 2;
-        column-gap: 4%;
-    }
-}
-
-/* sticky header on large monitors*/
-@media (min-height:850px) and (min-width:993px) {
-    header {
-        background: #f1f1f1;
-        position: sticky !important;
-        top: 0;
-        z-index: 999;
-    }
-}
-
-/* mobile layout*/
-@media (max-width:992px) {
-    .main {
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-        padding: 0 !important;
-    }
-}
-
-
-.w3-animate-opacity {
-    animation: opac 0.8s
-}
-
-@keyframes opac {
-    from {
-        opacity: 0
-    }
-
-    to {
-        opacity: 1
-    }
-}
-
 
 .w3-row:after,
 .w3-row:before,
@@ -775,7 +724,50 @@ button>i {
 
 .w3-col,
 .w3-half,
-.w3-third {
+.w3-third,
+.w3-twothird,
+.w3-threequarter,
+.w3-quarter {
     float: left;
     width: 100%
 }
+
+/****Responsive stuff*******/
+/* sticky header on large monitors*/
+@media (min-height:850px) and (min-width:993px) {
+    header {
+        background: #f1f1f1;
+        position: sticky !important;
+        top: 0;
+        z-index: 999;
+    }
+}
+
+/* desktop layout*/
+@media (min-width:993px) {
+    /**** hamborgir menu icon enzo ***/
+    .hide-on-large-screens {
+        display: none !important;
+        opacity: 0;
+    }
+
+    .description {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+        column-gap: 4%;
+    }
+    .w3-half {
+        width: 49%;
+    }
+}
+
+/* mobile layout*/
+@media (max-width:992px) {
+    .main {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding: 0 !important;
+    }
+}
+
