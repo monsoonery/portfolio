@@ -48,13 +48,6 @@ fetch("https://raw.githubusercontent.com/monsoonery/portfolio/main/data.json")
         document.querySelectorAll(".breadcrumb-item")[2].innerHTML = pageTitle;
         document.title = pageTitle;
 
-        // set favicon (if there is one)
-        let head = document.querySelector('head');
-        let favicon = document.createElement('link');
-        favicon.setAttribute('rel','shortcut icon');
-        head.setAttribute('href', icon);
-        head.appendChild(favicon);
-
         // embed the video (if there is one)
         if (video) {
             vidSection.innerHTML = `<h3>Video</h3>`;
