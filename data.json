@@ -29,7 +29,7 @@
     "timeline": [[2022,6], [2022,6]],
     "labels": [
       "Drawing",
-      "Cosplay",
+      "Props",
       "3D print",
       "CAD",
       "Electronics",
@@ -96,10 +96,10 @@
     "labels": [
       "3D print",
       "CAD",
-      "Cosplay"
+      "Props"
     ],
     "tab": "Personal",
-    "featured": true,
+    "featured": false,
     "images": [
       "https://lh3.googleusercontent.com/drive-viewer/AFGJ81oVDyr9-P4uW2hZbaqij5jweUOO2EPDDO_iCi3vgAoK2xaUr55N9KTF_ja4R_br5iIgNwYQLdLg4lqeuM4Xf7MM1jSnxw=s1600"
     ],
@@ -118,7 +118,7 @@
       "3D print",
       "Electronics",
       "CAD",
-      "Cosplay"
+      "Props"
     ],
     "tab": "Personal",
     "featured": true,
