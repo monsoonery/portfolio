@@ -24,8 +24,6 @@ document.write(`
             class="fa fa-house fa-fw fa-lg w3-margin-right"></i>Home</a>
         <a href="/projects" onclick="closeSidebar()" class="menu-item unlinkify"><i
             class="fa fa-th-large fa-fw fa-lg w3-margin-right"></i>Projects</a>
-        <a href="/store" onclick="closeSidebar()" class="menu-item unlinkify"><i
-            class="fa fa-store fa-fw fa-lg w3-margin-right"></i>Store</a>
         <a href="/about" onclick="closeSidebar()" class="menu-item unlinkify"><i
             class="fa-solid fa-user fa-fw fa-lg w3-margin-right"></i>About</a>
       </div>
