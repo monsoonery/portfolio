@@ -118,7 +118,7 @@ function getThumb(projectnr, thumbnail) {
         return "https://raw.githubusercontent.com/monsoonery/portfolio/main/assets/images/" + projectnr + "/" + thumbnail;
     }
     return (!thumbnail ? '$2.00' : '$10.00');
-}   
+}    
 
 /* project CREATION FUNCTION */
 const createProject = (projectData) => {
@@ -127,16 +127,19 @@ const createProject = (projectData) => {
     project.className = "project";
     // generate HTML for a project card 
     var thumbnailURL = getThumb(projectnr, thumbnail);
+    var iconURL = getIcon(projectnr, icon)
     project.innerHTML = `
     <div class="project-column">
         <a href="./projects/${projectnr}">
             <div class="project-preview">
-                <img class="project-thumbnail" src="${thumbnailURL}" alt="${title}">
+                <img class="project-thumbnail" 
+                src="${thumbnailURL}" 
+                alt="${title}">
             </div>
             <div class="project-content">
                 <p class="project-title">` +
         // insert FA icon or img depending on whether or not this project has a custom icon in data.json
-        (icon == "" ? `<i class="fa fa-circle fa-xs"> </i>` : `<img src="${icon}" style="width:15px; height: 15px;">`) +
+        (icon == "" ? `<i class="fa fa-circle fa-xs"> </i>` : `<img src="${"https://raw.githubusercontent.com/monsoonery/portfolio/main/assets/images/" + projectnr + "/" + icon}" style="width:15px; height: 15px;">`) +
         ` ${title}
                 </p>
                 <div class="project-status">

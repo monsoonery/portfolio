@@ -3,7 +3,7 @@
     "projectnr": 2525,
     "title": "#DECADE - A semi-competitive Splatoon team",
     "icon": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81oPcLFRkfUdu7jU0TZ4SV-mFIqK59nREXEOBzqfIgjQ6c0T_LQ_5zGteSSeA9bZzGYeOY6bTeKi6ijA8rIX_6lywDSi7A=s1600",
-    "thumbnail": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81pSyaeBjBdguoEmtZIoCXRzGiVoEej6IQqyoH1KEJvH8M_YiE6bc008kp6FcfmuXHNo8wCIYyLxIB7ro8u9Z3eKu8K8uw=s1600",
+    "thumbnail": "decade_banner_squidboards",
     "status": "Completed",
     "timeline": [[2016,6], [2016,6]],
     "labels": [
@@ -12,8 +12,8 @@
     "tab": "Work",
     "featured": true,
     "images": [
-      "https://lh3.googleusercontent.com/drive-viewer/AFGJ81pSyaeBjBdguoEmtZIoCXRzGiVoEej6IQqyoH1KEJvH8M_YiE6bc008kp6FcfmuXHNo8wCIYyLxIB7ro8u9Z3eKu8K8uw=s1600",
-      "https://lh3.googleusercontent.com/drive-viewer/AFGJ81qvoWYwaHtO95PGmguGX_YFiJb30wKgIGJ4nNs-ywIzemN6qfjEcWnqFR-PelWqIyc2QeuaEbu5GaZLb0R_PiCgcCCEWg=s1600"
+      "decade_icon_transparent.png",
+      "decade_banner_squidboards.pmg"
     ],
     "video": "",
     "intro": "#DECADE was a semi-competitive Splatoon team in 2016 that competed in Season 2 of Leagues Under The Ink (Z division). Aside from being the team’s co-captain and co-founder, I designed the logo, branding, and other material.",
@@ -90,7 +90,7 @@
     "projectnr": 3591,
     "title": "Splatoon: Ink Tank",
     "icon": "",
-    "thumbnail": "",
+    "thumbnail": "front.jpg",
     "status": "Completed",
     "timeline": [[2022, 11], [2023,4]],
     "labels": [
@@ -383,6 +383,26 @@
     "featured": false,
     "images": [
       "https://socialistmodernism.com/wp-content/uploads/2017/07/placeholder-image.png"
+    ],
+    "video": "",
+    "intro": "",
+    "description": ["", "", "", ""]
+  },
+  {
+    "projectnr": 8141,
+    "title": "Splatoon: Squid Hairclip & hat",
+    "icon": "",
+    "thumbnail": "",
+    "status": "Ongoing",
+    "timeline": [[2023,1], [9999,99]],
+    "labels": [
+      "3D print",
+      "Crafting"
+    ],
+    "tab": "Work",
+    "featured": false,
+    "images": [
+      ""
     ],
     "video": "",
     "intro": "",
