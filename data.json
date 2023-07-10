@@ -2,8 +2,8 @@
   {
     "projectnr": 2525,
     "title": "#DECADE - A semi-competitive Splatoon team",
-    "icon": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81oPcLFRkfUdu7jU0TZ4SV-mFIqK59nREXEOBzqfIgjQ6c0T_LQ_5zGteSSeA9bZzGYeOY6bTeKi6ijA8rIX_6lywDSi7A=s1600",
-    "thumbnail": "decade_banner_squidboards",
+    "icon": "decade_icon_transparent.png",
+    "thumbnail": "decade_banner_squidboards.png",
     "status": "Completed",
     "timeline": [[2016,6], [2016,6]],
     "labels": [
@@ -13,7 +13,7 @@
     "featured": true,
     "images": [
       "decade_icon_transparent.png",
-      "decade_banner_squidboards.pmg"
+      "decade_banner_squidboards.png"
     ],
     "video": "",
     "intro": "#DECADE was a semi-competitive Splatoon team in 2016 that competed in Season 2 of Leagues Under The Ink (Z division). Aside from being the team’s co-captain and co-founder, I designed the logo, branding, and other material.",
