@@ -101,8 +101,12 @@
     "tab": "Personal",
     "featured": false,
     "images": [
+      "front.jpg",
       "blink.gif",
-      "front.jpg"
+      "open.jpg",
+      "contents.jpg",
+      "strap.jpg",
+      "render.png"
     ],
     "video": "",
     "intro": "",
