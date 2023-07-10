@@ -413,6 +413,25 @@
     "video": "",
     "intro": "",
     "description": ["", "", "", ""]
+  },
+  {
+    "projectnr": 1212,
+    "title": "Hi-Fi RUSH: SCR-UB model",
+    "icon": "",
+    "thumbnail": "scrubrender.png",
+    "status": "Ongoing",
+    "timeline": [[2023,7], [9999,99]],
+    "labels": [
+      "3D print"
+    ],
+    "tab": "Personal",
+    "featured": false,
+    "images": [
+      "scrubrender.png"
+    ],
+    "video": "",
+    "intro": "",
+    "description": ["", "", "", ""]
   }
 ]
 
