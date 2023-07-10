@@ -127,7 +127,6 @@ const createProject = (projectData) => {
     project.className = "project";
     // generate HTML for a project card 
     var thumbnailURL = getThumb(projectnr, thumbnail);
-    var iconURL = getIcon(projectnr, icon)
     project.innerHTML = `
     <div class="project-column">
         <a href="./projects/${projectnr}">
