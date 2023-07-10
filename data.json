@@ -289,7 +289,7 @@
     "projectnr": 1665,
     "title": "Coffee Table - Designing 3D-printed connectors for DIY furniture",
     "icon": "",
-    "thumbnail": "inuse.png",
+    "thumbnail": "inuse.jpg",
     "status": "Completed",
     "timeline": [[2021, 4], [2021,6]],
     "labels": [
@@ -300,7 +300,7 @@
     "tab": "Work",
     "featured": false,
     "images": [
-      "inuse.png",
+      "inuse.jpg",
       "flexruimte.jpg"
     ],
     "video": "https://www.youtube.com/embed/dCTqd8zk0AE",
