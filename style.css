@@ -1,3 +1,7 @@
+.home-img {
+    width:100%;
+}
+
 /* Gallery stuff */
 .prev,
 .next {
@@ -758,7 +762,7 @@ button>i {
         column-gap: 4%;
     }
     .w3-half {
-        width: 49%;
+        width: 50%;
     }
 }
 
