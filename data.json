@@ -47,8 +47,8 @@
   {
     "projectnr": 7233,
     "title": "5thmonthocean - Mashup artist & DJ",
-    "icon": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81ppic4GRJVsYbjTN9fC_E5oN5Nf1bVA0yO_bHSs8_dQbGfZS1YWYPxIdrbfMiyr0oX1zZXLW96D6bTv-MDDZffEntFM=s1600",
-    "thumbnail": "https://lh3.googleusercontent.com/drive-viewer/AFGJ81q20oloupaJhz_1_sP7OCb7WZj_LqGbt33WjsnQunXqq48WIVRJCBjsNoJDuqsPpo9pUgeqhEIvfPUs2xwn0QZTeO_-ig=s1600",
+    "icon": "iconwatermarkB.png",
+    "thumbnail": "rebrand_banneryt2.png",
     "status": "Ongoing",
     "timeline": [[2017,6], [9999,99]],
     "labels": [
@@ -59,9 +59,9 @@
     "tab": "Work",
     "featured": true,
     "images": [
-      "https://lh3.googleusercontent.com/drive-viewer/AFGJ81r-lwJMwcbST0GTAwvP-rvq8OufDpaq6wC6OyTfuI6Gf-tF0W1gOfxl_kEStSOUk6HoimjAAcuqa8gDW4s0lROdmywCmg=s2560",
-      "https://lh3.googleusercontent.com/drive-viewer/AFGJ81pBRRnvQn3lFEIOCPdYda0vaMHxfGgYrhC4ECkT2u_Kfqc_EDzhY5U7cHXS12Z8XBBPF5I_gOanMelvmAXeq46A_wE6EA=s1600",
-      "https://lh3.googleusercontent.com/drive-viewer/AFGJ81oA-Mtkq5ODhYwTZ82up-GRb9JgqIgftnpyU7bsoa1kUnwXlT0Y-O9-Bjiu5XRhcDuGW56Ve59MR75QeUEnC21SQvc3LQ=s1600"
+      "iconrotate.gif",
+      "rebrand_banneryt2.png",
+      "rebrand_icongrey.png"
     ],
     "video": "https://www.youtube.com/embed/fPzi96MMIME",
     "intro": "",
