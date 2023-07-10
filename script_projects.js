@@ -110,17 +110,28 @@ fetch("https://raw.githubusercontent.com/monsoonery/portfolio/main/data.json")
         projectsContainer.textContent = "\r\nCan't load projects right now. Please try again later.";
     });
 
+ 
+function getThumb(projectnr, thumbnail) {
+    if (!thumbnail) {
+        return "https://raw.githubusercontent.com/monsoonery/portfolio/main/assets/images/placeholder.jpg"
+    } else {
+        return "https://raw.githubusercontent.com/monsoonery/portfolio/main/assets/images/" + projectnr + "/" + thumbnail;
+    }
+    return (!thumbnail ? '$2.00' : '$10.00');
+}   
+
 /* project CREATION FUNCTION */
 const createProject = (projectData) => {
     const { projectnr, title, icon, thumbnail, status, timeline, labels, tab } = projectData;
     const project = document.createElement("div");
     project.className = "project";
     // generate HTML for a project card 
+    var thumbnailURL = getThumb(projectnr, thumbnail);
     project.innerHTML = `
     <div class="project-column">
         <a href="./projects/${projectnr}">
             <div class="project-preview">
-                <img class="project-thumbnail" src="${thumbnail}" alt="${title}">
+                <img class="project-thumbnail" src="${thumbnailURL}" alt="${title}">
             </div>
             <div class="project-content">
                 <p class="project-title">` +
