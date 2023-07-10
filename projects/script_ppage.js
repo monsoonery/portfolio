@@ -111,7 +111,7 @@ fetch("https://raw.githubusercontent.com/monsoonery/portfolio/main/data.json")
 // eventhandler for dot click
 function updateSlideshow(i) {
     currentImageNr = i;
-    currentImage.src = images[currentImageNr];
+    currentImage.src = "https://raw.githubusercontent.com/monsoonery/portfolio/main/assets/images/" + projectnr + "/" + images[currentImageNr];
     document.getElementById("numbertext").innerHTML = (i + 1) + ` / ` + images.length;
     document.querySelectorAll(".dot").forEach(function (el) {
         el.classList.remove("active")
