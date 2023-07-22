@@ -509,6 +509,7 @@ i.breadcrumb-item {
     padding: 8px;
     padding-top: 0px;
     padding-bottom: 0px;
+    height: 100%
 }
 
 .tabs-container {
