@@ -39,11 +39,11 @@ document.write(`
       </div>
       <!-- Socials -->
       <div class="socials-panel">
-        <a class="fa fa-brands fa-instagram social-media-icon" href="https://instagram.com"></a>
-        <a class="fa fa-brands fa-twitter social-media-icon" href="https://twitter.com"></a>
-        <a class="fa fa-brands fa-linkedin social-media-icon" href="https://linkedin.com"></a>
-        <a class="fa fa-brands fa-github social-media-icon" href="https://github.com/monsoonery?tab=repositories"></a>
-        <a class="fac fa-printables social-media-icon" href="https://www.printables.com/@monsoonery"></a>
+        <a class="social-media-icon" href="https://instagram.com"><i class="fa fa-brands fa-instagram"></i></a>
+        <a class="social-media-icon" href="https://twitter.com"><i class="fa fa-brands fa-twitter"></i></a>
+        <a class="social-media-icon" href="https://linkedin.com"><i class=class="fa fa-brands fa-linkedin"></i></a>
+        <a class="social-media-icon" href="https://github.com/monsoonery?tab=repositories"><i class="fa fa-brands fa-github"></i></a>
+        <a class="social-media-icon" href="https://www.printables.com/@monsoonery"><i class="fac fa-printables" ></i></a>
       </div>
       <div class="footer" id="myFooter">
         © 2023 me.
