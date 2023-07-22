@@ -44,7 +44,6 @@ document.write(`
         <a class="social-media-icon" href="https://linkedin.com"><i class=class="fa fa-brands fa-linkedin"></i></a>
         <a class="social-media-icon" href="https://github.com/monsoonery?tab=repositories"><i class="fa fa-brands fa-github"></i></a>
         <a class="social-media-icon" href="https://www.printables.com/@monsoonery"><i class="fac fa-printables"></i></a>
-        <a href=""></a>
       </div>
       <div class="footer" id="myFooter">
         © 2023 me.
