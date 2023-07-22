@@ -153,6 +153,11 @@ a {
 }
 
 /********************************************************** HOME PAGE / INDEX *************************************************************/
+.home-row {
+    background-color: #eee;
+    height: 50%;
+}
+
 .home-img-container {
     overflow: hidden;
     width: 100%;
