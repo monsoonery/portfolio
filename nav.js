@@ -59,10 +59,10 @@ document.write(`
 // check if mobile layout is needed for sidebar on page load
 sidebar = document.getElementById("mySidebar")
 function updateLayout() {
-    if (window.innerWidth < 992) {
+    if (window.innerWidth < 900) {
         mobileLayout = true;
         sidebar.classList.add("mobile");
-    } else if (window.innerWidth > 992) {
+    } else if (window.innerWidth > 899) {
         mobileLayout = false;
         sidebar.classList.remove("mobile");
     }
