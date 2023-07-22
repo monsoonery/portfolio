@@ -163,10 +163,6 @@ a {
     height: 100%;
 }
 
-.home-col {
-    height: 400px;
-}
-
 .home-img-container {
     overflow: hidden;
     width: 100%;
@@ -767,6 +763,9 @@ button>i {
     .w3-half {
         width: 50%;
     }
+    .home-col {
+        height: 300px;
+    }
 }
 
 /* mobile layout*/
@@ -780,6 +779,9 @@ button>i {
         margin-left: 0 !important;
         margin-right: 0 !important;
         padding: 0 !important;
+    }
+    .home-col .home-img-container{
+        height: 300px;
     }
 }
 
