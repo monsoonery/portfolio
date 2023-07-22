@@ -39,7 +39,7 @@ document.write(`
       </div>
       <!-- Socials -->
       <div class="socials-panel">
-        <a class="fa fa-lg fa-brands fa-instagram social-media-icon" href="https://instagram.com"></a>
+        <a class="fa fa-brands fa-instagram social-media-icon" href="https://instagram.com"></a>
         <a class="fa fa-brands fa-twitter social-media-icon" href="https://twitter.com"></a>
         <a class="fa fa-brands fa-linkedin social-media-icon" href="https://linkedin.com"></a>
         <a class="fa fa-brands fa-github social-media-icon" href="https://github.com/monsoonery?tab=repositories"></a>
