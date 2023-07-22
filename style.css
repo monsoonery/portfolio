@@ -762,13 +762,14 @@ button>i {
     .w3-half {
         width: 50%;
     }
-    .home-row {
-        height: 50%;
-    }
 }
 
 /* mobile layout*/
 @media (max-width:899px) {
+    .hide-on-small-screens {
+        display: none !important;
+        opacity: 0;
+    }
     /* remove extra margon on main div*/
     .main {
         margin-left: 0 !important;
