@@ -1,3 +1,13 @@
+var faPrintables = {
+  prefix: 'fac',
+  iconName: 'printables',
+  icon: [428.98, 94.05, [], null, 'M0 94.05 32.61 75.24 0 56.43 0 94.05z M32.61 0 0 18.81 32.61 37.62 32.61 75.24 65.22 56.43 65.22 18.81 32.61 0z']
+}
+
+FontAwesome.library.add(
+  faPrintables
+)
+
 function dirLevelUp() {
     if (document.location.pathname.includes("/projects/")) {
         return "../"
@@ -33,6 +43,7 @@ document.write(`
         <a class="fa fa-brands fa-twitter social-media-icon" href="https://twitter.com"></a>
         <a class="fa fa-brands fa-linkedin social-media-icon" href="https://linkedin.com"></a>
         <a class="fa fa-brands fa-github social-media-icon" href="https://github.com/monsoonery?tab=repositories"></a>
+        <a class="fac fa-printables social-media-icon" href="https://github.com/monsoonery?tab=repositories"></a>
         <!-- Printables icon -->
         <svg class="social-media-icon" width="1em" height="1em" style="vertical-align:middle">
           <a href="https://www.printables.com/@monsoonery" style="padding: 12px 16px;">
