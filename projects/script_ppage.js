@@ -80,8 +80,8 @@ fetch("https://raw.githubusercontent.com/monsoonery/portfolio/main/data.json")
                 <img id="current-image">
                 <!-- dit is waar de slideshow foto verschijnt-->
             </div>
-            <button class="prev fa fa-sm fa-angle-left" onclick="plusSlides(-1)"></button>
-            <button class="next fa fa-sm fa-angle-right" onclick="plusSlides(1)"></button>
+            <button style="font-size: 12px" class="prev fa fa-sm fa-angle-left" onclick="plusSlides(-1)"></button>
+            <button style="font-size: 12px" class="next fa fa-sm fa-angle-right" onclick="plusSlides(1)"></button>
         </div>
         <br>
         <div id="dot-container" style="text-align:center">
