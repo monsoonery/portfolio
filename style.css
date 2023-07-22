@@ -741,6 +741,9 @@ button>i {
     .w3-half {
         width: 50%;
     }
+    .home-row {
+        height: 50%;
+    }
 }
 
 /* mobile layout*/
