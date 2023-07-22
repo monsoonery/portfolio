@@ -153,6 +153,11 @@ a {
 }
 
 /********************************************************** HOME PAGE / INDEX *************************************************************/
+.home-container {
+    display: grid;
+    height: 100%
+}
+
 .home-row {
     background-color: #eee;
     height: 100%;
