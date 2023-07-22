@@ -43,15 +43,7 @@ document.write(`
         <a class="fa fa-brands fa-twitter social-media-icon" href="https://twitter.com"></a>
         <a class="fa fa-brands fa-linkedin social-media-icon" href="https://linkedin.com"></a>
         <a class="fa fa-brands fa-github social-media-icon" href="https://github.com/monsoonery?tab=repositories"></a>
-        <a class="fac fa-printables social-media-icon" href="https://github.com/monsoonery?tab=repositories"></a>
-        <!-- Printables icon -->
-        <svg class="social-media-icon" width="1em" height="1em" style="vertical-align:middle">
-          <a href="https://www.printables.com/@monsoonery" style="padding: 12px 16px;">
-            <polygon _ngcontent points="0 94.05 32.61 75.24 0 56.43 0 94.05" transform="scale(0.18 0.18)">
-            </polygon>
-            <polygon _ngcontent points="32.61 0 0 18.81 32.61 37.62 32.61 75.24 65.22 56.43 65.22 18.81 32.61 0"
-              transform="scale(0.18 0.18)"></polygon>
-        </svg>
+        <a class="fac fa-printables social-media-icon" href="https://www.printables.com/@monsoonery"></a>
       </div>
       <div class="footer" id="myFooter">
         © 2023 me.
