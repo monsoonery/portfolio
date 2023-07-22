@@ -18,7 +18,8 @@
     "video": "",
     "intro": "#DECADE was a semi-competitive Splatoon team in 2016 that competed in Season 2 of Leagues Under The Ink (Z division). Aside from being the team’s co-captain and co-founder, I designed the logo, branding, and other material.",
     "description": [
-      "The name #DECADE is an HTML color code, which translates to the soft pink color found in the branding and remains its most iconic feature. With the design, I wanted to create something timeless that expresses the team’s core value of diversity, both in terms of different playstyles and the backgrounds of our members. As long as we had fun, no match was impossible!"]
+      "The name #DECADE is an HTML color code, which translates to the soft pink color found in the branding and remains its most iconic feature. With the design, I wanted to create something timeless that expresses the team’s core value of diversity, both in terms of different playstyles and the backgrounds of our members. As long as we had fun, no match was impossible!"],
+      "show": true
   },
   {
     "projectnr": 3684,
@@ -42,7 +43,8 @@
     ],
     "video": "",
     "intro": "",
-    "description": ["", "", "", ""]
+    "description": ["", "", "", ""],
+    "show": true
   },
   {
     "projectnr": 7233,
@@ -65,7 +67,8 @@
     ],
     "video": "https://www.youtube.com/embed/fPzi96MMIME",
     "intro": "",
-    "description": ["", "", "", ""]
+    "description": ["", "", "", ""],
+    "show": true
   },
   {
     "projectnr": 1673,
@@ -84,7 +87,8 @@
     ],
     "video": "",
     "intro": "",
-    "description": ["", "", "", ""]
+    "description": ["", "", "", ""],
+    "show": true
   },
   {
     "projectnr": 3591,
@@ -110,7 +114,8 @@
     ],
     "video": "",
     "intro": "",
-    "description": ["", "", "", ""]
+    "description": ["", "", "", ""],
+    "show": true
   },
   {
     "projectnr": 8931,
@@ -134,7 +139,8 @@
     ],
     "video": "",
     "intro": "A 3D-printed life-size replica of the Splat Charger from Splatoon 1. Designed in SolidWorks and printed in various colors of PLA. Features a working laser and 4X magnifying scope",
-    "description": ["Part of my Splatoon inkling costume. See also the <a href='3591.html'>Ink Tank model</a>.", "", ""]
+    "description": ["Part of my Splatoon inkling costume. See also the <a href='3591.html'>Ink Tank model</a>.", "", ""],
+    "show": true
   },
   {
     "projectnr": 4701,
@@ -166,7 +172,8 @@
     "video": "",
     "intro": "Contrary to popular belief, plastic bottles and straws are not the worst pollutant on beaches. It's cigarette butts. Filled with toxic chemicals, they are actually the biggest danger to our coastlines right now. Sand sifting machines, the conventional tools for large-scale beach-cleaning, cannot remove such small trash effectively because of net limitations. Denser nets would filter out seashells and organic life, too. That's why we designed Litore.",
     "description": ["Litore is a friendly and inviting crab-like robot on an ambitious mission: to effectively rid beaches of cigarettes and other small waste with its two tele-operated arms. Through the 360 camera on the front, its operator can control it from a distance to pick up and analyze trash around. Litore comes equipped with a built-in trashcan, so beachgoers are encouraged to help contribute to safer and cleaner beaches.", 
-    "Litore was my Robotics minor project, commissioned by <b>Techtics</b> in collaboration with <b>TU Delft</b>. Since it is an interfacultary minor, I did this project with 6 other students from Mechanical Engineering, Electrical Enginering, and Computer Science. Together we worked under the team name <b>Robust</b>. As the team's sole Industrial Designer, I was responsible for Litore's exterior design, human-robot-interaction and user experience, ethics, business aspects, and promotional material such as branding, renders & videos. In addition, I was in charge of the stream setup during the live demo shown in the video below.", "", ""]
+    "Litore was my Robotics minor project, commissioned by <b>Techtics</b> in collaboration with <b>TU Delft</b>. Since it is an interfacultary minor, I did this project with 6 other students from Mechanical Engineering, Electrical Enginering, and Computer Science. Together we worked under the team name <b>Robust</b>. As the team's sole Industrial Designer, I was responsible for Litore's exterior design, human-robot-interaction and user experience, ethics, business aspects, and promotional material such as branding, renders & videos. In addition, I was in charge of the stream setup during the live demo shown in the video below.", "", ""],
+    "show": true
   },
   {
     "projectnr": 1517,
@@ -188,7 +195,8 @@
     ],
     "video": "",
     "intro": "",
-    "description": ["", "", "", ""]
+    "description": ["", "", "", ""],
+    "show": true
   },
   {
     "projectnr": 8367,
@@ -211,7 +219,8 @@
     ],
     "video": "",
     "intro": "",
-    "description": ["", "", "", ""]
+    "description": ["", "", "", ""],
+    "show": true
   },
   {
     "projectnr": 4979,
@@ -237,7 +246,8 @@
     ],
     "video": "",
     "intro": "",
-    "description": ["", "", "", ""]
+    "description": ["", "", "", ""],
+    "show": true
   },
   {
     "projectnr": 1408,
@@ -257,7 +267,8 @@
     ],
     "video": "",
     "intro": "",
-    "description": ["", "", "", ""]
+    "description": ["", "", "", ""],
+    "show": true
   },
   {
     "projectnr": 5467,
@@ -283,7 +294,8 @@
     "intro": "DRIP was my Bachelor Industrial Design Final Project, commissioned by TU Delft and U-Lab.",
     "description": ["DRIP is a weather- and hufterproof smart drone delivery mailbox in the shape of a large drawer. The box wirelessly communicates with incoming drones through the internet. It comes with a companion app for the user, which can be used to unlock the box alongside a digital tag.", 
     "I designed this concept with a hypothetical pilot in mind, with the goal of assessing the viability and feasibility of drone delivery in The Netherlands in the near future (~5 years). Special attention was paid to making DRIP as low-tech and as easy to manufacture as possible to speed up the development process for U-Lab.", 
-    "Watch the video below to see DRIP in action!", ""]
+    "Watch the video below to see DRIP in action!", ""],
+    "show": true
   },
   {
     "projectnr": 1665,
@@ -305,7 +317,8 @@
     ],
     "video": "https://www.youtube.com/embed/dCTqd8zk0AE",
     "intro": "",
-    "description": ["", "", "", ""]
+    "description": ["", "", "", ""],
+    "show": true
   },
   {
     "projectnr": 7172,
@@ -329,7 +342,8 @@
     "video": "",
     "intro": "Chaddius Maximus is a wirelessly controlled block tower bulding robot that competed in the 2022 Design Engineering Contest at the Faculty of Industrial Design Engineering at TU Delft. I built this robot in a team with 3 other students and we placed second!",
     "description": [
-      "The competition had us battle other team’s robots one-on-one to build the highest block tower in 5 minutes. Our robot featured a unique grabber and conveyor belt mechanism to collect blocks and stack them inside a square tube in the back. This allowed us to carry our tower with us at all times, protecting it from the enemy team. Once the stack of blocks was ready, we deployed the tower on the buildplate with a press of a button."]
+      "The competition had us battle other team’s robots one-on-one to build the highest block tower in 5 minutes. Our robot featured a unique grabber and conveyor belt mechanism to collect blocks and stack them inside a square tube in the back. This allowed us to carry our tower with us at all times, protecting it from the enemy team. Once the stack of blocks was ready, we deployed the tower on the buildplate with a press of a button."],
+      "show": true
   },
   {
     "projectnr": 5556,
@@ -348,7 +362,8 @@
     ],
     "video": "",
     "intro": "",
-    "description": ["", "", "", ""]
+    "description": ["", "", "", ""],
+    "show": true
   },
   {
     "projectnr": 7441,
@@ -368,7 +383,8 @@
     ],
     "video": "",
     "intro": "",
-    "description": ["", "", "", ""]
+    "description": ["", "", "", ""],
+    "show": true
   }, 
   {
     "projectnr": 9792,
@@ -388,7 +404,8 @@
     ],
     "video": "",
     "intro": "",
-    "description": ["", "", "", ""]
+    "description": ["", "", "", ""],
+    "show": true
   },
   {
     "projectnr": 8141,
@@ -412,7 +429,8 @@
     ],
     "video": "",
     "intro": "",
-    "description": ["", "", "", ""]
+    "description": ["", "", "", ""],
+    "show": true
   },
   {
     "projectnr": 1212,
@@ -432,7 +450,8 @@
     ],
     "video": "",
     "intro": "",
-    "description": ["", "", "", ""]
+    "description": ["", "", "", ""],
+    "show": true
   }
 ]
 
