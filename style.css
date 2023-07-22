@@ -763,8 +763,8 @@ button>i {
     .w3-half {
         width: 50%;
     }
-    /* force height for homepage column elements */
-    .home-col {
+    /* force height for homepage rows */
+    .home-row {
         height: 300px;
     }
 }
@@ -781,8 +781,8 @@ button>i {
         margin-right: 0 !important;
         padding: 0 !important;
     }
-    /* give homepage images a height but not text*/
-    .home-col .home-img-container{
+    /* give homepage images a height */
+    .home-img-container{
         height: 300px;
     }
 }
