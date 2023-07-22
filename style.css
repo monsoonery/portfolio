@@ -89,6 +89,7 @@ a {
 
 .default-container {
     padding: 0 16px;
+    height: 100%
 }
 
 .float-right {
