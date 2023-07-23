@@ -203,7 +203,7 @@ function resetFilterButtons(currentButton) {
 
 // EL voor tab buttons
 function handleButtonClickTab(e, param) {
-    const button = e.target;
+    const button = e.currentTarget;
     // button active/inactive toggle
     const buttonState = button.getAttribute('data-state');
     if (buttonState == 'inactive') {

@@ -9,13 +9,7 @@
 
 i {
     font-style: normal;
-    pointer-events: none;
-
 }
-
-.svg {
-    pointer-events: none
-  }
 
 html {
     box-sizing: border-box;
