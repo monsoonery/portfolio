@@ -122,8 +122,9 @@ function getThumb(projectnr, thumbnail) {
 
 /* project CREATION FUNCTION */
 const createProject = (projectData) => {
-    const { projectnr, title, icon, thumbnail, status, timeline, labels, tab } = projectData;
-    const project = document.createElement("div");
+    const { projectnr, title, icon, thumbnail, status, timeline, labels, tab, show } = projectData;
+    if (show) {
+        const project = document.createElement("div");
     project.className = "project";
     // generate HTML for a project card 
     var thumbnailURL = getThumb(projectnr, thumbnail);
@@ -155,6 +156,7 @@ const createProject = (projectData) => {
     // add eventlistener for rotation animation on hovering over card
     project.addEventListener("mouseenter", cardMouseEnter);
     projectsContainer.append(project);
+    }
 };
 
 // generate tab buttons (for broad category filtering: work vs personal (+ featured))
