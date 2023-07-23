@@ -110,14 +110,18 @@ fetch("https://raw.githubusercontent.com/monsoonery/portfolio/main/data.json")
 
 // eventhandler for dot click
 function updateSlideshow(i) {
-    currentImageNr = i;
-    currentImage.src = "https://raw.githubusercontent.com/monsoonery/portfolio/main/assets/images/" + currentProjectData["projectnr"] + "/" + images[currentImageNr];
-    document.getElementById("numbertext").innerHTML = (i + 1) + ` / ` + images.length;
-    document.querySelectorAll(".dot").forEach(function (el) {
-        el.classList.remove("active")
-    });
-    thisDot = document.getElementById("dot" + (i + 1));
-    thisDot.classList.add("active");
+    if (!images) {
+        currentImage.src = "https://raw.githubusercontent.com/monsoonery/portfolio/main/assets/images/common/placeholder.jpg"
+    } else {
+        currentImageNr = i;
+        currentImage.src = "https://raw.githubusercontent.com/monsoonery/portfolio/main/assets/images/" + currentProjectData["projectnr"] + "/" + images[currentImageNr];
+        document.getElementById("numbertext").innerHTML = (i + 1) + ` / ` + images.length;
+        document.querySelectorAll(".dot").forEach(function (el) {
+            el.classList.remove("active")
+        });
+        thisDot = document.getElementById("dot" + (i + 1));
+        thisDot.classList.add("active");
+    }
 }
 
 // eventhandler for button left/right click
