@@ -36,8 +36,29 @@
         </header>
 
         <!-- Major section -->
-        <div>
-
+        <div class="default-container">
+            <h4 id="contact"><b>Contact Me</b></h4>
+            <hr class="w3-opacity">
+            <form action="./send_email.php" target="_blank">
+                <div class="w3-section">
+                    <label>Name</label>
+                    <br>
+                    <input class="w3-input w3-border" type="text" name="Name" required>
+                </div>
+                <div class="w3-section">
+                    <label>Email</label>
+                    <br>
+                    <input class="w3-input w3-border" type="text" name="Email" required>
+                </div>
+                <div class="w3-section">
+                    <label>Message</label>
+                    <br>
+                    <input class="w3-input w3-border" type="text" name="Message" required>
+                </div>
+                <br>
+                <button type="submit" class="w3-button w3-black w3-margin-bottom"><i
+                        class="fa fa-paper-plane"></i> Send Message</button>
+            </form>
         </div>
     </div>
 
