@@ -126,8 +126,8 @@ function getThumb(projectnr, thumbnail) {
     } else {
         return "https://raw.githubusercontent.com/monsoonery/portfolio/main/assets/images/" + projectnr + "/" + thumbnail;
     }
-    return (!thumbnail ? '$2.00' : '$10.00');
 }
+
 
 /* project CREATION FUNCTION */
 const createProject = (projectData) => {

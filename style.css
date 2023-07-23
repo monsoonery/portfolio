@@ -9,7 +9,13 @@
 
 i {
     font-style: normal;
+    pointer-events: none;
+
 }
+
+.svg {
+    pointer-events: none
+  }
 
 html {
     box-sizing: border-box;
@@ -783,6 +789,9 @@ i.breadcrumb-item {
 }
 
 /* voorkomen dat FA icon de button deels onklikbaar maakt */
+button>i {
+    pointer-events: none;
+}
 
 .label-button {
     font-size: 13px;
