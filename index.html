@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script src="https://use.fontawesome.com/releases/v6.4.0/js/all.js"></script>
+  <script src="./assets/js/cssFadey.js" defer></script>
 </head>
 
 <body>
@@ -37,12 +38,14 @@
     <div class="default-container">
       <div class="flex-container">
         <div class="home-row">
-          <div class="home-column">
-            <div style="padding:16px; text-align: justify;">
+          <div id="home-linksboven" class="home-column">
+            <div class="home-text">
               <h2><b>Welcome</b></h2>
-              <p>Hello, I'm Mees! I'm an industrial designer, maker, and robotics student from the Netherlands.
+              <p>Hello, I'm Mees! I'm an industrial designer, maker, and robotics student from the
+                Netherlands.
                 I specialize in CAD and 3D printing and occasionally do programming and graphic design, among other
-                things. On this website you will find my work, both professional and personal projects.</p>
+                things.
+                On this website you will find my work, both professional and personal projects.</p>
               <div>
                 <a href="/projects"><button class="home-button"><i class="fa fa-arrow-right"></i> Check out my
                     work</button></a>
@@ -50,24 +53,28 @@
               </div>
             </div>
           </div>
-          <div class="home-column">
+          <div id="home-rechtsboven" class="home-column">
             <div class="home-img-container img1">
-              <img class="home-img" src=".\assets\images\placeholder.jpg">
+              <div id="fadey">
+                <img class="home-img" src=".\assets\images\home\test.jpg">
+                <img class="home-img" src=".\assets\images\home\placeholder.jpg">
+              </div>
             </div>
           </div>
         </div>
         <div class="home-row">
-          <div class="home-column">
+          <div id="home-linksonder" class="home-column">
             <div class="home-img-container img2">
-              <img class="home-img" src=".\assets\images\placeholder.jpg">
+              <img class="home-img" src=".\assets\images\test.jpg">
             </div>
           </div>
-          <div class="home-column">
+          <div id="home-rechtsonder" class="home-column">
             <div class="home-text">
-              <p style="margin-top:0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut consequat
+              <p style="margin:0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut consequat
                 turpis, a tincidunt
                 diam. Aliquam imperdiet eget quam nec suscipit.
               </p>
+              <br>
               <div>
                 <a href="/about"><button class="home-button"><i class="fa-solid fa-message"></i> Contact me</button></a>
               </div>
@@ -76,6 +83,7 @@
         </div>
       </div>
     </div>
+    <br>
   </div>
 </body>
 
