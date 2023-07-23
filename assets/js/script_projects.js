@@ -74,6 +74,15 @@ fetch("https://raw.githubusercontent.com/monsoonery/portfolio/main/data.json")
         }
         projectsData = await response.json();
 
+        // alle projecten die show = false hebben, eruit filteren
+        for (i = projectsData.length - 1; i >= 0; i--) {
+            const { title, show } = projectsData[i];
+            if (!show) {
+                console.log("removed " + title);
+                projectsData.splice(i,1);
+            }
+        }
+
         // totaal aantal projects die we hebben
         projectCount.innerText = projectsData.length;
 
@@ -110,7 +119,7 @@ fetch("https://raw.githubusercontent.com/monsoonery/portfolio/main/data.json")
         projectsContainer.textContent = "\r\nCan't load projects right now. Please try again later.";
     });
 
- 
+
 function getThumb(projectnr, thumbnail) {
     if (!thumbnail) {
         return "https://raw.githubusercontent.com/monsoonery/portfolio/main/assets/images/placeholder.jpg"
@@ -118,45 +127,43 @@ function getThumb(projectnr, thumbnail) {
         return "https://raw.githubusercontent.com/monsoonery/portfolio/main/assets/images/" + projectnr + "/" + thumbnail;
     }
     return (!thumbnail ? '$2.00' : '$10.00');
-}    
+}
 
 /* project CREATION FUNCTION */
 const createProject = (projectData) => {
-    const { projectnr, title, icon, thumbnail, status, timeline, labels, tab, show } = projectData;
-    if (show) {
-        const project = document.createElement("div");
+    const { projectnr, title, icon, thumbnail, status, timeline, labels, tab } = projectData;
+    const project = document.createElement("div");
     project.className = "project";
     // generate HTML for a project card 
     var thumbnailURL = getThumb(projectnr, thumbnail);
     project.innerHTML = `
-    <div class="project-column">
-        <a href="./projects/${projectnr}">
-            <div class="project-preview">
-                <img class="project-thumbnail" 
-                src="${thumbnailURL}" 
-                alt="${title}">
-            </div>
-            <div class="project-content">
-                <p class="project-title">` +
+            <div class="project-column">
+                <a href="./projects/${projectnr}">
+                    <div class="project-preview">
+                    <img class="project-thumbnail" 
+                    src="${thumbnailURL}" 
+                    alt="${title}">
+                </div>
+                <div class="project-content">
+                    <p class="project-title">` +
         // insert FA icon or img depending on whether or not this project has a custom icon in data.json
         (icon == "" ? `<i class="fa fa-circle fa-xs"> </i>` : `<img src="${"https://raw.githubusercontent.com/monsoonery/portfolio/main/assets/images/" + projectnr + "/" + icon}" style="width:15px; height: 15px;">`) +
         ` ${title}
-                </p>
-                <div class="project-status">
-                    ${status} (` + getTimeline(timeline) + `)
-                </div>
-                <div class="project-tags">
-                    ${labels.map((label) => {
+                    </p>
+                    <div class="project-status">
+                        ${status} (` + getTimeline(timeline) + `)
+                    </div>
+                    <div class="project-tags">
+                        ${labels.map((label) => {
             return '<span class="project-tag">' + label + "</span>";
         }).join("")}
+                    </div>
                 </div>
-            </div>
-        </a>
-    </div>`;
+            </a>
+        </div>`;
     // add eventlistener for rotation animation on hovering over card
     project.addEventListener("mouseenter", cardMouseEnter);
     projectsContainer.append(project);
-    }
 };
 
 // generate tab buttons (for broad category filtering: work vs personal (+ featured))
@@ -266,7 +273,7 @@ function handleFilterProjects(filters) {
         // stap 1: filteren adhv of het een work of personal project
         if (filters.tab != "All") {
             filteredProjects = filteredProjects.filter((project) =>
-                    project.tab == filters.tab
+                project.tab == filters.tab
             );
         }
         // stap 2: filteren adhv geselecteerde labels
