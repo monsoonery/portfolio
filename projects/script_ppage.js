@@ -110,7 +110,7 @@ fetch("https://raw.githubusercontent.com/monsoonery/portfolio/main/data.json")
 
 // eventhandler for dot click
 function updateSlideshow(i) {
-    if (!images) {
+    if (!images.length) {
         currentImage.src = "https://raw.githubusercontent.com/monsoonery/portfolio/main/assets/images/common/placeholder.jpg"
     } else {
         currentImageNr = i;
