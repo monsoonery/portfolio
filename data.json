@@ -455,12 +455,14 @@
   },
   {
     "projectnr": 9999,
-    "title": "TITLE",
+    "title": "insert title here",
     "icon": "",
     "thumbnail": "",
     "status": "Ongoing",
-    "timeline": [[2023, 5], [9999,99]],
-    "labels": [],
+    "timeline": [[2099, 1], [9999,99]],
+    "labels": [
+      "3D print"
+    ],
     "tab": "Work",
     "featured": false,
     "images": [
