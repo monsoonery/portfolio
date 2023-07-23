@@ -122,7 +122,7 @@ fetch("https://raw.githubusercontent.com/monsoonery/portfolio/main/data.json")
 
 function getThumb(projectnr, thumbnail) {
     if (!thumbnail) {
-        return "https://raw.githubusercontent.com/monsoonery/portfolio/main/assets/images/placeholder.jpg"
+        return "https://raw.githubusercontent.com/monsoonery/portfolio/main/assets/images/common/placeholder.jpg"
     } else {
         return "https://raw.githubusercontent.com/monsoonery/portfolio/main/assets/images/" + projectnr + "/" + thumbnail;
     }
