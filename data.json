@@ -454,16 +454,14 @@
     "show": true
   },
   {
-    "projectnr": 5275,
-    "title": "3D print service",
+    "projectnr": 9999,
+    "title": "TITLE",
     "icon": "",
     "thumbnail": "",
     "status": "Ongoing",
     "timeline": [[2023, 5], [9999,99]],
     "labels": [
-    "3D print",
-    "CAD",
-    "Prototype"
+    ""
     ],
     "tab": "Work",
     "featured": false,
@@ -476,14 +474,16 @@
     "show": false
   },
   {
-    "projectnr": 9999,
-    "title": "TITLE",
+    "projectnr": 5275,
+    "title": "3D print service",
     "icon": "",
     "thumbnail": "",
     "status": "Ongoing",
     "timeline": [[2023, 5], [9999,99]],
     "labels": [
-    ""
+    "3D print",
+    "CAD",
+    "Prototype"
     ],
     "tab": "Work",
     "featured": false,
