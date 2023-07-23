@@ -9,11 +9,11 @@ FontAwesome.library.add(
 )
 
 function dirLevelUp() {
-    if (document.location.pathname.includes("/projects/")) {
-        return "../"
-    } else {
-        return ""
-    }
+  if (document.location.pathname.includes("/projects/")) {
+    return "../"
+  } else {
+    return ""
+  }
 }
 
 document.write(`
@@ -56,30 +56,15 @@ document.write(`
   </div>
 `);
 
-// check if mobile layout is needed for sidebar on page load
 sidebar = document.getElementById("mySidebar")
-function updateLayout() {
-    if (window.innerWidth < 900) {
-        mobileLayout = true;
-        sidebar.classList.add("mobile");
-    } else if (window.innerWidth > 899) {
-        mobileLayout = false;
-        sidebar.classList.remove("mobile");
-    }
-}
-updateLayout();
-window.addEventListener('resize', updateLayout, false);
-
 // functions to open and close sidebar on mobile
 function openSidebar() {
-    sidebar.classList.add("openMobile");
-    document.getElementById("myOverlay").classList.add("visible");
+  sidebar.classList.add("openMobile");
+  document.getElementById("myOverlay").classList.add("visible");
 }
 
 function closeSidebar() {
-    if (mobileLayout) {
-        sidebar.classList.remove("openMobile");
-        document.getElementById("myOverlay").classList.remove("visible");
-        console.log("closed");
-    }
+  sidebar.classList.remove("openMobile");
+  document.getElementById("myOverlay").classList.remove("visible");
+  console.log("closed");
 }

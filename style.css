@@ -154,12 +154,12 @@ a {
 
 /********************************************************** HOME PAGE / INDEX *************************************************************/
 
-#fadey {  
+#fadey {
     width: 100%;
     height: 100%;
     position: relative;
     margin: 0;
-  }
+}
 
 .home-button {
     font-family: "Work Sans";
@@ -457,16 +457,6 @@ i.breadcrumb-item {
     z-index: 999;
     overflow: auto;
     transition: transform 400ms;
-}
-
-/*collapse on mobile*/
-.sidebar.mobile {
-    left: -250px;
-    transform: translateX(0px);
-}
-
-.sidebar.mobile.openMobile {
-    transform: translateX(250px);
 }
 
 .w3-margin-right {
@@ -864,5 +854,15 @@ button>i {
         margin-left: 0 !important;
         margin-right: 0 !important;
         padding: 0 !important;
+    }
+
+    /*collapse on mobile*/
+    .sidebar {
+        left: -250px;
+        transform: translateX(0px);
+    }
+
+    .sidebar.openMobile {
+        transform: translateX(250px);
     }
 }
