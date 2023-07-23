@@ -856,13 +856,12 @@ button>i {
         padding: 0 !important;
     }
 
-    /*collapse on mobile*/
+    /*collapse navbar on mobile*/
     .sidebar {
-        left: -250px;
-        transform: translateX(0px);
+        transform: translateX(-250px);
     }
-
+    /*expand navbar on mobile*/
     .sidebar.openMobile {
-        transform: translateX(250px);
+        transform: translateX(0px);
     }
 }
