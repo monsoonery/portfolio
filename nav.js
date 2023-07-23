@@ -23,7 +23,7 @@ document.write(`
       <div class="default-container">
         <!-- Logo -->
         <a href="index.html">
-          <img src= /assets/images/common/icon.png" style="width:45%;" class="w3-round"><br><br>
+          <img src="/assets/images/common/icon.png" style="width:45%;" class="w3-round"><br><br>
         </a>
         <!-- Website name -->
         <h4><b>monsoon's design</b></h4>
