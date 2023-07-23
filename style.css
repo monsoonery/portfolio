@@ -153,8 +153,38 @@ a {
 }
 
 /********************************************************** HOME PAGE / INDEX *************************************************************/
+.home-button {
+    font-family: "Work Sans";
+    border: none;
+    display: inline-block;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+    padding: 8px 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 2px;
+}
+
+.home-button.is-active {
+    background-color: #000;
+    color: #fff;
+}
+
+.home-button:hover {
+    color: black;
+    background-color: #DECADE;
+}
+
 .flex-container {
     display:grid;
+    background-color: #fff;
+    padding: 12px;
   }
 
   .home-row {
@@ -728,15 +758,7 @@ i.breadcrumb-item {
     padding: 8px 12px;
     font-size: 16px;
     font-weight: bold;
-}
-
-/* voorkomen dat FA icon de button deels onklikbaar maakt */
-button>i {
-    pointer-events: none;
-}
-
-.label-button {
-    font-size: 13px;
+    border-radius: 2px;
 }
 
 .label-button.is-active,
@@ -749,6 +771,15 @@ button>i {
 .tab-button:hover {
     color: black;
     background-color: #DECADE;
+}
+
+/* voorkomen dat FA icon de button deels onklikbaar maakt */
+button>i {
+    pointer-events: none;
+}
+
+.label-button {
+    font-size: 13px;
 }
 
 .hide-on-featured {
