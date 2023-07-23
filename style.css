@@ -200,7 +200,7 @@ a {
     flex-direction: column;
     flex-basis: 100%;
     background-color: #fff;
-    padding: 8px;
+    padding: 6px;
   }
 
 .home-img-container {
@@ -213,7 +213,7 @@ a {
 }
 
 .img1 {
-    height: 350px;
+    height: 400px;
 }
 .img2 {
     height: 200px;
@@ -764,7 +764,7 @@ i.breadcrumb-item {
 
 .label-button.is-active,
 .tab-button.is-active {
-    background-color: #000;
+    background-color: #333;
     color: #fff;
 }
 
