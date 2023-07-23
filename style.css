@@ -161,6 +161,11 @@ a {
     margin: 0;
 }
 
+.home-text {
+    padding:16px; 
+    text-align: justify;
+}
+
 .home-button {
     font-family: "Work Sans";
     border: none;
@@ -856,12 +861,12 @@ button>i {
         padding: 0 !important;
     }
 
-    /*collapse navbar on mobile*/
+    /*animation to collapse navbar on mobile (default)*/
     .sidebar {
         transform: translateX(-250px);
     }
-    /*expand navbar on mobile*/
-    .sidebar.openMobile {
+    /*animation to expand navbar on mobile*/
+    .sidebar.opened {
         transform: translateX(0px);
     }
 }

@@ -59,12 +59,12 @@ document.write(`
 sidebar = document.getElementById("mySidebar")
 // functions to open and close sidebar on mobile
 function openSidebar() {
-  sidebar.classList.add("openMobile");
+  sidebar.classList.add("opened");
   document.getElementById("myOverlay").classList.add("visible");
 }
 
 function closeSidebar() {
-  sidebar.classList.remove("openMobile");
+  sidebar.classList.remove("opened");
   document.getElementById("myOverlay").classList.remove("visible");
   console.log("closed");
 }
