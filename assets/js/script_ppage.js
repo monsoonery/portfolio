@@ -111,10 +111,12 @@ fetch("https://raw.githubusercontent.com/monsoonery/portfolio/main/assets/data/d
 // eventhandler for dot click
 function updateSlideshow(i) {
     if (!images.length) {
+        console.log("no imgs");
         currentImage.src = "https://raw.githubusercontent.com/monsoonery/portfolio/main/assets/images/common/placeholder.jpg"
     } else {
         currentImageNr = i;
         currentImage.src = "https://raw.githubusercontent.com/monsoonery/portfolio/main/assets/images/" + currentProjectData["projectnr"] + "/" + images[currentImageNr];
+        currentImage.onerror = onImgErrorSmall(this);
         document.getElementById("numbertext").innerHTML = (i + 1) + ` / ` + images.length;
         document.querySelectorAll(".dot").forEach(function (el) {
             el.classList.remove("active")
@@ -133,4 +135,11 @@ function plusSlides(dir) {
         currentImageNr += images.length;
     }
     updateSlideshow(currentImageNr);
+}
+
+function onImgErrorSmall(source) {
+    source.src = "/assets/images/common/placeholder.jpg";
+    // disable onerror to prevent endless loop
+    source.onerror = "";
+    return true;
 }
