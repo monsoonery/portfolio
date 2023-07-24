@@ -35,7 +35,7 @@ document.write(`
         <a href="/projects" onclick="closeSidebar()" class="menu-item unlinkify"><i
             class="fa fa-th-large fa-fw fa-lg w3-margin-right"></i>Projects</a>
         <a href="/about" onclick="closeSidebar()" class="menu-item unlinkify"><i
-            class="fa-solid fa-user fa-fw fa-lg w3-margin-right"></i>About</a>
+            class="fa-solid fa-user fa-fw fa-lg w3-margin-right"></i>Contact</a>
       </div>
       <!-- Socials -->
       <div class="socials-panel">
