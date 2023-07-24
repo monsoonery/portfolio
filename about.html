@@ -21,64 +21,62 @@
         <header id="header-about">
             <!-- die twee hieronder zie je alleen wanneer je apparaat klein is-->
             <div class="hide-on-large-screens">
-              <span id="hamburger-menu-button" class="float-left hover-text-grey" style="margin:16px;"
-                onclick="openSidebar()">
-                <i class="fa fa-bars fa-3x"></i>
-              </span>
-              <a href="./index.html" class="float-right" style="margin:16px; width:48px; height:48px">
-                <img src="./assets/images/common/icongrey.png" class="w3-round" style="max-height: 100%;">
-              </a>
+                <span id="hamburger-menu-button" class="float-left hover-text-grey" style="margin:16px;"
+                    onclick="openSidebar()">
+                    <i class="fa fa-bars fa-3x"></i>
+                </span>
+                <a href="./index.html" class="float-right" style="margin:16px; width:48px; height:48px">
+                    <img src="./assets/images/common/icongrey.png" class="w3-round" style="max-height: 100%;">
+                </a>
             </div>
             <!-- rest vd header, zie je op elk apparaat-->
-          </header>
+        </header>
         <br>
         <!-- Major section -->
         <div class="default-container">
-            <div class="flex-container">
-                <div class="home-row">
-                    <div class="home-column">
-                        <div class="home-text">
-                            <form method="post">
-                                <h2 id="contact"><b>Contact me</b></h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <div class="contact-grid-container">
+                <div class="contact-grid-child" id="text-form">
+                    <div class="home-text">
+                        <form method="post">
+                            <h2 id="contact"><b>Contact me</b></h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <br>
+                            <div>
+                                <label class="form-label">Name</label>
                                 <br>
-                                <div>
-                                    <label class="form-label">Name</label>
-                                    <br>
-                                    <input class="form-input" type="text" name="name" required>
-                                </div>
+                                <input class="form-input" type="text" name="name" required>
+                            </div>
+                            <br>
+                            <div>
+                                <label class="form-label">Email</label>
                                 <br>
-                                <div>
-                                    <label class="form-label">Email</label>
-                                    <br>
-                                    <input class="form-input" type="text" name="email" required>
-                                </div>
+                                <input class="form-input" type="text" name="email" required>
+                            </div>
+                            <br>
+                            <div>
+                                <label class="form-label">Message</label>
                                 <br>
-                                <div>
-                                    <label class="form-label">Message</label>
-                                    <br>
-                                    <textarea class="form-input" name="message" rows="4" required></textarea>
-                                </div>
-                                <br>
-                                <div>
-                                    <button type="submit" class="home-button"><i class="fa fa-paper-plane"></i>
-                                        Send</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="home-column" id="about-img-container">
-                        <div class="home-img-container imgform">
-                            <img class="home-img" src=".\assets\images\common\placeholder.jpg">
-                        </div>
+                                <textarea class="form-input" name="message" rows="4" required></textarea>
+                            </div>
+                            <br>
+                            <div>
+                                <button type="submit" class="home-button"><i class="fa fa-paper-plane"></i>
+                                    Send</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
-                <div class="home-row">
+                <div class="contact-grid-child" id="img-form">
+                    <div class="home-img-container">
+                        <img class="home-img" style="height: 550px" src=".\assets\images\common\placeholder.jpg"
+                            onerror="onImgErrorSmall(this)">
+                    </div>
+                </div>
 
-                </div>
             </div>
-
         </div>
+
+    </div>
     </div>
     <script id="ratufa_loader" src="https://www.ratufa.io/c/ld.js?f=yih3a1ya&n=n1.ratufa.io"></script>
 </body>
