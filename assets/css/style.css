@@ -180,7 +180,7 @@ a {
 }
 
 .home-text {
-    padding:16px; 
+    padding: 16px;
     text-align: justify;
 }
 
@@ -883,6 +883,7 @@ button>i {
     .sidebar {
         transform: translateX(-250px);
     }
+
     /*animation to expand navbar on mobile*/
     .sidebar.opened {
         transform: translateX(0px);
