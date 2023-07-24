@@ -42,7 +42,7 @@ fetch("https://raw.githubusercontent.com/monsoonery/portfolio/main/assets/data/d
         //images apart definieren omdat het een global var is (moet vanwege eventhandlers)
         images = currentProjectData["images"];
 
-        if (!images.length) {
+        if (!images[0]) {
             images[0] = "/assets/images/common/placeholder.jpg"
         }
 
