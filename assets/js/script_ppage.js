@@ -16,7 +16,7 @@ function containsOnlyNumbers(str) {
     return /^\d+$/.test(str);
 }
 
-fetch("https://raw.githubusercontent.com/monsoonery/portfolio/main/data.json")
+fetch("https://raw.githubusercontent.com/monsoonery/portfolio/main/assets/data/data.json")
     .then(async (response) => {
         if (!response.ok) {
             throw new Error(`HTTP error: ${response.status}`);

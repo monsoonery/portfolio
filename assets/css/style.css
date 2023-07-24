@@ -174,36 +174,6 @@ a {
 
 /********************************************************** HOME PAGE / INDEX *************************************************************/
 
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, auto);
-    grid-column-gap: 8px;
-    grid-row-gap: 8px;
-}
-
-.grid-child {
-    background-color: #fff;
-    padding: 6px;
-}
-
-#linksboven {
-    grid-area: 1 / 2 / 3 / 3;
-}
-
-#rechtsboven {
-    grid-area: 1 / 1 / 2 / 2;
-}
-
-#linksonder {
-    grid-area: 3 / 2 / 4 / 3;
-    
-}
-
-#rechtsonder {
-    grid-area: 2 / 1 / 4 / 2;
-}
-
 #fadey {
     width: 100%;
     height: 100%;
@@ -244,40 +214,78 @@ a {
     background-color: #DECADE;
 }
 
-
 .home-img-container {
     display: flex;
     position: relative;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    width:100%;
+    width: 100%;
     height: 100%;
 }
 
 .home-img-container img {
-    flex-shrink:0;
-    min-width:100%;
-    min-height:100%;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
 }
 
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-column-gap: 8px;
+    grid-row-gap: 8px;
+}
 
-@media screen and (min-width: 800px) {
-    .home-column {
-        flex: 1
-    }
+.grid-child {
+    background-color: #fff;
+    padding: 6px;
+}
 
-    .home-row {
-        flex: 1
+#linksboven {
+    height: 100%; /*dont remove anders trippen je images op desktop als je landscape met portrait mixt!!*/
+    grid-area: topimage;
+    /*grid-area: 1 / 2 / 3 / 3;*/
+}
+
+#rechtsboven {
+    grid-area: welcome;
+    /*grid-area: 1 / 1 / 2 / 2;*/
+}
+
+#linksonder {
+    grid-area: contact
+    /*grid-area: 3 / 2 / 4 / 3;*/
+}
+
+#rechtsonder {
+    grid-area: bottomimage
+    /*grid-area: 2 / 1 / 4 / 2;*/
+}
+
+@media (min-width: 800px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: 
+            "welcome topimage"
+            "bottomimage topimage"
+            "bottomimage contact"
     }
 }
 
-@media screen and (max-width: 799px) {
-    .home-row:nth-child(2) .home-column:nth-child(2) {
-        order: -1
+@media (max-width: 799px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "welcome"
+            "topimage"
+            "contact"
+            "bottomimage"
     }
 }
 

@@ -68,3 +68,10 @@ function closeSidebar() {
   document.getElementById("myOverlay").classList.remove("visible");
   console.log("closed");
 }
+
+function onImgErrorSmall(source) {
+  source.src = "/assets/images/common/placeholder.jpg";
+  // disable onerror to prevent endless loop
+  source.onerror = "";
+  return true;
+}

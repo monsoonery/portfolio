@@ -2,8 +2,8 @@ var cssFadey = function(newOptions) {
     var options = (function() {
         var mergedOptions = {},
         defaultOptions = {
-            presentationTime: 4,
-            durationTime: 1,
+            presentationTime: 3.5,
+            durationTime: 1.5,
             fadeySelector: '#fadey',
             cssAnimationName: 'fadey',
             fallbackFunction: function() {}
