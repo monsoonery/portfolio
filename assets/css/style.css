@@ -233,7 +233,7 @@ a {
     min-height: 100%;
 }
 
-.grid-container {
+.home-grid-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, auto);
@@ -241,7 +241,7 @@ a {
     grid-row-gap: 8px;
 }
 
-.grid-child {
+.home-grid-child {
     background-color: #fff;
     padding: 6px;
 }
@@ -268,7 +268,7 @@ a {
 }
 
 @media (min-width: 800px) {
-    .grid-container {
+    .home-grid-container {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, auto);
         grid-template-areas: 
@@ -279,7 +279,7 @@ a {
 }
 
 @media (max-width: 799px) {
-    .grid-container {
+    .home-grid-container {
         grid-template-columns: 1fr;
         grid-template-areas: 
             "welcome"
