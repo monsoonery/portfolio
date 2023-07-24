@@ -42,6 +42,10 @@ fetch("https://raw.githubusercontent.com/monsoonery/portfolio/main/assets/data/d
         //images apart definieren omdat het een global var is (moet vanwege eventhandlers)
         images = currentProjectData["images"];
 
+        if (!images.length) {
+            images[0] = "/assets/images/common/placeholder.jpg"
+        }
+
         // set title on page, browser tab and breadcrumbs
         var pageTitle = title.split(' - ', 1)[0]
         document.querySelector("h1").innerHTML = pageTitle;
@@ -110,20 +114,15 @@ fetch("https://raw.githubusercontent.com/monsoonery/portfolio/main/assets/data/d
 
 // eventhandler for dot click
 function updateSlideshow(i) {
-    if (!images.length) {
-        console.log("no imgs");
-        currentImage.src = "https://raw.githubusercontent.com/monsoonery/portfolio/main/assets/images/common/placeholder.jpg"
-    } else {
-        currentImageNr = i;
-        currentImage.src = "https://raw.githubusercontent.com/monsoonery/portfolio/main/assets/images/" + currentProjectData["projectnr"] + "/" + images[currentImageNr];
-        currentImage.onerror = onImgErrorSmall(this);
-        document.getElementById("numbertext").innerHTML = (i + 1) + ` / ` + images.length;
-        document.querySelectorAll(".dot").forEach(function (el) {
-            el.classList.remove("active")
-        });
-        thisDot = document.getElementById("dot" + (i + 1));
-        thisDot.classList.add("active");
-    }
+    currentImageNr = i;
+    currentImage.src = "https://raw.githubusercontent.com/monsoonery/portfolio/main/assets/images/" + currentProjectData["projectnr"] + "/" + images[currentImageNr];
+    currentImage.onerror = onImgErrorSmall(this);
+    document.getElementById("numbertext").innerHTML = (i + 1) + ` / ` + images.length;
+    document.querySelectorAll(".dot").forEach(function (el) {
+        el.classList.remove("active")
+    });
+    thisDot = document.getElementById("dot" + (i + 1));
+    thisDot.classList.add("active");
 }
 
 // eventhandler for button left/right click
