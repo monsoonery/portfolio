@@ -153,7 +153,7 @@ a {
 }
 
 
-/********************************************************* ABOUT PAGE *********************************************************************/
+/********************************************************* ABOUT / CONTACT PAGE *********************************************************************/
 .contact-grid-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -209,20 +209,7 @@ a {
 }
 
 
-
-/********************************************************** HOME PAGE / INDEX *************************************************************/
-
-#fadey {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    margin: 0;
-}
-
-.home-text {
-    padding: 16px;
-    text-align: justify;
-}
+/********************************************************** HOME / INDEX PAGE *************************************************************/
 
 .home-button {
     font-family: "Work Sans";
@@ -250,25 +237,6 @@ a {
 .home-button:hover {
     color: black;
     background-color: #DECADE;
-}
-
-.home-img-container {
-    display: flex;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-}
-
-.home-img-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    flex-shrink: 0;
-    min-width: 100%;
-    min-height: 100%;
 }
 
 .home-grid-container {
@@ -327,6 +295,39 @@ a {
             "bottomimage"
     }
 }
+
+/********************************************************** HOME & CONTACT SHARED CSS *************************************************************/
+.grid-img-container {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.grid-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+#fadey {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin: 0;
+}
+
+.grid-text {
+    padding: 16px;
+    text-align: justify;
+}
+
 
 /******************************************************* PROJECT SPECIFIC PAGE *********************************************************/
 /* project-specific page sticky header on large monitors*/
@@ -644,7 +645,6 @@ i.breadcrumb-item {
     border-bottom: 6px solid #ccc !important
 }
 
-
 .main {
     margin-top: 0 !important;
     margin-left: 250px;
@@ -869,7 +869,7 @@ button>i {
     display: none;
 }
 
-/* responsive layout grid, 4 projects on each row is default */
+/*** responsive layout grid, 4 projects on each row is default ***/
 /* three column-layout*/
 @media screen and (max-width: 1600px) {
     .project {
@@ -894,7 +894,6 @@ button>i {
 /********************************************* DEVICE SPECIFIC LAYOUTS / RESPONSIVE STUFF ********************************************************/
 /* desktop layout*/
 @media (min-width:900px) {
-
     /* hamborgir menu icon enzo */
     .hide-on-large-screens {
         display: none !important;
