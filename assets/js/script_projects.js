@@ -65,6 +65,14 @@ filtersContainer.style.maxHeight = null;
 filtersContainer.style.height = "0";
 filtersContainer.style.display = "none";
 let cookietab = sessionStorage.getItem("tab");
+var arrayOfPages = [];
+
+// random page function
+function randomPage() {
+    const random = Math.floor(Math.random() * arrayOfPages.length);
+    console.log(random, arrayOfPages[random]);
+    location.href = "./projects/" + arrayOfPages[random] + "";
+}
 
 // this is where the magic happens
 fetch("https://raw.githubusercontent.com/monsoonery/portfolio/main/assets/data/data.json")
@@ -78,7 +86,7 @@ fetch("https://raw.githubusercontent.com/monsoonery/portfolio/main/assets/data/d
         for (i = projectsData.length - 1; i >= 0; i--) {
             const { title, show } = projectsData[i];
             if (!show) {
-                console.log("removed " + title);
+                //console.log("removed " + title);
                 projectsData.splice(i,1);
             }
         }
@@ -86,10 +94,18 @@ fetch("https://raw.githubusercontent.com/monsoonery/portfolio/main/assets/data/d
         // totaal aantal projects die we hebben
         projectCount.innerText = projectsData.length;
 
+        // maak lijst van alle publieke pagina's (voor random button)
+        for (i = 0; i < projectsData.length; i++) {
+            const { projectnr } = projectsData[i];
+            arrayOfPages.push(projectnr);
+        }
+        console.log(arrayOfPages);
+
         // maak een html elementje voor elk project
         projectsData.map((project) => createProject(project));
 
-        // voor elke tab een knopje maken
+        // voor elke tab een knopje maken 
+        // (tegenwoordig is dit alleen eventlistener en is-active toevoegen)
         tabData = ["Featured", "All", "Personal", "Work"]
         tabData.map((tab) => createTabButton(tab, tabsContainer));
 
