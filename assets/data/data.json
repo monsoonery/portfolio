@@ -255,7 +255,7 @@
     "projectnr": 1408,
     "title": "This website",
     "icon": "",
-    "thumbnail": "",
+    "thumbnail": "websitescreenshot.png",
     "status": "Ongoing",
     "timeline": [[2023, 4], [9999,99]],
     "labels": [
@@ -265,7 +265,7 @@
     "tab": "Work",
     "featured": false,
     "images": [
-      ""
+      "websitescreenshot.png"
     ],
     "video": "",
     "intro": "",
