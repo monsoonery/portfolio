@@ -894,6 +894,7 @@ button>i {
 /********************************************* DEVICE SPECIFIC LAYOUTS / RESPONSIVE STUFF ********************************************************/
 /* desktop layout*/
 @media (min-width:900px) {
+
     /* hamborgir menu icon enzo */
     .hide-on-large-screens {
         display: none !important;
@@ -918,6 +919,7 @@ button>i {
     .w3-twothird {
         width: 66.66666%
     }
+
     #Random {
         display: inline-block;
         margin-left: auto;

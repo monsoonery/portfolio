@@ -439,14 +439,17 @@
     "title": "Hi-Fi RUSH: SCR-UB figurine",
     "icon": "",
     "thumbnail": "scrubrender.jpg",
-    "status": "Ongoing",
-    "timeline": [[2023,7], [9999,99]],
+    "status": "Completed",
+    "timeline": [[2023,7], [2023,8]],
     "labels": [
       "3D print"
     ],
     "tab": "Personal",
     "featured": false,
     "images": [
+      "scrubmain.jpg",
+      "scrubside.jpg",
+      "scrubback.jpg",
       "scrubrender.jpg",
       "scrubwip.jpg"
     ],
